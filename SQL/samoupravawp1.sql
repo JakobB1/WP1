@@ -1,9 +1,9 @@
 use master;
-drop database if exists zupanijawp1;
+drop database if exists samoupravawp1;
 go
-create database zupanijawp1;
+create database samoupravawp1;
 go
-use zupanijawp1;
+use samoupravawp1;
 
 create table zupan(
 	sifra int not null primary key identity(1,1),
