@@ -2,7 +2,7 @@
 use master;
 drop database if exists edunovawp1;
 go
-create database edunovawp1;
+create database edunovawp1 collate Croatian_CI_AS;
 go
 use edunovawp1;
 
@@ -41,3 +41,20 @@ create table clan(
 alter table grupa add foreign key (smjer) references smjer(sifra);
 alter table clan add foreign key (grupa) references grupa(sifra);
 alter table clan add foreign key (polaznik) references polaznik(sifra);
+
+select * from smjer;
+
+-- najlošiji način
+-- 1
+insert into smjer 
+values ('Web programiranje ŠĆ',250,1473.82,73,1);
+
+--malo bolji način
+-- 2
+insert into smjer(naziv,trajanje)
+values ('Java programiranje',130);
+
+-- dobra praksa
+-- 3
+insert into smjer (naziv,trajanje,cijena,upisnina,verificiran)
+values ('Serviser',150,null,null,0);
