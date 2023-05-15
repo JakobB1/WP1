@@ -42,7 +42,6 @@ alter table grupa add foreign key (smjer) references smjer(sifra);
 alter table clan add foreign key (grupa) references grupa(sifra);
 alter table clan add foreign key (polaznik) references polaznik(sifra);
 
-select * from smjer;
 
 -- najlošiji način
 -- 1
