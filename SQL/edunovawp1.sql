@@ -42,7 +42,7 @@ alter table grupa add foreign key (smjer) references smjer(sifra);
 alter table clan add foreign key (grupa) references grupa(sifra);
 alter table clan add foreign key (polaznik) references polaznik(sifra);
 
-
+select * from smjer;
 -- najlošiji način
 -- 1
 insert into smjer 
@@ -57,3 +57,11 @@ values ('Java programiranje',130);
 -- 3
 insert into smjer (naziv,trajanje,cijena,upisnina,verificiran)
 values ('Serviser',150,null,null,0);
+
+select * from grupa;
+-- 1
+insert into grupa(naziv,smjer,datumpocetka)
+values ('WP1',1,'2023-04-26 17:00:00');
+-- 2
+insert into grupa(naziv,smjer,datumpocetka)
+values ('JP28',2,'2023-04-26 19:00:00');
