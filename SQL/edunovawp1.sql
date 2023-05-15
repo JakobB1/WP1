@@ -1,8 +1,8 @@
-﻿-- ovo je komentar i neće se izvesti
+﻿﻿-- ovo je komentar i neće se izvesti
 use master;
 drop database if exists edunovawp1;
 go
-create database edunovawp1 collate Croatian_CI_AS;
+create database edunovawp1;
 go
 use edunovawp1;
 
@@ -42,15 +42,15 @@ alter table grupa add foreign key (smjer) references smjer(sifra);
 alter table clan add foreign key (grupa) references grupa(sifra);
 alter table clan add foreign key (polaznik) references polaznik(sifra);
 
-select * from smjer;
+
 -- najlošiji način
 -- 1
-insert into smjer 
-values ('Web programiranje ŠĆ',250,1473.82,73,1);
+insert into smjer
+values ('Web programiranje ŠČ',250,1473.82,73,1);
 
---malo bolji način
+-- malo bolji način
 -- 2
-insert into smjer(naziv,trajanje)
+insert into smjer (naziv,trajanje)
 values ('Java programiranje',130);
 
 -- dobra praksa
@@ -58,16 +58,16 @@ values ('Java programiranje',130);
 insert into smjer (naziv,trajanje,cijena,upisnina,verificiran)
 values ('Serviser',150,null,null,0);
 
-select * from grupa;
+
 -- 1
-insert into grupa(naziv,smjer,datumpocetka)
+insert into grupa (naziv,smjer,datumpocetka)
 values ('WP1',1,'2023-04-26 17:00:00');
 -- 2
-insert into grupa(naziv,smjer,datumpocetka)
+insert into grupa (naziv,smjer,datumpocetka)
 values ('JP28',2,'2023-04-26 19:00:00');
 
-select * from polaznik;
 
+-- 1 do 25
 insert into polaznik(ime,prezime,oib,email)
 values 
 ('Luka','Bušić',null,'busic.luka1@gmail.com'),
@@ -96,7 +96,9 @@ values
 ('Ivan','Angebrandt',null,'ivan.angebrandt@gmail.com'),
 ('Luka','Mrđa',null,'luka.mrda@yahoo.com');
 
-select * from clan;
+
+
+
 
 insert into clan(grupa,polaznik)
 values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),
@@ -105,25 +107,11 @@ values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),
 (1,21),(1,22),(1,23),(1,24),(1,25);
 
 
-
-
--- vjezbanje:
--- 1. Unijeti smjer PHP programiranje 
--- 2. Na PHP programiranje definirati dvije grupa (PP17 i PP17)
+-- vježbanje:
+-- 1. Unijeti smjer PHP programiranje
+-- 2. Na PHP pregoramiranje definirati dvije grupe (PP17 i PP18)
 -- 3. Na PP18 postaviti 3 polaznika (koje ste prethodno unijeli)
 
--- 1. zadatak
-select * from smjer;
-insert into smjer (naziv,trajanje,cijena,upisnina,verificiran)
-values ('PHP programiranje',160,1999.99,49.99,0);
 
--- 2.zadatak
-select * from grupa;
-insert into grupa(naziv,smjer,datumpocetka)
-values ('PP17',4,'2023-04-27 17:00:00');
-insert into grupa(naziv,smjer,datumpocetka)
-values ('PP18',4,'2023-04-27 19:00:00');
-
--- 3.zadatak
-select * from smjer;
-
+-- Domaća zadaća:
+-- U sve baze koje ste kreirali na osnovu zadatka ERA osnovno unijeti u svaku tablicu po 3 - 5 redova
