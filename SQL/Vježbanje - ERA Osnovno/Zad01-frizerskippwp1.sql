@@ -14,7 +14,7 @@ create table salon (
 create table djelatnica (
     sifra int not null primary key identity(1,1),
     ime varchar(50) not null,
-    iban varchar(32),
+    iban char(11),
     korisnik int not null
 );
 
@@ -59,12 +59,12 @@ values ('Korisnik01','mail01@mail.com',4),
 
 
 select * from djelatnica;
-insert into djelatnica(ime,iban,korisnik)
-values ('Djelatnica01',12345678911,3),
-       ('Djelatnica02',12345678911,1),
-       ('Djelatnica03',12345678911,2),
-       ('Djelatnica04',12345678911,5),
-       ('Djelatnica05',12345678911,4);
+insert into djelatnica(ime,korisnik)
+values ('Djelatnica01',3),
+       ('Djelatnica02',1),
+       ('Djelatnica03',2),
+       ('Djelatnica04',5),
+       ('Djelatnica05',4);
 
 
 select * from salon;
