@@ -30,4 +30,4 @@ create table sestra (
 create table lijecenje (
     sifra int not null primary key identity(1,1),
     nazivTerapije varchar(50) not null
-); 
+);
