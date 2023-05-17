@@ -5,27 +5,29 @@ create database frizerskiwp1;
 go
 use frizerskiwp1;
 
-create table salon (
+create table salon(
     sifra int not null primary key identity(1,1),
     naziv varchar(50),
     djelatnica int not null
 );
 
-create table djelatnica (
+create table djelatnica(
     sifra int not null primary key identity(1,1),
     ime varchar(50) not null,
-    iban char(11),
+	prezime varchar(50),
+    iban char(21),
     korisnik int not null
 );
 
-create table korisnik (
+create table korisnik(
     sifra int not null primary key identity(1,1),
     ime varchar(50) not null,
+	prezime varchar(50) not null,
     email varchar(20),
     usluga int not null
 );
 
-create table usluga (
+create table usluga(
     sifra int not null primary key identity(1,1),
     naziv varchar(50) not null,
     cijena decimal(18,2)
@@ -34,9 +36,7 @@ create table usluga (
 
 
 alter table salon add foreign key (djelatnica) references djelatnica (sifra);
-
 alter table djelatnica add foreign key (korisnik) references korisnik (sifra);
-
 alter table korisnik add foreign key (usluga) references usluga (sifra);
 
 
@@ -49,13 +49,14 @@ values ('Usluga01',99.99),
        ('Usluga04',399.99),
        ('Usluga05',499.99);
 
+
 select * from korisnik;
-insert into korisnik(ime,email,usluga)
-values ('Korisnik01','mail01@mail.com',4),
-       ('Korisnik02','mail02@mail.com',2),
-       ('Korisnik03','mail03@mail.com',5),
-       ('Korisnik04','mail04@mail.com',2),
-       ('Korisnik05','mail05@mail.com',1);
+insert into korisnik(ime,prezime,usluga)
+values ('Korisnik01','Prezime01',4),
+       ('Korisnik02','Prezime02',2),
+       ('Korisnik03','Prezime03',5),
+       ('Korisnik04','Prezime04',2),
+       ('Korisnik05','Prezime05',1);
 
 
 select * from djelatnica;
