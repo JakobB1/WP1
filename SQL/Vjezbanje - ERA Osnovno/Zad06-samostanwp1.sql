@@ -4,7 +4,7 @@ go
 create database samostanwp1;
 go
 use samostanwp1;
-
+--nije dobro
 create table samostan(
     sifra int not null primary key identity(1,1),
     naziv varchar(50) not null,
@@ -30,3 +30,10 @@ create table nadredeni(
     ime varchar(50) not null,
     prezime varchar(50) not null
 );
+
+
+
+alter table samostan add foreign key(svecenici) references svecenici(sifra);
+alter table svecenici add foreign key(poslovi) references poslovi(sifra);
+alter table poslovi add foreign key(svecenici) references svecenici(sifra);
+alter table svecenici add foreign key(nadredeni) references nadredeni(sifra);

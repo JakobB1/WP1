@@ -39,10 +39,12 @@ create table strucnaSprema(
 );
 
 
+
 alter table vrtic add foreign key(odgojnaSkupina) references odgojnaSkupina(sifra);
 alter table odgojnaSkupina add foreign key(djeca) references djeca(sifra);
 alter table odgojnaSkupina add foreign key (odgajateljica) references odgajateljica(sifra);
 alter table odgajateljica add foreign key (strucnaSprema) references strucnaSprema(sifra);
+
 
 
 select * from strucnaSprema;

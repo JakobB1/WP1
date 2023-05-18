@@ -50,6 +50,7 @@ values ('Usluga01',99.99),
        ('Usluga05',499.99);
 
 
+
 select * from korisnik;
 insert into korisnik(ime,prezime,usluga)
 values ('Korisnik01','Prezime01',4),

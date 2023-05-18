@@ -36,3 +36,6 @@ create table segrt(
 	prezime varchar(50) not null,
 	popravak int not null
 );
+
+
+

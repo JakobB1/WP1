@@ -37,6 +37,7 @@ alter table skrbnik add foreign key(zivotinja) references zivotinja(sifra);
 alter table zivotinja add foreign key(prostor) references prostor(sifra);
 
 
+
 select * from prostor;
 insert into prostor(naziv)
 values ('Prostor01'),

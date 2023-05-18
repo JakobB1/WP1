@@ -36,3 +36,10 @@ create table voznja (
     vrijemeVoznje datetime,
     cijenaVoznje decimal(18,2)
 );
+
+
+
+alter table tvrtka add foreign key(vozilo) references vozilo(sifra);
+alter table vozilo add foreign key(vozac) references vozac(sifra);
+alter table vozac add foreign key(putnik) references putnik(sifra);
+alter table putnik add foreign key(voznja) references voznja(sifra);
