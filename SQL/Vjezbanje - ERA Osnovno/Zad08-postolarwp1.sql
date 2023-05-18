@@ -8,7 +8,8 @@ use postolarwp1;
 create table postolar(
 	sifra int not null primary key identity(1,1),
 	ime varchar(50) not null,
-	prezima varchar(50) not null,
+	prezime varchar(50) not null,
+	popravak int not null,
 	segrt int not null
 );
 
@@ -39,3 +40,8 @@ create table segrt(
 
 
 
+alter table postolar add foreign key(popravak) references popravak(sifra);
+alter table obuca add foreign key(popravak) references popravak(sifra);
+alter table korisnik add foreign key(obuca) references obuca(sifra);
+alter table segrt add foreign key(popravak) references popravak(sifra);
+alter table postolar add foreign key(segrt) references segrt(sifra);

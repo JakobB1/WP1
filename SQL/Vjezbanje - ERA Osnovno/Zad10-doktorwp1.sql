@@ -9,8 +9,7 @@ create table doktor (
     sifra int not null primary key identity(1,1),
     ime varchar(50) not null,
     prezime varchar(50) not null,
-    pacijent int not null,
-    sestra int not null
+    pacijent int not null
 );
 
 create table pacijent (
@@ -29,5 +28,12 @@ create table sestra (
 
 create table lijecenje (
     sifra int not null primary key identity(1,1),
-    nazivTerapije varchar(50) not null
+    nazivTerapije varchar(50) not null,
+	pacijent int not null
 );
+
+
+
+alter table doktor add foreign key(pacijent) references pacijent(sifra);
+alter table sestra add foreign key(doktor) references doktor(sifra);
+alter table pacijent add foreign key(lijecenje) references lijecenje(sifra);

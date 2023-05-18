@@ -9,6 +9,7 @@ create table urar(
 	sifra int not null primary key identity(1,1),
 	ime varchar(50) not null,
 	prezime varchar(50) not null,
+	popravak int not null,
 	segrt int not null
 );
 
@@ -36,3 +37,11 @@ create table segrt(
 	prezime varchar(50) not null,
 	popravak int not null
 );
+
+
+
+alter table urar add foreign key(popravak) references popravak(sifra);
+alter table korisnik add foreign key(sat) references sat(sifra);
+alter table sat add foreign key(popravak) references popravak(sifra);
+alter table urar add foreign key(segrt) references segrt(sifra);
+alter table segrt add foreign key(popravak) references popravak(sifra);
