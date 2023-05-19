@@ -7,45 +7,52 @@ use facewp1;
 
 create table osoba(
 	sifra int not null primary key identity(1,1),
-	ime varchar(25),
-	prezime varchar(25),
-	datum_rodenja datetime not null,
-	email varchar(50),
-	lozinka varchar(60),
-	broj_tel int not null,
-	slika varchar(100) not null,
-	administrator bit,
-	stanje bit,
-	aktivan bit,
+	ime varchar(25) not null,
+	prezime varchar(25) not null,
+	datum_rodenja datetime,
+	email varchar(50) not null,
+	lozinka varchar(60) not null,
+	broj_tel int,
+	slika varchar(100),
+	administrator bit not null,
+	stanje bit not null,
+	aktivan bit not null,
 	uniqueid varchar(255)
 );
 
 create table svidamise(
 	sifra int not null primary key identity(1,1),
-	vrijeme_svidanja datetime,
-	objava int not null,
-	osoba int not null
+	vrijeme_svidanja datetime not null,
+	objava int,
+	osoba int
 );
 
 create table svidamise_komentar(
 	sifra int not null primary key identity(1,1),
-	osoba int not null,
-	komentar int not null
+	osoba int,
+	komentar int
 );
 
 create table objava(
 	sifra int not null primary key identity(1,1),
-	naslov varchar(50),
-	upis varchar(250),
-	vrijeme_izrade datetime,
-	ipadres varchar(20) not null,
-	osoba int not null
+	naslov varchar(50) not null,
+	upis varchar(250) not null,
+	vrijeme_izrade datetime not null,
+	ipadres varchar(20),
+	osoba int
 );
 
 create table komentar(
 	sifra int not null primary key identity(1,1),
-	vrijeme_komentiranja datetime,
-	opis varchar(250) not null,
-	objava int not null,
-	osoba int not null
+	vrijeme_komentiranja datetime not null,
+	opis varchar(250),
+	objava int,
+	osoba int
 );
+
+
+
+alter table svidamise add foreign key(objava) references objava(sifra);
+alter table komentar add foreign key(objava) references objava(sifra);
+alter table svidamise_komentar add foreign key(komentar) references komentar(sifra);
+alter table objava add foreign key(osoba) references osoba(sifra);
