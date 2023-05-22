@@ -56,3 +56,9 @@ alter table svidamise add foreign key(objava) references objava(sifra);
 alter table komentar add foreign key(objava) references objava(sifra);
 alter table svidamise_komentar add foreign key(komentar) references komentar(sifra);
 alter table objava add foreign key(osoba) references osoba(sifra);
+
+
+select * from osoba;
+insert into osoba(ime,prezime,email,lozinka,administrator,stanje,aktivan)
+values	('Ime01','Prezime01','ime01@mail.com','12345',1,1,1),
+		('Ime02','Prezime02','ime02@mail.com','45678',0,0,0);
