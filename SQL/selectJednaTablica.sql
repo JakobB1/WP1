@@ -1,71 +1,71 @@
--- komentar
+-- do sada smo vidjeli ovu naredbu
+
 select * from smjer;
 
-
--- komentar
+-- minimalni dio select naredbe
 select 1;
 
--- komentar
-select sifra,naziv from smjer; --komentar
- 
-select sifra,naziv,sifra from smjer;
+-- filtriranjem kolona
+select sifra, naziv from smjer; -- sifra, naziv su select lista
+
+SELECT SIFRA,NAZIV,SIFRA FROM SMJER;
 
 select *,naziv, * from smjer;
 
---komentar
---komentar
---komentar
+-- u select listi se može nalaziti
+-- *, naziv kolone
+-- konstanta
 select naziv, 'Osijek', 2 from smjer;
 
---komentar
+-- kolone mogu imati zamjenska imena
 
 select naziv as nazivsmjera, 'Osijek' as grad from smjer;
 
---komentar
+-- izraz (funkcija)
 
 select naziv, getdate() from smjer;
 
 select upper(naziv) as smjer, getdate() as datum from smjer;
 
--- ispisite imena i prezimena osoba
-select * from polaznik;
-select ime,prezime from polaznik;
+-- ispišite imena i prezimena polaznika
+select ime, prezime from polaznik;
 
--- komentar
+
+-- filtriranje redova
 select * from polaznik;
 
--- komentar
+-- od prošli puta
 select * from polaznik where sifra=2;
 
--- komentar
--- komentar
--- komentar
+-- u where dijelu se nalaze operatori
+-- Operatori usporeðivanja
+-- = != (<>) < > <= >=
 select * from polaznik where sifra<>2;
 select * from polaznik where sifra>2;
 select * from polaznik where sifra<=2;
 select * from polaznik where ime='Luka';
 
--- komentar
--- komentar
+-- logièki operatori -> èitati: https://i.ytimg.com/vi/7dvqfpXEjdg/maxresdefault.jpg
+-- and or not
 select * from polaznik where sifra>2 and sifra<5;
 
 select * from polaznik where sifra=2 or sifra=3;
 
 select * from polaznik where not (sifra>3 and sifra<5);
 
-select * from polaznik where 
-ime='Luka' and prezime='Bušic';
+select * from polaznik where
+ime='Luka' and prezime='Bušiæ';
 
--- izlistajte sve polaznike koji se ne zovu luka
-select * from polaznik where not ime='Luka';
--- komentar
--- komentar
+-- izlistajte sve polaznike koji se ne zovu Luka
+
+-- operatori algebre
+-- + - / *
 update smjer set cijena = cijena * 1.1;
 
--- komentar
--- komentar
-select * from polaznik where ime like 'L%' ;
-select * from polaznik where ime like 'L%A' ;
+-- Ostali operatori
+-- like, between, in, is null, is not null
+select * from polaznik where ime like 'L%';
+select * from polaznik where ime like 'L%A';
 
 select * from polaznik where ime like '%nt%';
 
@@ -78,3 +78,10 @@ select * from smjer;
 select * from smjer where cijena is null;
 
 select * from smjer where cijena is not null;
+
+
+
+
+
+
+
