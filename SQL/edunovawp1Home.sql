@@ -43,6 +43,10 @@ alter table clan add foreign key (grupa) references grupa(sifra);
 alter table clan add foreign key (polaznik) references polaznik(sifra);
 
 
+
+
+
+-- INSERT
 -- najlošiji način
 -- 1
 insert into smjer
@@ -107,6 +111,7 @@ values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),
 
 
 
+
 -- vježbanje:
 -- 1. Unijeti smjer PHP programiranje
 -- 2. Na PHP pregoramiranje definirati dvije grupe (PP17 i PP18)
@@ -131,9 +136,13 @@ values (4,5),
 	   (4,15);
 
 
+
+
+
 -- Domaća zadaća:
 -- U sve baze koje ste kreirali na osnovu zadatka ERA osnovno unijeti u svaku tablicu po 3 - 5 redova
 
+-- +Rješeno (Folder WP1/SQL/Vjezbanje - ERA Osnovno)
 
 
 
@@ -141,10 +150,9 @@ values (4,5),
 
 -- PROMJENA PODATAKA
 
---select * from smjer;
-
 -- ne izvoditi update bez where dijela update naredbe
 
+select * from smjer;
 update smjer set naziv='Web programiranje'
 where sifra=1;
 
@@ -155,32 +163,47 @@ cijena=1200,
 upisnina=50
 where sifra=3;
 
---select * from grupa;
 
---update grupa set smjer=11 where sifra=1;
+-- Vjezba sa nastave
+-- select * from grupa;
+-- update grupa set smjer=11 where sifra=1;
+
 
 
 -- zadatak
---select * from polaznik;
+
 -- Ivor Ćelić se udao. Uzeo je ženinno prezime Herc
 -- Provedite promjenu u bazi
+select * from polaznik;
+
+update polaznik set prezime='Herc' where sifra=18;
 
 -- Leon Bićak ima 
---novu email adresu: lbicak@ht.hr i njegov oib je 25698545854
+-- novu email adresu: lbicak@ht.hr i njegov oib je 25698545854
+select * from polaznik;
+
+update polaznik set email='lbicak@ht.hr' where sifra=10;
+
+
+
 
 
 -- BRISANJE PODATAKA
 
---select * from clan;
+-- select * from clan;
 -- DELETE naredbe su zakomentirane da nam ne pobrišu podatke
---delete from clan where grupa=1;
+-- delete from clan where grupa=1;
 
---delete from grupa where smjer=1;
+-- delete from grupa where smjer=1;
 
---delete from smjer where sifra=1;
+-- delete from smjer where sifra=1;
+
+
 
 -- moguće je promjena i brisanje kroz više tablica
 -- ali o tome nakon spajanja tablica
 
 -- Domaća zadaća: Za ponedjeljak (22. 05.) na svoj github postaviti 
 -- prvu verziju ER dijagrama završnog rada kao sliku s papira. 
+
+-- +Rješeno (Folder WP1/SQL/Vjezbanje - ERA Osnovno)
