@@ -98,8 +98,6 @@ values
 
 
 
-
-
 insert into clan(grupa,polaznik)
 values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),
 (1,7),(1,8),(1,9),(1,10),(1,11),(1,12),(1,13),(1,14),
@@ -115,3 +113,54 @@ values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),
 
 -- Domaća zadaća:
 -- U sve baze koje ste kreirali na osnovu zadatka ERA osnovno unijeti u svaku tablicu po 3 - 5 redova
+
+
+
+
+
+
+-- PROMJENA PODATAKA
+
+--select * from smjer;
+
+-- ne izvoditi update bez where dijela update naredbe
+
+update smjer set naziv='Web programiranje'
+where sifra=1;
+
+
+-- promjeni cijenu serviseru na 1200 EUR i upisninu na 50 EUR
+update smjer set
+cijena=1200,
+upisnina=50
+where sifra=3;
+
+--select * from grupa;
+
+update grupa set smjer=11 where sifra=1;
+
+
+-- zadatak
+--select * from polaznik;
+-- Ivor Ćelić se udao. Uzeo je ženinno prezime Herc
+-- Provedite promjenu u bazi
+
+-- Leon Bićak ima 
+--novu email adresu: lbicak@ht.hr i njegov oib je 25698545854
+
+
+-- BRISANJE PODATAKA
+
+--select * from clan;
+-- DELETE naredbe su zakomentirane da nam ne pobrišu podatke
+--delete from clan where grupa=1;
+
+--delete from grupa where smjer=1;
+
+--delete from smjer where sifra=1;
+
+-- moguće je promjena i brisanje kroz više tablica
+-- ali o tome nakon spajanja tablica
+
+-- Domaća zadaća: Za ponedjeljak (22. 05.) na svoj github postaviti 
+-- prvu verziju ER dijagrama završnog rada kao sliku s papira. 
