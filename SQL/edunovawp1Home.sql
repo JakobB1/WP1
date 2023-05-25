@@ -1,10 +1,10 @@
 ﻿-- ovo je komentar i neće se izvesti
 use master;
-drop database if exists edunovawp1;
+drop database if exists edunovawp1Home;
 go
-create database edunovawp1;
+create database edunovawp1Home;
 go
-use edunovawp1;
+use edunovawp1Home;
 
 create table smjer(
 	sifra int not null primary key identity(1,1),
@@ -105,10 +105,30 @@ values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),
 (1,21),(1,22),(1,23),(1,24),(1,25);
 
 
+
+
 -- vježbanje:
 -- 1. Unijeti smjer PHP programiranje
 -- 2. Na PHP pregoramiranje definirati dvije grupe (PP17 i PP18)
 -- 3. Na PP18 postaviti 3 polaznika (koje ste prethodno unijeli)
+
+-- 1.
+select * from smjer;
+
+insert into smjer(naziv,trajanje)
+values ('PHP programiranje',180);
+-- 2.
+select * from grupa;
+
+insert into grupa(naziv,smjer,datumpocetka)
+values ('PP17',4,'2023-06-30 17:00:00'),
+       ('PP18',4,'2023-12-30 17:00:00');
+-- 3.
+select * from clan;
+insert into clan(grupa,polaznik)
+values (4,5),
+       (4,10),
+	   (4,15);
 
 
 -- Domaća zadaća:
@@ -137,7 +157,7 @@ where sifra=3;
 
 --select * from grupa;
 
-update grupa set smjer=11 where sifra=1;
+--update grupa set smjer=11 where sifra=1;
 
 
 -- zadatak
