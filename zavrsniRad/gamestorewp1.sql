@@ -34,15 +34,20 @@ create table korisnik(
 create table narudzba(
 	sifra int not null primary key identity(1,1),
 	korisnik_id int not null,
-	placanje varchar(50),
+	placanje varchar(50) not null,
 	datum datetime not null
 );
 
 create table narudzba_igra(
 	sifra int not null primary key identity(1,1),
+	igra_id int not null,
 	narudzba_id int not null,
 	kolicina int not null
 );
 
 
 
+alter table igra add foreign key(izdavac_id) references izdavac(sifra);
+alter table narudzba add foreign key(korisnik_id) references korisnik(sifra);
+alter table narudzba_igra add foreign key(igra_id) references igra(sifra);
+alter table narudzba_igra add foreign key(narudzba_id) references narudzba(sifra);
