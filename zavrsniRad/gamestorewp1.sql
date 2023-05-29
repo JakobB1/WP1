@@ -43,3 +43,6 @@ create table narudzba_igra(
 	narudzba_id int not null,
 	kolicina int not null
 );
+
+
+
