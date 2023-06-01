@@ -5,11 +5,6 @@ create database frizerskiwp1;
 go
 use frizerskiwp1;
 
-create table salon(
-    sifra int not null primary key identity(1,1),
-    naziv varchar(50),
-    djelatnica int not null
-);
 
 create table djelatnica(
     sifra int not null primary key identity(1,1),
@@ -35,44 +30,5 @@ create table usluga(
 
 
 
-alter table salon add foreign key (djelatnica) references djelatnica (sifra);
 alter table djelatnica add foreign key (korisnik) references korisnik (sifra);
 alter table korisnik add foreign key (usluga) references usluga (sifra);
-
-
-
-select * from usluga;
-insert into usluga(naziv,cijena)
-values ('Usluga01',99.99),
-       ('Usluga02',199.99),
-       ('Usluga03',299.99),
-       ('Usluga04',399.99),
-       ('Usluga05',499.99);
-
-
-
-select * from korisnik;
-insert into korisnik(ime,prezime,usluga)
-values ('Korisnik01','Prezime01',4),
-       ('Korisnik02','Prezime02',2),
-       ('Korisnik03','Prezime03',5),
-       ('Korisnik04','Prezime04',2),
-       ('Korisnik05','Prezime05',1);
-
-
-select * from djelatnica;
-insert into djelatnica(ime,korisnik)
-values ('Djelatnica01',3),
-       ('Djelatnica02',1),
-       ('Djelatnica03',2),
-       ('Djelatnica04',5),
-       ('Djelatnica05',4);
-
-
-select * from salon;
-insert into salon(naziv,djelatnica)
-values ('Salon01',5),
-       ('Salon02',3),
-       ('Salon03',1),
-       ('Salon04',2),
-       ('Salon05',4);
