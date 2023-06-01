@@ -6,6 +6,7 @@ go
 use frizerskiwp1;
 
 
+--CREATE TABLE
 create table djelatnica(
     sifra int not null primary key identity(1,1),
     ime varchar(50) not null,
