@@ -43,7 +43,7 @@ alter table termin add foreign key(usluga) references usluga(sifra);
 select * from djelatnica;
 --Insert
 insert into djelatnica(ime,prezime,kontakt)
-values	('Ime01','Prezime01','091 000 0000'),
+values		('Ime01','Prezime01','091 000 0000'),
 		('Ime02','Prezime02','092 000 0000'),
 		('Ime03','Prezime03','093 000 0000'),
 		('Ime04','Prezime04','094 000 0000'),
