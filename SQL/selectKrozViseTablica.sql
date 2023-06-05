@@ -88,6 +88,17 @@ where c.ime='August' and c.prezime='Šenoa';
 
 -- Izlistajte sve naslove koje su izdali 
 -- izdavači čiji naziv počinje s slovom E
-select  b.naslov
+select  b.naslov, a.naziv
 from izdavac a inner join katalog b on a.sifra=b.izdavac
-where a.naziv like 'E%';
+where a.naziv like 'E%' order by 2;
+
+
+-- Koji autori nisu izdali niti jednu knjigu
+select a.ime, a.prezime, b.sifra
+from autor a left join katalog b on a.sifra=b.autor
+where b.sifra is null;
+
+-- Koja su jedinstevena imena autora koji nisu izdali niti jednu knjigu
+select distinct a.ime
+from autor a left join katalog b on a.sifra=b.autor
+where b.sifra is null;
