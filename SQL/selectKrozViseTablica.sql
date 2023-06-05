@@ -102,3 +102,47 @@ where b.sifra is null;
 select distinct a.ime
 from autor a left join katalog b on a.sifra=b.autor
 where b.sifra is null;
+
+-- baza svastara
+-- izlistati sve nazive mjesta u Osječko baranjskoj županiji
+
+select a.naziv, c.naziv
+from zupanije a inner join opcine b on a.sifra=b.zupanija
+inner join mjesta c on b.sifra=c.opcina
+where a.naziv like 'Osje%';
+
+-- izlistajte sve nazive dobavljača iz mjest Osijek
+
+select a.naziv
+from dobavljaci a inner join mjesta b on a.mjesto=b.sifra
+where b.naziv='Osijek';
+
+-- U kojim mjestima postoje dobavljači
+select b.naziv
+from dobavljaci a inner join mjesta b on a.mjesto=b.sifra;
+
+select a.naziv
+from dobavljaci a inner join mjesta b on a.mjesto=b.sifra
+where b.naziv='Antolovec';
+
+-- Koje je sve jedinstvene nazive artikle dobavio dobavljač
+-- Kovalos d.o.o
+
+select distinct d.kratkiNaziv
+from dobavljaci a inner join 
+Primke b on b.dobavljac=a.sifra
+inner join ArtikliNaPrimci c on 
+c.primka=b.sifra
+inner join Artikli d on 
+c.artikl=d.sifra
+where a.naziv='Kovalos d.o.o'
+order by 1;
+
+-- Izlistajte sve kupce iz mjesta Antolovec
+
+select top 10 * from kupci;
+
+select distinct a.ime,a.prezime
+from kupci a inner join mjesta b
+on a.mjesto=b.sifra
+where b.naziv='Antolovec';
