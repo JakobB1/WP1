@@ -16,6 +16,8 @@ select top 10 percent ime from polaznik order by ime desc; -- prvih 10 %
 -- dodavanje kolone tablici
 alter table smjer add iznos decimal(18,2);
 
+select rand();
+
 update smjer set iznos=rand()*1000;
 
 --zabraniti nepoznavanje dodatka
@@ -23,6 +25,8 @@ alter table smjer alter column iznos decimal(18,2) not null ;
 
 -- povećati iznos za 10%
 update smjer set iznos=iznos*1.1;
+
+select * from smjer;
 
 -- smanjiti za 10 %
 update smjer set iznos=iznos*0.9;
@@ -79,7 +83,8 @@ where b.grupa is null;
 --left(X) - prima jedan parametar
 --funkcije primaju više parametara odvojenih zarezom
 --concat nadoljepljuje stringove (y,y,y,y,y)
-select getdate(),ime, left(ime,1) from polaznik;
+select getdate(),ime, left(ime,1),
+left('Osijek',2)from polaznik;
 
 select getdate();
 
@@ -88,7 +93,7 @@ select 1;
 select 
 concat(
 	left(lower(ime),1),
-lower(prezime)
+	lower(prezime)
 )
 from polaznik;
 
@@ -171,7 +176,8 @@ BEGIN
 END
 
 
-insert into polaznik (ime,prezime,email) values ('Pero','Perić','email');
+insert into polaznik (ime,prezime,email) 
+values ('Pero','Perić','email');
 
 select * from logiranje;
 
