@@ -137,7 +137,8 @@ where sifra=3;
 
 --select * from grupa;
 
-update grupa set smjer=11 where sifra=1;
+-- ne može se izvesti jer nema smjera s šifrom 11
+--update grupa set smjer=11 where sifra=1;
 
 
 -- zadatak
