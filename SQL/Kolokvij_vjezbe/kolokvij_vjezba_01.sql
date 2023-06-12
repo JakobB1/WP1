@@ -1,9 +1,9 @@
 use master;
-drop database if exists kolokvij_vjezba_1;
+drop database if exists kolokvij_vjezba_01;
 go
-create database kolokvij_vjezba_1;
+create database kolokvij_vjezba_01;
 go
-use kolokvij_vjezba_1;
+use kolokvij_vjezba_01;
 
 create table sestra(
 	sifra int not null primary key identity(1,1),
