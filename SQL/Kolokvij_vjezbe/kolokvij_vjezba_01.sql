@@ -5,8 +5,7 @@ create database kolokvij_vjezba_01;
 go
 use kolokvij_vjezba_01;
 
-
---0. Kreirajte tablice i veze između tablica.
+--0. Kreirajte tablice i veze između tablica
 create table sestra(
 	sifra int not null primary key identity(1,1),
 	introvertno bit,

@@ -1,10 +1,11 @@
-use master;
+﻿use master;
 drop database if exists kolokvij_vjezba_19;
 go
 create database kolokvij_vjezba_19;
 go
 use kolokvij_vjezba_19;
 
+--0. Kreirajte tablice i veze između tablica
 create table decko(
 	sifra int not null primary key identity(1,1),
 	modelnaocala varchar(42) not null,

@@ -1,10 +1,11 @@
-use master;
+﻿use master;
 drop database if exists kolokvij_vjezba_04;
 go
 create database kolokvij_vjezba_04;
 go
 use kolokvij_vjezba_04;
 
+--0. Kreirajte tablice i veze između tablica
 create table ostavljen(
 	sifra int not null primary key identity(1,1),
 	modelnaocala varchar(43),

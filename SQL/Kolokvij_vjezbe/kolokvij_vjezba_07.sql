@@ -1,10 +1,11 @@
-use master;
+﻿use master;
 drop database if exists kolokvij_vjezba_07;
 go
 create database kolokvij_vjezba_07;
 go
 use kolokvij_vjezba_07;
 
+--0. Kreirajte tablice i veze između tablica
 create table cura(
 	sifra int not null primary key identity(1,1),
 	lipa decimal(12,9) not null,

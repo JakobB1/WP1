@@ -1,10 +1,11 @@
-use master;
+﻿use master;
 drop database if exists kolokvij_vjezba_13;
 go
 create database kolokvij_vjezba_13;
 go
 use kolokvij_vjezba_13;
 
+--0. Kreirajte tablice i veze između tablica
 create table muskarac(
 	sifra int not null primary key identity(1,1),
 	dukserica varchar(34),

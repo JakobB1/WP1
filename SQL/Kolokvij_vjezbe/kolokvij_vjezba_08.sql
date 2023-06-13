@@ -1,10 +1,11 @@
-use master;
+﻿use master;
 drop database if exists kolokvij_vjezba_08;
 go
 create database kolokvij_vjezba_08;
 go
 use kolokvij_vjezba_08;
 
+--0. Kreirajte tablice i veze između tablica
 create table prijateljica(
 	sifra int not null primary key identity(1,1),
 	vesta varchar(50),

@@ -1,10 +1,11 @@
-use master;
+﻿use master;
 drop database if exists kolokvij_vjezba_18;
 go
 create database kolokvij_vjezba_18;
 go
 use kolokvij_vjezba_18;
 
+--0. Kreirajte tablice i veze između tablica
 create table ostavljena(
 	sifra int not null primary key identity(1,1),
 	novcica decimal(18,9),

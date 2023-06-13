@@ -1,10 +1,11 @@
-use master;
+﻿use master;
 drop database if exists kolokvij_vjezba_06;
 go
 create database kolokvij_vjezba_06;
 go
 use kolokvij_vjezba_06;
 
+--0. Kreirajte tablice i veze između tablica
 create table punac(
 	sifra int not null primary key identity(1,1),
 	ekstrovertno bit not null,
