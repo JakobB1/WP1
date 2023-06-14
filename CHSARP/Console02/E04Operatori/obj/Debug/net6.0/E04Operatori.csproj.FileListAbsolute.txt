@@ -1,0 +1,15 @@
+D:\WP1\CHSARP\Console02\E04Operatori\bin\Debug\net6.0\E04Operatori.exe
+D:\WP1\CHSARP\Console02\E04Operatori\bin\Debug\net6.0\E04Operatori.deps.json
+D:\WP1\CHSARP\Console02\E04Operatori\bin\Debug\net6.0\E04Operatori.runtimeconfig.json
+D:\WP1\CHSARP\Console02\E04Operatori\bin\Debug\net6.0\E04Operatori.dll
+D:\WP1\CHSARP\Console02\E04Operatori\bin\Debug\net6.0\E04Operatori.pdb
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.csproj.AssemblyReference.cache
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.GeneratedMSBuildEditorConfig.editorconfig
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.AssemblyInfoInputs.cache
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.AssemblyInfo.cs
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.csproj.CoreCompileInputs.cache
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.dll
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\refint\E04Operatori.dll
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.pdb
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\E04Operatori.genruntimeconfig.cache
+D:\WP1\CHSARP\Console02\E04Operatori\obj\Debug\net6.0\ref\E04Operatori.dll
