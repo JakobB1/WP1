@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleApp02": {
+      "commandName": "Project",
+      "commandLineArgs": "Edunova"
+    }
+  }
+}
