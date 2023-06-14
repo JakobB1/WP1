@@ -75,3 +75,10 @@ create table zena(
 	prviputa datetime,
 	mladic int
 );
+
+alter table sestra add foreign key(zarucnica) references zarucnica(sifra);
+alter table zena add foreign key(mladic) references mladic(sifra);
+alter table mladic add foreign key(svekrva) references svekrva(sifra);
+alter table svekrva add foreign key(punac) references punac(sifra);
+alter table punac_neprijatelj add foreign key(punac) references punac(sifra);
+alter table punac_neprijatelj add foreign key(neprijatelj) references neprijatelj(sifra);

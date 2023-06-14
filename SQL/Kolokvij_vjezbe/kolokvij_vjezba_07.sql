@@ -74,3 +74,10 @@ create table sestra(
 	maraka decimal(12,8) not null,
 	prijateljica int 
 );
+
+alter table punica add foreign key(cura) references cura(sifra);
+alter table sestra add foreign key(prijateljica) references prijateljica(sifra);
+alter table prijateljica add foreign key(ostavljen) references ostavljen(sifra);
+alter table ostavljen add foreign key(zarucnik) references zarucnik(sifra);
+alter table zarucnik_mladic add foreign key(zarucnik) references zarucnik(sifra);
+alter table zarucnik_mladic add foreign key(mladic) references mladic(sifra);
