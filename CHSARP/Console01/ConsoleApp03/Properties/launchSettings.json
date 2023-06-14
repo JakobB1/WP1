@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleApp03": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Osijek Zagreb\" Pero"
+    }
+  }
+}
