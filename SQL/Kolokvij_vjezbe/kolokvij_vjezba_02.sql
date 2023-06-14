@@ -73,3 +73,10 @@ create table brat(
 	asocijalno bit not null,
 	neprijatelj int not null
 );
+
+alter table prijatelj add foreign key(svekar) references svekar(sifra);
+alter table brat add foreign key(neprijatelj) references neprijatelj(sifra);
+alter table neprijatelj add foreign key(cura) references cura(sifra);
+alter table cura add foreign key(decko) references decko(sifra);
+alter table decko_zarucnica add foreign key(decko) references decko(sifra);
+alter table decko_zarucnica add foreign key(zarucnica) references zarucnica(sifra);

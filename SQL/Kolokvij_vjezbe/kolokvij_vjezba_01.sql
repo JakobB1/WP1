@@ -80,7 +80,6 @@ create table sestra_svekar(
 	svekar int not null
 );
 
-
 alter table cura add foreign key(punac) references punac(sifra);
 alter table mladic add foreign key(muskarac) references muskarac(sifra);
 alter table muskarac add foreign key(zena) references zena(sifra);
