@@ -74,3 +74,10 @@ create table punica(
 	bojakose varchar(37) not null,
 	djevojka int not null
 );
+
+alter table muskarac add foreign key(neprijatelj) references neprijatelj(sifra);
+alter table punica add foreign key(djevojka) references djevojka(sifra);
+alter table djevojka add foreign key(svekrva) references svekrva(sifra);
+alter table svekrva add foreign key(punac) references punac(sifra);
+alter table punac_mladic add foreign key(punac) references punac(sifra);
+alter table punac_mladic add foreign key(mladic) references mladic(sifra);

@@ -79,3 +79,10 @@ create table svekrva(
 	gustoca decimal(18,9) not null,
 	ostavljen int not null
 );
+
+alter table djevojka add foreign key(mladic) references mladic(sifra);
+alter table svekrva add foreign key(ostavljen) references ostavljen(sifra);
+alter table ostavljen add foreign key(cura) references cura(sifra);
+alter table cura add foreign key(zena) references zena(sifra);
+alter table zena_brat add foreign key(zena) references zena(sifra);
+alter table zena_brat add foreign key(brat) references brat(sifra);

@@ -77,3 +77,10 @@ create table cura(
 	majica varchar(50),
 	mladic int
 );
+
+alter table neprijatelj add foreign key(muskarac) references muskarac(sifra);
+alter table cura add foreign key(mladic) references mladic(sifra);
+alter table mladic add foreign key(ostavljen) references ostavljen(sifra);
+alter table ostavljen add foreign key(svekrva) references svekrva(sifra);
+alter table svekrva_svekar add foreign key(svekrva) references svekrva(sifra);
+alter table svekrva_svekar add foreign key(svekar) references svekar(sifra);

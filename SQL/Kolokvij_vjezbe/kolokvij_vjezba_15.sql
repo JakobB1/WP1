@@ -49,6 +49,7 @@ create table zarucnik_ostavljena(
 );
 
 create table zarucnica(
+	sifra int not null primary key identity(1,1),
 	prviputa datetime not null,
 	bojaociju varchar(31) not null,
 	modelnaocala varchar(40),
@@ -70,3 +71,10 @@ create table decko(
 	gustoca decimal(18,7),
 	prijatelj int not null
 );
+
+alter table prijateljica add foreign key(brat) references brat(sifra);
+alter table decko add foreign key(prijatelj) references prijatelj(sifra);
+alter table prijatelj add foreign key(zarucnica) references zarucnica(sifra);
+alter table zarucnica add foreign key(zarucnik) references zarucnik(sifra);
+alter table zarucnik_ostavljena add foreign key(zarucnik) references zarucnik(sifra);
+alter table zarucnik_ostavljena add foreign key(ostavljena) references ostavljena(sifra);

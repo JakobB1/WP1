@@ -77,3 +77,10 @@ create table zarucnica(
 	treciputa datetime,
 	decko int
 );
+
+alter table neprijateljica add foreign key(zena) references zena(sifra);
+alter table zarucnica add foreign key(decko) references decko(sifra);
+alter table decko add foreign key(punica) references punica(sifra);
+alter table punica add foreign key(mladic) references mladic(sifra);
+alter table mladic_zarucnik add foreign key(mladic) references mladic(sifra);
+alter table mladic_zarucnik add foreign key(zarucnik) references zarucnik(sifra);

@@ -47,7 +47,7 @@ create table brat_becar(
 	becar int not null
 );
 
-create table ostvaljen(
+create table ostavljen(
 	sifra int not null primary key identity(1,1),
 	bojaociju varchar(45),
 	bojakose varchar(33),
@@ -73,3 +73,10 @@ create table prijateljica(
 	modelnaocala varchar(41) not null,
 	cura int
 );
+
+alter table punica add foreign key(prijatelj) references prijatelj(sifra);
+alter table prijateljica add foreign key(cura) references cura(sifra);
+alter table cura add foreign key(ostavljen) references ostavljen(sifra);
+alter table ostavljen add foreign key(brat) references brat(sifra);
+alter table brat_becar add foreign key(brat) references brat(sifra);
+alter table brat_becar add foreign key(becar) references becar(sifra);

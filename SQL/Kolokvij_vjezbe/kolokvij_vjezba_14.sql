@@ -76,3 +76,10 @@ create table ostavljena(
 	gustoca decimal(12,10) not null,
 	ostavljen int
 );
+
+alter table prijatelj add foreign key(mladic) references mladic(sifra);
+alter table ostavljena add foreign key(ostavljen) references ostavljen(sifra);
+alter table ostavljen add foreign key(brat) references brat(sifra);
+alter table brat add foreign key(neprijatelj) references neprijatelj(sifra);
+alter table neprijatelj_muskrac add foreign key(neprijatelj) references neprijatelj(sifra);
+alter table neprijatelj_muskrac add foreign key(muskarac) references muskarac(sifra);
