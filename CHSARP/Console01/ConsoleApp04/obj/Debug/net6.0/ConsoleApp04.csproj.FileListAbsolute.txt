@@ -1,0 +1,15 @@
+D:\WP1\CHSARP\Console01\ConsoleApp04\bin\Debug\net6.0\ConsoleApp04.exe
+D:\WP1\CHSARP\Console01\ConsoleApp04\bin\Debug\net6.0\ConsoleApp04.deps.json
+D:\WP1\CHSARP\Console01\ConsoleApp04\bin\Debug\net6.0\ConsoleApp04.runtimeconfig.json
+D:\WP1\CHSARP\Console01\ConsoleApp04\bin\Debug\net6.0\ConsoleApp04.dll
+D:\WP1\CHSARP\Console01\ConsoleApp04\bin\Debug\net6.0\ConsoleApp04.pdb
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.csproj.AssemblyReference.cache
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.GeneratedMSBuildEditorConfig.editorconfig
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.AssemblyInfoInputs.cache
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.AssemblyInfo.cs
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.csproj.CoreCompileInputs.cache
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.dll
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\refint\ConsoleApp04.dll
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.pdb
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ConsoleApp04.genruntimeconfig.cache
+D:\WP1\CHSARP\Console01\ConsoleApp04\obj\Debug\net6.0\ref\ConsoleApp04.dll
