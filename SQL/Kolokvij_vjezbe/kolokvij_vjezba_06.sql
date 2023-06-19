@@ -80,3 +80,83 @@ alter table zena add foreign key(brat) references brat(sifra);
 alter table brat add foreign key(prijatelj) references prijatelj(sifra);
 alter table prijatelj_ostavljena add foreign key(prijatelj) references prijatelj(sifra);
 alter table prijatelj_ostavljena add foreign key(ostavljena) references ostavljena(sifra);
+
+--1. U tablice zena, brat i prijatelj_ostavljena unesite po 3 retka.
+select * from prijatelj;
+insert into prijatelj(prstena,stilfrizura)
+values  
+(3,'Kratka'),
+(5,'Duga'),
+(7,'Celavo');
+              
+select * from brat;
+insert into brat(nausnica,treciputa,narukvica)
+values  (8,'2021-11-21',1),
+        (5,'2017-12-11',5),
+        (8,'2013-09-23',9);      
+       
+select * from zena;
+insert into zena(novcica,narukvica,dukserica,brat)
+values  
+(10.99,3,'Plava',1),
+(20.99,8,'Zelena',2),
+(30.99,1,'Crna',3);        
+       
+select * from ostavljena;
+insert into ostavljena(prviputa,kratkamajica)
+values  
+('2020-12-03','Plava kratka'),
+('2019-04-23','Zelena duga'),
+('2018-11-13','Crna kratka');
+               
+select * from prijatelj_ostavljena;
+insert into prijatelj_ostavljena(prijatelj,ostavljena)
+values  
+(1,3),
+(2,2),
+(3,1);
+
+--2. U tablici svekrva postavite svim zapisima kolonu suknja na vrijednost Osijek.
+select * from punac;
+insert into punac(ekstrovertno,suknja,majica,prviputa)
+values  
+(0,'Kratka','Dugih rukava','2024-04-04'),
+(1,'Duga','Kratkih rukava','2023-12-11'),
+(1,'Plava','Crna','2021-11-01');
+        
+select * from svekrva;
+insert into svekrva(hlace,suknja,ogrlica,treciputa,dukserica,narukvica,punac)
+values  
+('Plave','Crna',3,'2019-12-31','Duga',3,1),
+('Crne','Plava',5,'2012-10-24','Crna',3,1),
+('Zelene','Zuta',1,'2013-11-01','Plava',3,1);
+        
+update svekrva set suknja='Osijek';
+
+--3. U tablici decko obrišite sve zapise čija je vrijednost kolone modelnaocala manje od AB.
+delete from decko where modelnaocala<'AB';
+
+--4. Izlistajte narukvica iz tablice brat uz uvjet da vrijednost kolone treciputa nepoznate.
+select narukvica from brat where treciputa is null;
+
+--5. 
+--Prikažite drugiputa iz tablice ostavljena, zena iz tablice decko te narukvica iz tablice zena 
+
+--uz uvjet da su vrijednosti kolone treciputa iz tablice brat poznate 
+--te da su vrijednosti kolone prstena iz tablice prijatelj jednake broju 219. 
+--Podatke posložite po narukvica iz tablice zena silazno.
+select a.drugiputa , f.zena , e.narukvica 
+from ostavljena a
+inner join prijatelj_ostavljena b on a.sifra      = b.ostavljena 
+inner join prijatelj            c on b.prijatelj  = c.sifra
+inner join brat                 d on c.sifra      = d.prijatelj 
+inner join zena                 e on d.sifra      = e.brat
+inner join decko                f on e.sifra      = f.zena
+where d.treciputa is not null and c.prstena = 219
+order by e.narukvica desc;
+
+--6. Prikažite kolone prstena i introvertno iz tablice prijatelj 
+--čiji se primarni ključ ne nalaze u tablici prijatelj_ostavljena.
+select	a.prstena , a.introvertno
+from	prijatelj a left join prijatelj_ostavljena b on a.sifra = b.prijatelj 
+where	b.prijatelj is null; 
