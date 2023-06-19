@@ -86,3 +86,32 @@ alter table muskarac add foreign key(zena) references zena(sifra);
 alter table zena add foreign key(sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key(sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key(svekar) references svekar(sifra);
+
+--1. U tablice muskarac, zena i sestra_svekar unesite po 3 retka.
+select * from sestra;
+insert into sestra(haljina,hlace,narukvica)
+values	('Plava haljina','Kratke hlace',3),
+		('Zuta haljina','Duge hlace',4),
+		('Zelena haljina','Crne hlace',5);
+      
+select * from zena;
+insert into zena(kratkamajica,jmbag,bojaociju,sestra)
+values	('Plava majica',111111,'zelena',2),
+		('Zelena majica',222222,'plava',3),
+		('Crna majica',333333,'smeda',1);
+          
+select * from muskarac;
+insert into muskarac(bojaociju,maraka,zena)
+values	('Crna',10.10,3),
+		('Plava',20.20,1),
+		('Zelena',30.30,2);
+           
+select * from svekar;
+insert into svekar(bojaociju,eura,majica)
+values	('Plava',40.00,'Crna majica'),
+		('Crna',50.00,'Bijela majica'),
+		('Zelena',60.00,'Plava majica');
+
+select * from sestra_svekar;
+insert into sestra_svekar(sestra,svekar) 
+values	(1,1),(2,2),(3,3);
