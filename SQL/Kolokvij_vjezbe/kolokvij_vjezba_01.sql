@@ -118,4 +118,60 @@ values
 
 select * from sestra_svekar;
 insert into sestra_svekar(sestra,svekar) 
-values	(1,1),(2,2),(3,3);
+values	
+(1,1),
+(2,2),
+(3,3);
+
+--2. U tablici cura postavite svim zapisima kolonu gustoca na vrijednost 15,77.
+select * from cura;
+insert into cura(novcica,gustoca,ogrlica)
+values
+(10.10,10,1),
+(20.50,20,2),
+(30.50,30,3);
+
+update cura set gustoca = 15.77;
+
+--3. U tablici mladic obrišite sve zapise čija je vrijednost kolone kuna veće od 15,78.
+select * from mladic;
+insert into mladic(suknja,kuna,ekstrovertno,dukserica)
+values 
+('Suknja01',22.22,0,'Dukserica01'),
+('Suknja02',4.25,1,'Dukserica02'),
+('Suknja03',22.22,0,'Dukserica03'),
+('Suknja04',33.50,1,'Dukserica04'),
+('Suknja05',5.55,0,'Dukserica05');
+
+delete from mladic where kuna > 15.78;
+
+--4. Izlistajte kratkamajica iz tablice zena uz uvjet da vrijednost kolone hlace sadrže slova ana.
+select * from zena;
+insert into zena(hlace,kratkamajica,jmbag,bojaociju,sestra)
+values 
+('Ana','Kratka01',444444,'plava',3);
+
+select kratkamajica from zena where hlace like '%ana%';
+
+ 
+--5. 
+--Prikažite dukserica iz tablice svekar, asocijalno iz tablice mladic te hlace iz tablice muskarac 
+
+--uz uvjet da su vrijednosti kolone hlace iz tablice zena počinju slovom a 
+--te da su vrijednosti kolone haljina iz tablice sestra sadrže niz znakova ba. 
+--Podatke posložite po hlace iz tablice muskarac silazno.
+select a.dukserica, f.asocijalno, e.hlace 
+from svekar a 
+inner join sestra_svekar  b on a.sifra = b.svekar 
+inner join sestra         c on b.sestra = c.sifra 
+inner join zena           d on c.sifra = d.sestra 
+inner join muskarac       e on d.sifra = e.zena 
+inner join mladic         f on e.sifra = f.muskarac 
+where d.hlace like 'a%' and c.haljina like '%ba%'
+order by e.hlace desc;
+
+--6. Prikažite kolone haljina i maraka iz tablice sestra 
+--čiji se primarni ključ ne nalaze u tablici sestra_svekar.
+select	a.haljina, a.maraka 
+from	sestra a inner join sestra_svekar b on a.sifra = b.sestra 
+where	b.sestra is null;  
