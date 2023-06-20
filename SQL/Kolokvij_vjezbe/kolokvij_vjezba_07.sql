@@ -121,13 +121,17 @@ values
 --2. U tablici punica postavite svim zapisima kolonu eura na vrijednost 15,77.
 select * from cura;
 insert into cura(lipa)
-values  (33.33),(32.22),(44.44);
+values  
+(33.33),
+(32.22),
+(44.44);
 
 select * from punica;
 insert into punica(eura,cura)
-values  (55.44,1),
-        (13.55,2),
-        (23.55,3);
+values  
+(55.44,1),
+(13.55,2),
+(23.55,3);
         
 update punica set eura=15.77;
 
@@ -163,4 +167,4 @@ order by e.gustoca desc;
 --čiji se primarni ključ ne nalaze u tablici zarucnik_mladic.
 select	a.asocijalno , a.modelnaocala 
 from	zarucnik a left join zarucnik_mladic b on b.zarucnik = a.sifra 
-where	b.zarucnik is null; 
+where	b.zarucnik is null;
