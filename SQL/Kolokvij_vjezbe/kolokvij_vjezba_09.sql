@@ -81,3 +81,84 @@ alter table brat add foreign key(cura) references cura(sifra);
 alter table cura add foreign key(punac) references punac(sifra);
 alter table punac_prijateljica add foreign key(punac) references punac(sifra);
 alter table punac_prijateljica add foreign key(prijateljica) references prijateljica(sifra);
+
+--1. U tablice brat, cura i punac_prijateljica unesite po 3 retka.
+select * from punac;
+insert into punac(narukvica)
+values  
+(6),
+(3),
+(8);
+
+select * from cura;
+insert into cura(vesta,suknja,punac)
+values  
+('Plava vesta','Crna suknja',1),
+('Crna vesta','Zelena suknja',2),
+('Zelena vesta','Crvena suknja',3);
+                 
+select * from brat;
+insert into brat(novcica,vesta,cura)
+values  
+(99.99,'Plava vesta',1),
+(33.99,'Zelena vesta',2),
+(54.99,'Crna vesta',3);
+              
+select * from prijateljica;
+insert into prijateljica(kuna)
+values 
+(12.12),
+(123.12),
+(54.15);
+
+select * from punac_prijateljica;
+insert into punac_prijateljica (punac,prijateljica)
+values  
+(1,3),
+(2,2),
+(3,1);
+
+--2. U tablici snasa postavite svim zapisima kolonu drugiputa na vrijednost 24. travnja 2020.
+select * from ostavljena;
+insert into ostavljena(modelnaocala,eura,lipa,treciputa,drugiputa)
+values  
+('Suncane',232.33,141.22,'2021-04-04','2012-11-02'),
+('Dioptrijske',212.33,131.22,'2019-04-04','2012-11-02'),
+('RayBan',33.33,222.22,'2012-04-04','2012-11-02');
+        
+select * from snasa;
+insert into snasa(drugiputa,haljina,ostavljena)
+values  
+('2013-11-23','Plava',1),
+('2014-09-11','Crna',2),
+('2015-12-02','Zelena',3);
+        
+update snasa set drugiputa = '2020-04-24';
+
+--3. U tablici zarucnik obrišite sve zapise čija je vrijednost kolone haljina jednako AB.
+delete from zarucnik where haljina='AB';
+
+--4. Izlistajte carape iz tablice cura uz uvjet da vrijednost kolone ekstroventno nepoznate.
+select carape from cura where ekstrovertno is null;
+
+--5
+--Prikažite kuna iz tablice prijateljica, nausnica iz tablice zarucnik te ekstroventno iz tablice brat 
+
+--uz uvjet da su vrijednosti kolone ekstroventno iz tablice cura poznate 
+--te da su vrijednosti kolone modelnaocala iz tablice punac sadrže niz znakova ba. 
+--Podatke posložite po ekstroventno iz tablice brat silazno.
+select a.kuna , f.nausnica , e.ekstrovertno 
+from prijateljica a
+inner join punac_prijateljica   b on a.sifra      = b.prijateljica 
+inner join punac                c on b.punac      = c.sifra
+inner join cura                 d on c.sifra      = d.punac
+inner join brat                 e on d.sifra      = e.cura
+inner join zarucnik             f on e.sifra      = f.brat
+where d.ekstrovertno is not null and c.modelnaocala like '%ba%'
+order by e.ekstrovertno;
+
+--6. Prikažite kolone modelnaocala i kuna iz tablice punac 
+--čiji se primarni ključ ne nalaze u tablici punac_prijateljica.
+select	a.modelnaocala , a.kuna 
+from	punac a left join punac_prijateljica b on b.punac = a.sifra 
+where	b.punac is null; 
