@@ -81,3 +81,70 @@ alter table sestra add foreign key(mladic) references mladic(sifra);
 alter table mladic add foreign key(muskarac) references muskarac(sifra);
 alter table muskarac_prijatelj add foreign key(muskarac) references muskarac(sifra);
 alter table muskarac_prijatelj add foreign key(prijatelj) references prijatelj(sifra);
+
+--1. U tablice sestra, mladic i muskarac_prijatelj unesite po 3 retka.
+select * from muskarac;
+insert into muskarac(nausnica,drugiputa,prstena)
+values  
+(3,'2021-03-01',9),
+(6,'2021-02-11',3),
+(8,'2021-01-21',7);
+
+select * from mladic;
+insert into mladic(carape,hlace,drugiputa)
+values  
+('Plave','Zelene','2019-04-11'),
+('Zelene','Plave','2019-03-21'),
+('Zute','Crvene','2019-06-01');
+
+select * from sestra;
+insert into sestra(haljina)
+values  
+('Plava'),
+('Zuta'),
+('Zelena');
+
+select * from prijatelj;
+insert into prijatelj(ekstrovertno,bojakose)
+values
+(0,'Plava'),
+(1,'Zelena'),
+(1,'Zuta');
+
+select * from muskarac_prijatelj;
+insert into muskarac_prijatelj(muskarac,prijatelj)
+values  
+(1,3),
+(2,2),
+(3,1);
+
+--2. U tablici ostavljena postavite svim zapisima kolonu drugiputa na vrijednost 7. travnja 2016.
+update ostavljena set drugiputa = '2016-04-07';
+
+--3. U tablici zarucnica obrišite sve zapise čija je vrijednost kolone treciputa 18. travnja 2015.
+delete from zarucnica where treciputa='2015-04-18';
+
+--4. Izlistajte hlace iz tablice mladic uz uvjet da vrijednost kolone jmbag nepoznate.
+select hlace from mladic where jmbag is null;
+
+--5.
+--Prikažite bojakose iz tablice prijatelj, sestra iz tablice zarucnica te indiferentno iz tablice sestra 
+
+--uz uvjet da su vrijednosti kolone jmbag iz tablice mladic poznate 
+--te da su vrijednosti kolone nausnica iz tablice muskarac jednake broju 213. 
+--Podatke posložite po indiferentno iz tablice sestra silazno.
+select a.bojakose , f.sestra , e.indiferentno
+from prijatelj a
+inner join muskarac_prijatelj   b on a.sifra      = b.prijatelj 
+inner join muskarac             c on b.muskarac   = c.sifra
+inner join mladic               d on c.sifra      = d.muskarac 
+inner join sestra               e on d.sifra      = e.mladic
+inner join zarucnica            f on e.sifra      = f.sestra
+where d.jmbag is null  and c.nausnica = 213
+order by e.indiferentno desc;
+
+--6. Prikažite kolone nausnica i drugiputa iz tablice muskarac 
+--čiji se primarni ključ ne nalaze u tablici muskarac_prijatelj.
+select	a.nausnica , a.drugiputa 
+from	muskarac a left join muskarac_prijatelj b on b.muskarac = a.sifra
+where	b.muskarac is null;
