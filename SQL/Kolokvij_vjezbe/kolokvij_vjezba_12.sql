@@ -81,3 +81,63 @@ alter table djevojka add foreign key(svekrva) references svekrva(sifra);
 alter table svekrva add foreign key(zarucnica) references zarucnica(sifra);
 alter table zarucnica_sestra add foreign key(zarucnica) references zarucnica(sifra);
 alter table zarucnica_sestra add foreign key(sestra) references sestra(sifra);
+
+--1. U tablice djevojka, svekrva i zarucnica_sestra unesite po 3 retka.
+select * from zarucnica;
+insert into zarucnica(hlace,kratkamajica)
+values  
+('Plave','Zelena'),
+('Plave','Zelena'),
+('Plave','Zelena');
+        
+select * from svekrva;
+insert into svekrva(asocijalno,zarucnica)
+values  
+(0,1),
+(1,2),
+(0,3);
+        
+select * from sestra;
+insert into sestra(kratkamajica)
+values  
+('Plava'),
+('Plava'),
+('Plava');
+        
+select * from zarucnica_sestra;
+insert into zarucnica_sestra(zarucnica,sestra)
+values  
+(1,1),
+(2,2),
+(3,3);
+
+--2. U tablici decko postavite svim zapisima kolonu asocijalno na vrijednost false.
+update decko set asocijalno = 0; 
+
+--3. U tablici prijatelj obrišite sve zapise čija je vrijednost kolone asocijalno false.
+delete from prijatelj where asocijalno = 0;
+
+--4. Izlistajte vesta iz tablice svekrva uz uvjet da vrijednost kolone kuna nije 8,13,20,28 ili 35.
+select vesta from svekrva where kuna not in(8,13,20,28,35);
+
+--5.
+--Prikažite kratkamajica iz tablice sestra, kuna iz tablice prijatelj te vesta iz tablice djevojka 
+
+--uz uvjet da su vrijednosti kolone kuna iz tablice svekrva veće od 87 
+--te da su vrijednosti kolone kratkamajica iz tablice zarucnica sadrže niz znakova ba. 
+--Podatke posložite po vesta iz tablice djevojka silazno.
+select a.kratkamajica , f.kuna , e.vesta 
+from sestra a 
+inner join zarucnica_sestra b on a.sifra      =b.sestra 
+inner join zarucnica        c on b.zarucnica  =c.sifra 
+inner join svekrva          d on c.sifra      =d.zarucnica 
+inner join djevojka         e on d.sifra      =e.svekrva 
+inner join prijatelj        f on e.sifra      =f.sifra
+where d.kuna >87 and c.kratkamajica like '%ba%&'
+order by e.vesta desc;
+
+--6. Prikažite kolone kratkamajica i jmbag iz tablice zarucnica 
+--čiji se primarni ključ ne nalaze u tablici zarucnica_sestra.
+select	a.kratkamajica , a.jmbag 
+from	zarucnica a left join zarucnica_sestra b on b.zarucnica=a.sifra 
+where	b.zarucnica = null;
