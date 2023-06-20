@@ -82,3 +82,92 @@ alter table mladic add foreign key(svekrva) references svekrva(sifra);
 alter table svekrva add foreign key(punac) references punac(sifra);
 alter table punac_neprijatelj add foreign key(punac) references punac(sifra);
 alter table punac_neprijatelj add foreign key(neprijatelj) references neprijatelj(sifra);
+
+--1. U tablice mladic, svekrva i punac_neprijatelj unesite po 3 retka.
+select * from punac;
+insert into punac(eura)
+values  
+(10.99),
+(62.99),
+(13.99);
+
+     
+select * from svekrva;
+insert into svekrva(introvertno)
+values  
+(1),
+(0),
+(1);
+
+select * from mladic;
+insert into mladic(hlace,stilfrizura,maraka,svekrva)
+values  
+('Crne hlace','Kratka',13.52,1),
+('Plave hlace','Duga',32.52,1),
+('Zelene hlace','Celavo',113.52,1);
+              
+select * from neprijatelj;
+insert into neprijatelj(gustoca,dukserica,stilfrizura)
+values  
+(15.25,'Crna','Duga'),
+(25.25,'Dugih rukava','Duga'),
+(35.65,'Kratkih rukava','Duga');
+              
+select * from punac_neprijatelj;
+insert into punac_neprijatelj (punac,neprijatelj)
+values  
+(1,3),
+(2,1),
+(3,2);
+
+--2. U tablici sestra postavite svim zapisima kolonu bojaociju na vrijednost Osijek.
+select * from zarucnica;
+insert into zarucnica(suknja)
+values  
+('Plava'),
+('Zelena'),
+('Crna');
+        
+select * from sestra;
+insert into sestra(suknja,dukserica,prviputa,zarucnica)
+values  
+('Roza','Plava','2021-03-23',1),
+('Plava','Zelena','2021-01-01',2),
+('Crna','Zuta','2021-06-30',3);
+
+update sestra set bojaociju='Osijek';
+
+--3. U tablici zena obrišite sve zapise čija je vrijednost kolone maraka različito od 14,81.
+select * from zena;
+insert into zena(bojaociju,maraka,mladic)
+values  
+('Zelena',33.35,1),
+('Plava',14.81,2),
+('Crna',222.55,3);
+        
+delete from zena where maraka !=14.81;
+
+--4. Izlistajte kuna iz tablice svekrva uz uvjet da vrijednost kolone carape sadrže slova ana.
+select kuna from svekrva where carape like '%ana%';
+
+--5. 
+--Prikažite maraka iz tablice neprijatelj, indiferentno iz tablice zena te lipa iz tablice mladic 
+
+--uz uvjet da su vrijednosti kolone carape iz tablice svekrva počinju slovom a 
+--te da su vrijednosti kolone eura iz tablice punac različite od 22. 
+--Podatke posložite po lipa iz tablice mladic silazno.
+select a.maraka , f.indiferentno , e.lipa 
+from neprijatelj a
+inner join punac_neprijatelj  b on a.sifra      = b.neprijatelj 
+inner join punac              c on b.punac      = c.sifra
+inner join svekrva            d on c.sifra      = d.punac 
+inner join mladic             e on d.sifra      = e.svekrva 
+inner join zena               f on e.sifra      = f.mladic
+where d.carape like 'a&' and c.eura != 22
+order by e.lipa desc;
+
+--6. Prikažite kolone eura i stilfrizura iz tablice punac 
+--čiji se primarni ključ ne nalaze u tablici punac_neprijatelj.
+select	a.eura , a.stilfrizura 
+from	punac a left join punac_neprijatelj b on b.punac = a.sifra
+where	b.punac is null; 
