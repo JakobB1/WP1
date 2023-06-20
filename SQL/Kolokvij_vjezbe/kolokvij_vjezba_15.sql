@@ -78,3 +78,70 @@ alter table prijatelj add foreign key(zarucnica) references zarucnica(sifra);
 alter table zarucnica add foreign key(zarucnik) references zarucnik(sifra);
 alter table zarucnik_ostavljena add foreign key(zarucnik) references zarucnik(sifra);
 alter table zarucnik_ostavljena add foreign key(ostavljena) references ostavljena(sifra);
+
+--1. U tablice prijatelj, zarucnica i zarucnik_ostavljena unesite po 3 retka
+select * from ostavljena;
+insert into ostavljena(stilfrizura)
+values 
+('Kratka'),
+('Duga'),
+('Srednja');
+
+select * from zarucnik;
+insert into zarucnik(kratkamajica,jmbag,dukserica,treciputa)
+values 
+('Crna',11111111111,'Plava','2022-04-23'),
+('Plava',22222222222,'Crna','2023-04-23'),
+('Crna',33333333333,'Plava','2021-04-23');
+
+select * from zarucnik_ostavljena;
+insert into zarucnik_ostavljena(zarucnik,ostavljena)
+values 
+(1,3),
+(2,2),
+(3,1);
+
+select * from zarucnica;
+insert into zarucnica(prviputa,bojaociju)
+values
+('2021-05-21','Plava'),
+('2022-05-21','Smeda'),
+('2023-05-21','Zelena');
+
+select * from prijatelj;
+insert into prijatelj(majica,narukvica)
+values
+('Plava',2),
+('Crvena',4),
+('Zelena',5);
+
+--2. U tablici prijateljica postavite svim zapisima kolonu bojakose na vrijednost Osijek.
+update prijateljica set bojakose ='Osijek';
+
+--3. U tablici decko obrišite sve zapise čija je vrijednost kolone bojakose jednako AB.
+delete from decko where bojakose ='AB';
+
+--4. Izlistajte modelnaocala iz tablice zarucnica uz uvjet da vrijednost kolone bojaociju sadrže slova ana.
+select modelnaocala from zarucnica where bojaociju like '%ana%';
+
+--5.
+--Prikažite ogrlica iz tablice ostavljena, prijatelj iz tablice decko te vesta iz tablice prijatelj 
+
+--uz uvjet da su vrijednosti kolone bojaociju iz tablice zarucnica počinju slovom a 
+--te da su vrijednosti kolone jmbag iz tablice zarucnik poznate. 
+--Podatke posložite po vesta iz tablice prijatelj silazno.
+select a.ogrlica , f.prijatelj , e.vesta 
+from ostavljena a 
+inner join zarucnik_ostavljena	b on a.sifra		=b.ostavljena 
+inner join zarucnik				c on b.zarucnik		=c.sifra 
+inner join zarucnica			d on c.sifra		=d.zarucnik 
+inner join prijatelj			e on d.sifra		=e.zarucnica 
+inner join decko				f on e.sifra		=f.sifra
+where d.bojaociju like 'a%' and e.vesta is not null
+order by e.vesta desc;
+
+--6. Prikažite kolone jmbag i dukserica iz tablice zarucnik 
+--čiji se primarni ključ ne nalaze u tablici zarucnik_ostavljena.
+select	a.jmbag , a.dukserica
+from	zarucnik a left join zarucnik_ostavljena b on b.zarucnik=a.sifra 
+where	b.zarucnik = null;
