@@ -86,3 +86,70 @@ alter table ostavljen add foreign key(cura) references cura(sifra);
 alter table cura add foreign key(zena) references zena(sifra);
 alter table zena_brat add foreign key(zena) references zena(sifra);
 alter table zena_brat add foreign key(brat) references brat(sifra);
+
+--1. U tablice ostavljen, cura i zena_brat unesite po 3 retka.
+select * from zena;
+insert into zena(kuna,asocijalno)
+values  
+(30.23,0),
+(60.23,1),
+(40.23,0);
+
+select * from cura;
+insert into cura(nausnica,dukserica,stilfrizura,zena)
+values  
+(3,'Plava','Kratka',1),
+(5,'Plava','Kratka',2),
+(7,'Plava','Kratka',3);
+
+select * from ostavljen;
+insert into ostavljen(ekstrovertno,kratkamajica,kuna)
+values  
+(0,'Plava',30.20),
+(1,'Crvena',40.20),
+(0,'Zelena',50.20);
+
+select * from brat;
+insert into brat(prviputa,hlace)
+values  
+('2020-11-11','Plave'),
+('2020-11-01','Zelene'),
+('2020-11-21','Zute');
+
+select * from zena_brat;
+insert into zena_brat(zena,brat)
+values  
+(1,3),
+(2,2),
+(3,1);
+
+--2. U tablici djevojka postavite svim zapisima kolonu maraka na vrijednost 15,74.
+update djevojka set maraka = 15.74;
+
+--3. U tablici svekrva obrišite sve zapise čija je vrijednost kolone jmbag 00000000007.
+delete from svekrva where  jmbag =00000000007;    
+
+--4. Izlistajte nausnica iz tablice cura uz uvjet da vrijednost kolone bojakose sadrže slova ana.
+select nausnica from cura where bojakose like '%ana%';
+
+--5.
+--Prikažite hlace iz tablice brat, ostavljen iz tablice svekrva te ekstroventno iz tablice ostavljen 
+
+--uz uvjet da su vrijednosti kolone bojakose iz tablice cura počinju slovom a 
+--te da su vrijednosti kolone drugiputa iz tablice zena poznate. 
+--Podatke posložite po ekstroventno iz tablice ostavljen silazno.
+select a.hlace , f.ostavljen ,e.ekstrovertno 
+from brat a
+inner join zena_brat             b on a.sifra      = b.brat 
+inner join zena                  c on b.zena       = c.sifra
+inner join cura                  d on c.sifra      = d.zena 
+inner join ostavljen             e on d.sifra      = e.cura
+inner join svekrva               f on e.sifra      = f.ostavljen
+where d.bojakose like 'a&' and c.drugiputa is null
+order by e.ekstrovertno desc;
+
+--6. Prikažite kolone drugiputa i asocijalno iz tablice zena 
+--čiji se primarni ključ ne nalaze u tablici zena_brat.
+select	a.drugiputa , a.asocijalno 
+from	zena a left join zena_brat b on b.zena = a.sifra
+where	b.zena is null;
