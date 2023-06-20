@@ -119,3 +119,34 @@ values
 ('2021-04-23',0,1),
 ('2022-04-23',1,2),
 ('2023-04-23',1,3);
+
+--2. U tablici prijatelj postavite svim zapisima kolonu kratkamajica na vrijednost Osijek.
+update prijatelj set kratkamajica ='Osijek';
+
+--3. U tablici ostavljena obrišite sve zapise čija je vrijednost kolone hlace veće od AB.
+delete from ostavljena where hlace >'AB';
+
+--4. Izlistajte kuna iz tablice brat uz uvjet da vrijednost kolone gustoca nije 6,10,16,25 ili 36.
+select kuna from brat where gustoca not in(6,10,16,25,36);
+
+--5.
+--Prikažite vesta iz tablice muskarac, dukserica iz tablice ostavljena te drugiputa iz tablice ostavljen 
+
+--uz uvjet da su vrijednosti kolone gustoca iz tablice brat veće od 100 
+--te da su vrijednosti kolone gustoca iz tablice neprijatelj različite od 22. 
+--Podatke posložite po drugiputa iz tablice ostavljen silazno.
+select a.vesta , f.dukserica , e.drugiputa 
+from muskarac a 
+inner join neprijatelj_muskrac	b on a.sifra		=b.muskarac 
+inner join neprijatelj			c on b.neprijatelj  =c.sifra 
+inner join brat					d on c.sifra		=d.neprijatelj 
+inner join ostavljen			e on d.sifra		=e.brat 
+inner join ostavljena			f on e.sifra		=f.sifra
+where d.gustoca >100 and c.gustoca != 22
+order by e.drugiputa desc;
+
+--6. Prikažite kolone gustoca i bojakose iz tablice neprijatelj 
+--čiji se primarni ključ ne nalaze u tablici neprijatelj_muskarac.
+select	a.gustoca , a.bojakose
+from	neprijatelj a left join neprijatelj_muskrac b on b.neprijatelj=a.sifra 
+where	b.neprijatelj = null;
