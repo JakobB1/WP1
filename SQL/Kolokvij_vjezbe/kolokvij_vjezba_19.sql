@@ -80,3 +80,70 @@ alter table svekrva add foreign key(punac) references punac(sifra);
 alter table punac add foreign key(punica) references punica(sifra);
 alter table punica_ostavljena add foreign key(punica) references punica(sifra);
 alter table punica_ostavljena add foreign key(ostavljena) references ostavljena(sifra);
+
+--1. U tablice svekrva, punac i punica_ostavljena unesite po 3 retka.
+select * from punica;
+insert into punica(stilfrizura,maraka,jmbag)
+values 
+('Duga',20.22,12345678910),
+('Kratka',30.22,12345678910),
+('Rep',40.22,12345678910);
+
+select * from punac;
+insert into punac(punica)
+values  
+(1),
+(2),
+(3);
+
+select * from svekrva;
+insert into svekrva(gustoca,stilfrizura,punac)
+values  
+(11.11,'2021-11-21',1),
+(22.22,'2022-11-21',1),
+(33.33,'2023-11-21',1);
+
+select * from ostavljena;
+insert into ostavljena(ekstrovertno,eura)
+values  
+(0,30.29),
+(0,40.29),
+(1,60.29);
+
+select * from punica_ostavljena;
+insert into punica_ostavljena(punica,ostavljena)
+values  
+(1,3),
+(2,2),
+(3,1);
+
+--2. U tablici svekar postavite svim zapisima kolonu indiferentno na vrijednost false.
+update svekar set indiferentno = 0;
+
+--3. U tablici muskarac obrišite sve zapise čija je vrijednost kolone gustoca jednako 14,92.
+delete from muskarac where  gustoca =14.92;
+
+--4. Izlistajte ekstroventno iz tablice punac uz uvjet da vrijednost kolone treciputa nepoznate.
+select ekstrovertno from punac where treciputa is null;
+
+--5.
+--Prikažite narukvica iz tablice ostavljena, ogrlica iz tablice muskarac te carape iz tablice svekrva 
+
+--uz uvjet da su vrijednosti kolone treciputa iz tablice punac poznate 
+--te da su vrijednosti kolone maraka iz tablice punica različite od 21. 
+--Podatke posložite po carape iz tablice svekrva silazno.
+select a.narukvica , f.ogrlica , e.carape 
+from ostavljena a
+inner join punica_ostavljena     b on a.sifra      = b.ostavljena 
+inner join punica                c on b.punica     = c.sifra
+inner join punac                 d on c.sifra      = d.punica 
+inner join svekrva               e on d.sifra      = e.punac
+inner join muskarac              f on e.sifra      = f.svekrva
+where d.treciputa is null and c.maraka != 21
+order by e.carape desc;
+
+--6. Prikažite kolone maraka i jmbag iz tablice punica 
+--čiji se primarni ključ ne nalaze u tablici punica_ostavljena.
+select	a.maraka , a.jmbag
+from	punica a left join punica_ostavljena b on b.punica = a.sifra
+where	b.punica is null;   
