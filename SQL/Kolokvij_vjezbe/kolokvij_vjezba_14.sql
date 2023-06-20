@@ -83,3 +83,39 @@ alter table ostavljen add foreign key(brat) references brat(sifra);
 alter table brat add foreign key(neprijatelj) references neprijatelj(sifra);
 alter table neprijatelj_muskrac add foreign key(neprijatelj) references neprijatelj(sifra);
 alter table neprijatelj_muskrac add foreign key(muskarac) references muskarac(sifra);
+
+--1. U tablice ostavljen, brat i neprijatelj_muskarac unesite po 3 retka.
+select * from muskarac;
+insert into muskarac(ogrlica,vesta)
+values
+(2,'Plava'),
+(4,'Zelena'),
+(3,'Crvena');
+
+select * from neprijatelj;
+insert into neprijatelj(prstena,bojakose,ogrlica,stilfrizura)
+values
+(3,'Plava',3,'Zelena'),
+(1,'Zelena',5,'Smeda'),
+(2,'Smeda',4,'Plava');
+
+select * from neprijatelj_muskrac;
+insert into neprijatelj_muskrac(neprijatelj,muskarac)
+values
+(1,3),
+(2,3),
+(3,1);
+
+select * from brat;
+insert into brat(eura,gustoca,haljina,neprijatelj)
+values 
+(22.22,33.33,'Plava',3),
+(32.22,23.33,'Zelena',2),
+(42.22,63.33,'Plava',1);
+
+select * from ostavljen;
+insert into ostavljen(drugiputa,asocijalno,brat)
+values 
+('2021-04-23',0,1),
+('2022-04-23',1,2),
+('2023-04-23',1,3);
