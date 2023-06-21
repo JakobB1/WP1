@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine(args[0]);
+            Console.WriteLine("|\\---/|\r\n| o_o |\r\n \\_^_/");
+            //Console.WriteLine(args[0]);
         }
     }
 }

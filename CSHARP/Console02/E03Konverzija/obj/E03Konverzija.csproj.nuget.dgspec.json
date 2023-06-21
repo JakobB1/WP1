@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WP1\\CHSARP\\Console02\\E03Konverzija\\E03Konverzija.csproj": {}
+    "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E03Konverzija\\E03Konverzija.csproj": {}
   },
   "projects": {
-    "D:\\WP1\\CHSARP\\Console02\\E03Konverzija\\E03Konverzija.csproj": {
+    "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E03Konverzija\\E03Konverzija.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WP1\\CHSARP\\Console02\\E03Konverzija\\E03Konverzija.csproj",
+        "projectUniqueName": "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E03Konverzija\\E03Konverzija.csproj",
         "projectName": "E03Konverzija",
-        "projectPath": "D:\\WP1\\CHSARP\\Console02\\E03Konverzija\\E03Konverzija.csproj",
-        "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
-        "outputPath": "D:\\WP1\\CHSARP\\Console02\\E03Konverzija\\obj\\",
+        "projectPath": "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E03Konverzija\\E03Konverzija.csproj",
+        "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E03Konverzija\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CTU-LA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

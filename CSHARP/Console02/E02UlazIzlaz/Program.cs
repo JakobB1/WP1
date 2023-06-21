@@ -1,9 +1,9 @@
 ﻿
 //// Ulaz
-//Console.Write("Unesite broj: ");
+//Console.Write("Unesite  broj: ");
 //int broj = int.Parse(Console.ReadLine());
 
-//// Algoritam
+//// algoritam
 //broj = broj + 7;
 
 //// Izlaz
@@ -22,3 +22,4 @@ double b2 = double.Parse(Console.ReadLine());
 double rez = b1 + b2;
 
 Console.WriteLine(rez);
+

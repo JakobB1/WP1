@@ -1,12 +1,12 @@
 ﻿
 
-// Implicitna konverzija
+// implicitna konverzija
 
 float f = 7f;
 
 double d = f;
 
-// Explicitna konverzija
+//explicitna konverzija
 
 f = float.Parse(d.ToString());
 
@@ -23,6 +23,8 @@ Console.WriteLine(rez);
 int broj = 15;
 
 // koja je prva znamenka broja?
-Console.WriteLine(broj/10);    
+Console.WriteLine(broj/10);
+
+
 
 
