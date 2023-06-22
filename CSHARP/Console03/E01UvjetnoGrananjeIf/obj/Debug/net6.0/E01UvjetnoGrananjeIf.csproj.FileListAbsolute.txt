@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\bin\Debug\net6.0\E01UvjetnoGrananjeIf.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\bin\Debug\net6.0\E01UvjetnoGrananjeIf.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\bin\Debug\net6.0\E01UvjetnoGrananjeIf.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\bin\Debug\net6.0\E01UvjetnoGrananjeIf.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\bin\Debug\net6.0\E01UvjetnoGrananjeIf.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\refint\E01UvjetnoGrananjeIf.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\E01UvjetnoGrananjeIf.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console03\E01UvjetnoGrananjeIf\obj\Debug\net6.0\ref\E01UvjetnoGrananjeIf.dll

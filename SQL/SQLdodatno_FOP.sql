@@ -79,12 +79,13 @@ where b.grupa is null;
 -- funkcije
 
 --funkcije
---now() ne prima niti jedan parametar
+--getdate() ne prima niti jedan parametar
 --left(X) - prima jedan parametar
 --funkcije primaju više parametara odvojenih zarezom
 --concat nadoljepljuje stringove (y,y,y,y,y)
+-- čitati: https://learn.microsoft.com/en-us/sql/t-sql/functions/functions?view=sql-server-ver16
 select getdate(),ime, left(ime,1),
-left('Osijek',2)from polaznik;
+left('Osijek',2) from polaznik;
 
 select getdate();
 
