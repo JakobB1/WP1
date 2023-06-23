@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj": {}
+    "D:\\WP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj": {
+    "D:\\WP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj",
+        "projectUniqueName": "D:\\WP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj",
         "projectName": "E02UlazIzlaz",
-        "projectPath": "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj",
-        "packagesPath": "C:\\Users\\CTU-LA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CTU-LA\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console02\\E02UlazIzlaz\\obj\\",
+        "projectPath": "D:\\WP1\\CSHARP\\Console02\\E02UlazIzlaz\\E02UlazIzlaz.csproj",
+        "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
+        "outputPath": "D:\\WP1\\CSHARP\\Console02\\E02UlazIzlaz\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\CTU-LA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

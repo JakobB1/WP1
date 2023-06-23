@@ -1,0 +1,15 @@
+D:\WP1\CSHARP\Console03\E03Nizovi\bin\Debug\net6.0\E03Nizovi.exe
+D:\WP1\CSHARP\Console03\E03Nizovi\bin\Debug\net6.0\E03Nizovi.deps.json
+D:\WP1\CSHARP\Console03\E03Nizovi\bin\Debug\net6.0\E03Nizovi.runtimeconfig.json
+D:\WP1\CSHARP\Console03\E03Nizovi\bin\Debug\net6.0\E03Nizovi.dll
+D:\WP1\CSHARP\Console03\E03Nizovi\bin\Debug\net6.0\E03Nizovi.pdb
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.csproj.AssemblyReference.cache
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.GeneratedMSBuildEditorConfig.editorconfig
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.AssemblyInfoInputs.cache
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.AssemblyInfo.cs
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.csproj.CoreCompileInputs.cache
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.dll
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\refint\E03Nizovi.dll
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.pdb
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\E03Nizovi.genruntimeconfig.cache
+D:\WP1\CSHARP\Console03\E03Nizovi\obj\Debug\net6.0\ref\E03Nizovi.dll
