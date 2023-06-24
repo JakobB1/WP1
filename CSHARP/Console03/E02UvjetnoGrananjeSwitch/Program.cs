@@ -43,3 +43,24 @@ switch(ocjena)
 // Program unosi ime mjesta iz jedne od 4 slavonske županije
 // Za uneseno ime mjesta program ispisuje ime županije
 
+Console.WriteLine("Unesi ime grada: ");
+string grad = Console.ReadLine();
+
+switch (grad)
+{
+    case "Osijek":
+        Console.WriteLine("Osjecko-baranjska");
+        break;
+    case "Zagreb":
+        Console.WriteLine("Zagrebacka zupanija");
+        break;
+    case "Split":
+        Console.WriteLine("Splitsko-dalmatinska");
+        break;
+    case "Rijeka":
+        Console.WriteLine("Istra");
+        break;
+    default:
+        Console.WriteLine("Nije grad");
+        break;
+}

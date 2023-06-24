@@ -102,6 +102,9 @@ Console.WriteLine("12: Broj je " + (g%2==0 ? "" : "ne") + "paran");
 // Za broj manji od 10
 // ispisuje se Osijek
 // inače se ispisuje Donji Miholjac
+Console.WriteLine("Unesi broj: ");
+int broj = int.Parse(Console.ReadLine());
+Console.WriteLine(broj<10 ? "Osijek" : "Donji Miholjac");
 
 
 
