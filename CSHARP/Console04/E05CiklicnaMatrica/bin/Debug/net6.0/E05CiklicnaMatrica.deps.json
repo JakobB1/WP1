@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "E05CiklicnaMatrica/1.0.0": {
+        "runtime": {
+          "E05CiklicnaMatrica.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "E05CiklicnaMatrica/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\bin\Debug\net6.0\E05CiklicnaMatrica.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\bin\Debug\net6.0\E05CiklicnaMatrica.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\bin\Debug\net6.0\E05CiklicnaMatrica.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\bin\Debug\net6.0\E05CiklicnaMatrica.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\bin\Debug\net6.0\E05CiklicnaMatrica.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\refint\E05CiklicnaMatrica.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\E05CiklicnaMatrica.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E05CiklicnaMatrica\obj\Debug\net6.0\ref\E05CiklicnaMatrica.dll

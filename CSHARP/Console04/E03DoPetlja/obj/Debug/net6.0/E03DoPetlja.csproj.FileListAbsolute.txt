@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\bin\Debug\net6.0\E03DoPetlja.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\bin\Debug\net6.0\E03DoPetlja.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\bin\Debug\net6.0\E03DoPetlja.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\bin\Debug\net6.0\E03DoPetlja.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\bin\Debug\net6.0\E03DoPetlja.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\refint\E03DoPetlja.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\E03DoPetlja.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E03DoPetlja\obj\Debug\net6.0\ref\E03DoPetlja.dll

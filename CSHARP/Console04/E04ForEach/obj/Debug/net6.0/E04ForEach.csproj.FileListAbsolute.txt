@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\bin\Debug\net6.0\E04ForEach.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\bin\Debug\net6.0\E04ForEach.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\bin\Debug\net6.0\E04ForEach.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\bin\Debug\net6.0\E04ForEach.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\bin\Debug\net6.0\E04ForEach.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\refint\E04ForEach.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\E04ForEach.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console04\E04ForEach\obj\Debug\net6.0\ref\E04ForEach.dll
