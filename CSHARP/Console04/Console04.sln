@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E01ForPetlja", "E01ForPetlja\E01ForPetlja.csproj", "{47C18284-BF72-4B3D-B5FC-555F1C38A448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E01ForPetlja", "E01ForPetlja\E01ForPetlja.csproj", "{47C18284-BF72-4B3D-B5FC-555F1C38A448}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02WhilePetlja", "E02WhilePetlja\E02WhilePetlja.csproj", "{86E441B6-40C5-453E-B247-6F2CD75E4067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E03DoPetlja", "E03DoPetlja\E03DoPetlja.csproj", "{0CE589B6-F09D-40BB-90F3-438BCD02BEF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E04ForEach", "E04ForEach\E04ForEach.csproj", "{2AEE937F-9A55-4DDC-A5A0-7DB11F79E0CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E05CiklicnaMatrica", "E05CiklicnaMatrica\E05CiklicnaMatrica.csproj", "{15A338DA-941C-45D3-8F3D-2AF1623A5456}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{47C18284-BF72-4B3D-B5FC-555F1C38A448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47C18284-BF72-4B3D-B5FC-555F1C38A448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47C18284-BF72-4B3D-B5FC-555F1C38A448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E441B6-40C5-453E-B247-6F2CD75E4067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E441B6-40C5-453E-B247-6F2CD75E4067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E441B6-40C5-453E-B247-6F2CD75E4067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E441B6-40C5-453E-B247-6F2CD75E4067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE589B6-F09D-40BB-90F3-438BCD02BEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE589B6-F09D-40BB-90F3-438BCD02BEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE589B6-F09D-40BB-90F3-438BCD02BEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE589B6-F09D-40BB-90F3-438BCD02BEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AEE937F-9A55-4DDC-A5A0-7DB11F79E0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AEE937F-9A55-4DDC-A5A0-7DB11F79E0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AEE937F-9A55-4DDC-A5A0-7DB11F79E0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AEE937F-9A55-4DDC-A5A0-7DB11F79E0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A338DA-941C-45D3-8F3D-2AF1623A5456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A338DA-941C-45D3-8F3D-2AF1623A5456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A338DA-941C-45D3-8F3D-2AF1623A5456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A338DA-941C-45D3-8F3D-2AF1623A5456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

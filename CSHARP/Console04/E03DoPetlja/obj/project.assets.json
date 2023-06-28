@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Katedra\\.nuget\\packages\\": {}
+    "C:\\Users\\Jale\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console04\\E03DoPetlja\\E03DoPetlja.csproj",
+      "projectUniqueName": "D:\\WP1\\CSHARP\\Console04\\E03DoPetlja\\E03DoPetlja.csproj",
       "projectName": "E03DoPetlja",
-      "projectPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console04\\E03DoPetlja\\E03DoPetlja.csproj",
-      "packagesPath": "C:\\Users\\Katedra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console04\\E03DoPetlja\\obj\\",
+      "projectPath": "D:\\WP1\\CSHARP\\Console04\\E03DoPetlja\\E03DoPetlja.csproj",
+      "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
+      "outputPath": "D:\\WP1\\CSHARP\\Console04\\E03DoPetlja\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Katedra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
