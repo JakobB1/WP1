@@ -1,0 +1,12 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\bin\Debug\net6.0\zajednickeMetode.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\bin\Debug\net6.0\zajednickeMetode.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\bin\Debug\net6.0\zajednickeMetode.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\zajednickeMetode.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\zajednickeMetode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\zajednickeMetode.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\zajednickeMetode.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\zajednickeMetode.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\zajednickeMetode.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\refint\zajednickeMetode.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\zajednickeMetode.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console05\zajednickeMetode\obj\Debug\net6.0\ref\zajednickeMetode.dll
