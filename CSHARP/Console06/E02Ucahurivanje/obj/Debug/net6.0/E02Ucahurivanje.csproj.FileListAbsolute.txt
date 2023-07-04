@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\bin\Debug\net6.0\E02Ucahurivanje.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\refint\E02Ucahurivanje.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\E02Ucahurivanje.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console06\E02Ucahurivanje\obj\Debug\net6.0\ref\E02Ucahurivanje.dll
