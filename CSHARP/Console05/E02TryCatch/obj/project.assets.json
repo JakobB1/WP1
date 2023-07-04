@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Jale\\.nuget\\packages\\": {}
+    "C:\\Users\\Katedra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WP1\\CSHARP\\Console05\\E02TryCatch\\E02TryCatch.csproj",
+      "projectUniqueName": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E02TryCatch\\E02TryCatch.csproj",
       "projectName": "E02TryCatch",
-      "projectPath": "D:\\WP1\\CSHARP\\Console05\\E02TryCatch\\E02TryCatch.csproj",
-      "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
-      "outputPath": "D:\\WP1\\CSHARP\\Console05\\E02TryCatch\\obj\\",
+      "projectPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E02TryCatch\\E02TryCatch.csproj",
+      "packagesPath": "C:\\Users\\Katedra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E02TryCatch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Katedra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

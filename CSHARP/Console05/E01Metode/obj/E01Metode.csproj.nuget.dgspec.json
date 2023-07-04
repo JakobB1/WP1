@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj": {}
+    "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj": {}
   },
   "projects": {
-    "D:\\WP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj": {
+    "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj",
+        "projectUniqueName": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj",
         "projectName": "E01Metode",
-        "projectPath": "D:\\WP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj",
-        "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
-        "outputPath": "D:\\WP1\\CSHARP\\Console05\\E01Metode\\obj\\",
+        "projectPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E01Metode\\E01Metode.csproj",
+        "packagesPath": "C:\\Users\\Katedra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\E01Metode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Katedra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\WP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj": {
-                "projectPath": "D:\\WP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj"
+              "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj": {
+                "projectPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj"
               }
             }
           }
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj": {
+    "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj",
+        "projectUniqueName": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj",
         "projectName": "zajednickeMetode",
-        "projectPath": "D:\\WP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj",
-        "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
-        "outputPath": "D:\\WP1\\CSHARP\\Console05\\zajednickeMetode\\obj\\",
+        "projectPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\zajednickeMetode\\zajednickeMetode.csproj",
+        "packagesPath": "C:\\Users\\Katedra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Katedra\\Documents\\GitHub\\EdunovaWP1\\CSHARP\\Console05\\zajednickeMetode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Katedra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
