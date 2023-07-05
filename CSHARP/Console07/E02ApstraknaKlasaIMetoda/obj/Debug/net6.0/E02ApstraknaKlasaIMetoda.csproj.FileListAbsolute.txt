@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\bin\Debug\net6.0\E02ApstraknaKlasaIMetoda.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\bin\Debug\net6.0\E02ApstraknaKlasaIMetoda.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\bin\Debug\net6.0\E02ApstraknaKlasaIMetoda.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\bin\Debug\net6.0\E02ApstraknaKlasaIMetoda.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\bin\Debug\net6.0\E02ApstraknaKlasaIMetoda.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\refint\E02ApstraknaKlasaIMetoda.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\E02ApstraknaKlasaIMetoda.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E02ApstraknaKlasaIMetoda\obj\Debug\net6.0\ref\E02ApstraknaKlasaIMetoda.dll

@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\bin\Debug\net6.0\E03Polimorfizam.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\bin\Debug\net6.0\E03Polimorfizam.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\bin\Debug\net6.0\E03Polimorfizam.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\bin\Debug\net6.0\E03Polimorfizam.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\bin\Debug\net6.0\E03Polimorfizam.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\refint\E03Polimorfizam.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\E03Polimorfizam.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E03Polimorfizam\obj\Debug\net6.0\ref\E03Polimorfizam.dll

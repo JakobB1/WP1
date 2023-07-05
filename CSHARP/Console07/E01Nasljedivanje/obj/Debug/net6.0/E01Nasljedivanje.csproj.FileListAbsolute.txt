@@ -1,0 +1,15 @@
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\bin\Debug\net6.0\E01Nasljedivanje.exe
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\bin\Debug\net6.0\E01Nasljedivanje.deps.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\bin\Debug\net6.0\E01Nasljedivanje.runtimeconfig.json
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\bin\Debug\net6.0\E01Nasljedivanje.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\bin\Debug\net6.0\E01Nasljedivanje.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.csproj.AssemblyReference.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.AssemblyInfoInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.AssemblyInfo.cs
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.csproj.CoreCompileInputs.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\refint\E01Nasljedivanje.dll
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.pdb
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\E01Nasljedivanje.genruntimeconfig.cache
+C:\Users\Katedra\Documents\GitHub\EdunovaWP1\CSHARP\Console07\E01Nasljedivanje\obj\Debug\net6.0\ref\E01Nasljedivanje.dll
