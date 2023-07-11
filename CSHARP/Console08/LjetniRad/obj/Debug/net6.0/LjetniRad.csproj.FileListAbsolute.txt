@@ -1,0 +1,15 @@
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.csproj.AssemblyReference.cache
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.GeneratedMSBuildEditorConfig.editorconfig
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.AssemblyInfoInputs.cache
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.AssemblyInfo.cs
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.csproj.CoreCompileInputs.cache
+D:\WP1\CSHARP\Console08\LjetniRad\bin\Debug\net6.0\LjetniRad.exe
+D:\WP1\CSHARP\Console08\LjetniRad\bin\Debug\net6.0\LjetniRad.deps.json
+D:\WP1\CSHARP\Console08\LjetniRad\bin\Debug\net6.0\LjetniRad.runtimeconfig.json
+D:\WP1\CSHARP\Console08\LjetniRad\bin\Debug\net6.0\LjetniRad.dll
+D:\WP1\CSHARP\Console08\LjetniRad\bin\Debug\net6.0\LjetniRad.pdb
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.dll
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\refint\LjetniRad.dll
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.pdb
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.genruntimeconfig.cache
+D:\WP1\CSHARP\Console08\LjetniRad\obj\Debug\net6.0\ref\LjetniRad.dll
