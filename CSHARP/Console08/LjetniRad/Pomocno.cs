@@ -8,8 +8,8 @@ namespace LjetniRad
 {
     internal class Pomocno
     {
-
-        public static int ucitajBrojRaspon(string poruka, string greska, 
+        public static bool dev;
+        public static int ucitajBrojRaspon(string poruka, string greska,
             int poc, int kraj)
         {
             int b;
@@ -19,7 +19,7 @@ namespace LjetniRad
                 try
                 {
                     b = int.Parse(Console.ReadLine());
-                    if(b>=poc && b <= kraj)
+                    if (b >= poc && b <= kraj)
                     {
                         return b;
                     }
@@ -35,7 +35,7 @@ namespace LjetniRad
         internal static int ucitajCijeliBroj(string poruka, string greska)
         {
             int b;
-            while (true) 
+            while (true)
             {
                 Console.Write(poruka);
                 try
@@ -47,14 +47,14 @@ namespace LjetniRad
                     }
                     Console.WriteLine(greska);
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
                     Console.WriteLine(greska);
                 }
             }
         }
 
-        internal static decimal ucitajDecimalniBroj(string poruka,string greska)
+        internal static decimal ucitajDecimalniBroj(string poruka, string greska)
         {
             decimal b;
             while (true)
@@ -89,7 +89,7 @@ namespace LjetniRad
             {
                 Console.Write(poruka);
                 s = Console.ReadLine();
-                if(s!=null && s.Trim().Length > 0)
+                if (s != null && s.Trim().Length > 0)
                 {
                     return s;
                 }
@@ -105,11 +105,12 @@ namespace LjetniRad
                 {
                     Console.WriteLine(v1);
                     return DateTime.Parse(Console.ReadLine());
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
-                    Console.WriteLine(v2);  
+                    Console.WriteLine(v2);
                 }
             }
         }
     }
-
+}
