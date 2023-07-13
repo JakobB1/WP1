@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Jale\\.nuget\\packages\\": {}
+    "C:\\Users\\Ivana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WP1\\CSHARP\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj",
+      "projectUniqueName": "G:\\WP1\\CSHARP\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj",
       "projectName": "E03Polimorfizam",
-      "projectPath": "D:\\WP1\\CSHARP\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj",
-      "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
-      "outputPath": "D:\\WP1\\CSHARP\\Console07\\E03Polimorfizam\\obj\\",
+      "projectPath": "G:\\WP1\\CSHARP\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj",
+      "packagesPath": "C:\\Users\\Ivana\\.nuget\\packages\\",
+      "outputPath": "G:\\WP1\\CSHARP\\Console07\\E03Polimorfizam\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ivana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

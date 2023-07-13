@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj": {}
+    "G:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj": {}
   },
   "projects": {
-    "D:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj": {
+    "G:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj",
+        "projectUniqueName": "G:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj",
         "projectName": "E01Nasljedivanje",
-        "projectPath": "D:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj",
-        "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
-        "outputPath": "D:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\obj\\",
+        "projectPath": "G:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\E01Nasljedivanje.csproj",
+        "packagesPath": "C:\\Users\\Ivana\\.nuget\\packages\\",
+        "outputPath": "G:\\WP1\\CSHARP\\Console07\\E01Nasljedivanje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ivana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
