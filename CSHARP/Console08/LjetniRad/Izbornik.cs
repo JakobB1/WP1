@@ -8,13 +8,16 @@ namespace LjetniRad
 {
     internal class Izbornik
     {
-        private ObradaSmjer ObradaSmjer;
-        private ObradaPolaznik ObradaPolaznik;
+        public ObradaSmjer ObradaSmjer { get; }
+        public ObradaPolaznik ObradaPolaznik { get; }
 
-        public Izbornik() 
+        private ObradaGrupa ObradaGrupa;
+
+        public Izbornik()
         {
-            ObradaSmjer = new ObradaSmjer(); 
+            ObradaSmjer = new ObradaSmjer();
             ObradaPolaznik = new ObradaPolaznik();
+            ObradaGrupa = new ObradaGrupa(this);
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
@@ -34,7 +37,7 @@ namespace LjetniRad
             Console.WriteLine("3. Grupe");
             Console.WriteLine("4. Izlaz iz programa");
 
-            switch(Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika: ",
+            switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika: ",
                 "Odabir mora biti 1 - 4.", 1, 4))
             {
                 case 1:
@@ -46,7 +49,7 @@ namespace LjetniRad
                     PrikaziIzbornik();
                     break;
                 case 3:
-                    Console.WriteLine("Rad s grupama");
+                    ObradaGrupa.PrikaziIzbornik();
                     PrikaziIzbornik();
                     break;
                 case 4:

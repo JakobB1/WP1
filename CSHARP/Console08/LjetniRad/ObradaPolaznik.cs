@@ -8,9 +8,9 @@ namespace LjetniRad
 {
     internal class ObradaPolaznik
     {
-        public List<Polaznik> Polaznici { get; }   
+        public List<Polaznik> Polaznici { get; }
 
-        public ObradaPolaznik() 
+        public ObradaPolaznik()
         {
             Polaznici = new List<Polaznik>();
             if (Pomocno.dev)
@@ -21,13 +21,13 @@ namespace LjetniRad
 
         public void PrikaziIzbornik()
         {
-                Console.WriteLine("Izbornik za rad s polaznicima");
-                Console.WriteLine("1. Pregleda postojećih polaznika");
-                Console.WriteLine("2. Unos novog polaznika");
-                Console.WriteLine("3. Promjena postojećeg polaznika");
-                Console.WriteLine("4. Brisanje polaznika");
-                Console.WriteLine("5. Povratak na glavni izbornik");
-            switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika smjera: ",
+            Console.WriteLine("Izbornik za rad s polaznicima");
+            Console.WriteLine("1. Pregled postojećih polaznika");
+            Console.WriteLine("2. Unos novog polaznika");
+            Console.WriteLine("3. Promjena postojećeg polaznika");
+            Console.WriteLine("4. Brisanje polaznika");
+            Console.WriteLine("5. Povratak na glavni izbornik");
+            switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika polaznika: ",
                 "Odabir mora biti 1-5", 1, 5))
             {
 
@@ -75,13 +75,13 @@ namespace LjetniRad
             Polaznici.RemoveAt(index - 1);
         }
 
-        private void PregledPolaznika()
+        public void PregledPolaznika()
         {
             Console.WriteLine("------------------");
             Console.WriteLine("---- Polaznici ----");
             Console.WriteLine("------------------");
             int b = 1;
-            foreach(Polaznik polaznik in Polaznici)
+            foreach (Polaznik polaznik in Polaznici)
             {
                 Console.WriteLine("{0}. {1}", b++, polaznik);
             }
