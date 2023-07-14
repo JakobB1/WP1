@@ -1,0 +1,15 @@
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\bin\Debug\net6.0\GameStore.exe
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\bin\Debug\net6.0\GameStore.deps.json
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\bin\Debug\net6.0\GameStore.runtimeconfig.json
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\bin\Debug\net6.0\GameStore.dll
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\bin\Debug\net6.0\GameStore.pdb
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.csproj.AssemblyReference.cache
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.GeneratedMSBuildEditorConfig.editorconfig
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.AssemblyInfoInputs.cache
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.AssemblyInfo.cs
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.csproj.CoreCompileInputs.cache
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.dll
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\refint\GameStore.dll
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.pdb
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\GameStore.genruntimeconfig.cache
+G:\WP1\zavrsniRad\ConsoleGame\GameStore\obj\Debug\net6.0\ref\GameStore.dll
