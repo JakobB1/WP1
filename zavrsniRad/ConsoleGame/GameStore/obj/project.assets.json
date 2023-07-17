@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Ivana\\.nuget\\packages\\": {}
+    "C:\\Users\\Jale\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\WP1\\zavrsniRad\\ConsoleGame\\GameStore\\GameStore.csproj",
+      "projectUniqueName": "D:\\WP1\\zavrsniRad\\ConsoleGame\\GameStore\\GameStore.csproj",
       "projectName": "GameStore",
-      "projectPath": "G:\\WP1\\zavrsniRad\\ConsoleGame\\GameStore\\GameStore.csproj",
-      "packagesPath": "C:\\Users\\Ivana\\.nuget\\packages\\",
-      "outputPath": "G:\\WP1\\zavrsniRad\\ConsoleGame\\GameStore\\obj\\",
+      "projectPath": "D:\\WP1\\zavrsniRad\\ConsoleGame\\GameStore\\GameStore.csproj",
+      "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
+      "outputPath": "D:\\WP1\\zavrsniRad\\ConsoleGame\\GameStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ivana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
