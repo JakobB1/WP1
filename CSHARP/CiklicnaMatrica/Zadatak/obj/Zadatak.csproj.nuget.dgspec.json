@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WP1\\CHSARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj": {}
+    "D:\\WP1\\CSHARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj": {}
   },
   "projects": {
-    "D:\\WP1\\CHSARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj": {
+    "D:\\WP1\\CSHARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WP1\\CHSARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj",
+        "projectUniqueName": "D:\\WP1\\CSHARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj",
         "projectName": "Zadatak",
-        "projectPath": "D:\\WP1\\CHSARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj",
+        "projectPath": "D:\\WP1\\CSHARP\\CiklicnaMatrica\\Zadatak\\Zadatak.csproj",
         "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
-        "outputPath": "D:\\WP1\\CHSARP\\CiklicnaMatrica\\Zadatak\\obj\\",
+        "outputPath": "D:\\WP1\\CSHARP\\CiklicnaMatrica\\Zadatak\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
