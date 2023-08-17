@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj": {}
+    "D:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj": {}
   },
   "projects": {
-    "G:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj": {
+    "D:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj",
+        "projectUniqueName": "D:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj",
         "projectName": "LjetniRad",
-        "projectPath": "G:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj",
-        "packagesPath": "C:\\Users\\Ivana\\.nuget\\packages\\",
-        "outputPath": "G:\\WP1\\CSHARP\\Console08\\LjetniRad\\obj\\",
+        "projectPath": "D:\\WP1\\CSHARP\\Console08\\LjetniRad\\LjetniRad.csproj",
+        "packagesPath": "C:\\Users\\Jale\\.nuget\\packages\\",
+        "outputPath": "D:\\WP1\\CSHARP\\Console08\\LjetniRad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ivana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jale\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
