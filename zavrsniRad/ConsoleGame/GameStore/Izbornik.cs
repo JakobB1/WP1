@@ -10,11 +10,13 @@ namespace GameStore
     {
         public ObradaIzdavac ObradaIzdavac { get;}
         public ObradaIgra ObradaIgra { get;}
+        public ObradaKorisnik ObradaKorisnik { get; }
 
         public Izbornik() 
         {
             ObradaIzdavac = new ObradaIzdavac();
             ObradaIgra = new ObradaIgra();
+            ObradaKorisnik = new ObradaKorisnik();
             PozdravnaPoruka();
             PrikaziIzbornik();  
         }
@@ -47,6 +49,7 @@ namespace GameStore
                     PrikaziIzbornik();
                     break;
                 case 3:
+                    ObradaKorisnik.PrikaziIzbornik();
                     PrikaziIzbornik();
                     break;
                 case 4:
