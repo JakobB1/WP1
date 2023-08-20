@@ -9,10 +9,12 @@ namespace GameStore
     internal class Izbornik
     {
         public ObradaIzdavac ObradaIzdavac { get;}
+        public ObradaIgra ObradaIgra { get;}
 
         public Izbornik() 
         {
             ObradaIzdavac = new ObradaIzdavac();
+            ObradaIgra = new ObradaIgra();
             PozdravnaPoruka();
             PrikaziIzbornik();  
         }
@@ -41,6 +43,7 @@ namespace GameStore
                     PrikaziIzbornik();
                     break;
                 case 2:
+                    ObradaIgra.PrikaziIzbornik();
                     PrikaziIzbornik();
                     break;
                 case 3:
