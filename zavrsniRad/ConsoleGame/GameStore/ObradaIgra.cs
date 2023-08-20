@@ -97,7 +97,7 @@ namespace GameStore
         private Izdavac PostaviIzdavaca()
         {
             Izbornik.ObradaIzdavac.PrikaziIzdavace();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj polaznika: ", "Nije dobar odabir", 1, Izbornik.ObradaIzdavac.Izdavaci.Count());
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izbornik.ObradaIzdavac.Izdavaci.Count());
             return Izbornik.ObradaIzdavac.Izdavaci[index - 1];
         }
 
