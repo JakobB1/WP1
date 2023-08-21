@@ -93,9 +93,9 @@ namespace GameStore
                 "Unos mora biti pozitivni cijeli broj");
             i.Naziv = Pomocno.UcitajString("Unesite naziv izdavaca (" + i.Naziv + "): ",
                 "Unos obavezan");
-            i.Drzava = Pomocno.UcitajString("Unesite drzavu izdavaca (" + i.Naziv + "): ",
+            i.Drzava = Pomocno.UcitajString("Unesite drzavu izdavaca (" + i.Drzava + "): ",
                 "Unos obavezan");
-            i.WebStranica = Pomocno.UcitajString("Unesite web stranicu izdavaca (" + i.Naziv + "): ",
+            i.WebStranica = Pomocno.UcitajString("Unesite web stranicu izdavaca (" + i.WebStranica + "): ",
                 "Unos obavezan");
         }
 
