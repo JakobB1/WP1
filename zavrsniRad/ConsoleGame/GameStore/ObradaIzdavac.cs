@@ -19,6 +19,7 @@ namespace GameStore
             }
         }
 
+
         public void PrikaziIzbornik()
         {
             Console.WriteLine("Izbornik za rad s izdavacima");
@@ -53,26 +54,18 @@ namespace GameStore
             }
         }
 
-        public void PromjenaIzdavaca()
-        {
-            PrikaziIzdavace();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izdavaci.Count());
-            var i = Izdavaci[index - 1];
-            i.Sifra = Pomocno.ucitajCijeliBroj("Unesite sifru izdavaca (" + i.Sifra + "): ",
-                "Unos mora biti pozitivni cijeli broj");
-            i.Naziv = Pomocno.UcitajString("Unesite naziv izdavaca (" + i.Naziv + "): ",
-                "Unos obavezan");
-            i.Drzava = Pomocno.UcitajString("Unesite drzavu izdavaca (" + i.Naziv + "): ",
-                "Unos obavezan");
-            i.WebStranica = Pomocno.UcitajString("Unesite web stranicu izdavaca (" + i.Naziv + "): ",
-                "Unos obavezan");
-        }
 
-        private void BrisanjeIzdavaca()
+        public void PrikaziIzdavace()
         {
-            PrikaziIzdavace();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izdavaci.Count());
-            Izdavaci.RemoveAt(index - 1);
+            Console.WriteLine("------------------");
+            Console.WriteLine("---- Izdavaci ----");
+            Console.WriteLine("------------------");
+            int b = 1;
+            foreach (Izdavac izdavac in Izdavaci)
+            {
+                Console.WriteLine("{0}. {1}", b++, izdavac.Naziv);
+            }
+            Console.WriteLine("------------------");
         }
 
 
@@ -90,18 +83,30 @@ namespace GameStore
             Izdavaci.Add(i);
         }
 
-        public void PrikaziIzdavace()
+
+        public void PromjenaIzdavaca()
         {
-            Console.WriteLine("------------------");
-            Console.WriteLine("---- Izdavaci ----");
-            Console.WriteLine("------------------");
-            int b = 1;
-            foreach (Izdavac izdavac in Izdavaci)
-            {
-                Console.WriteLine("{0}. {1}", b++, izdavac.Naziv);
-            }
-            Console.WriteLine("------------------");
+            PrikaziIzdavace();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izdavaci.Count());
+            var i = Izdavaci[index - 1];
+            i.Sifra = Pomocno.ucitajCijeliBroj("Unesite sifru izdavaca (" + i.Sifra + "): ",
+                "Unos mora biti pozitivni cijeli broj");
+            i.Naziv = Pomocno.UcitajString("Unesite naziv izdavaca (" + i.Naziv + "): ",
+                "Unos obavezan");
+            i.Drzava = Pomocno.UcitajString("Unesite drzavu izdavaca (" + i.Naziv + "): ",
+                "Unos obavezan");
+            i.WebStranica = Pomocno.UcitajString("Unesite web stranicu izdavaca (" + i.Naziv + "): ",
+                "Unos obavezan");
         }
+
+
+        private void BrisanjeIzdavaca()
+        {
+            PrikaziIzdavace();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izdavaci.Count());
+            Izdavaci.RemoveAt(index - 1);
+        }
+
 
         private void TestniPodaci()
         {

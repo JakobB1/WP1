@@ -24,6 +24,7 @@ namespace GameStore
             Narudzbe = new List<Narudzba>();   
         }
 
+
         public void PrikaziIzbornik()
         {
             Console.WriteLine("Izbornik za rad s narudzbama");
@@ -57,6 +58,21 @@ namespace GameStore
             }
         }
 
+
+        private void PrikaziNarudzbe()
+        {
+            Console.WriteLine("------------------");
+            Console.WriteLine("---- Narudzbe ----");
+            Console.WriteLine("------------------");
+            int b = 1;
+            foreach (Narudzba narudzba in Narudzbe)
+            {
+                Console.WriteLine("{0}. {1}", b++, narudzba.BrojNarudzbe);
+            }
+            Console.WriteLine("------------------");
+        }
+
+
         private void UnosNoveNarudzbe()
         {
             var n = new Narudzba();
@@ -71,12 +87,6 @@ namespace GameStore
             Narudzbe.Add(n);
         }
 
-        private void BrisanjeNardzbe()
-        {
-            PrikaziNarudzbe();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj narudzbe: ", "Nije dobar odabir", 1, Narudzbe.Count());
-            Narudzbe.RemoveAt(index - 1);
-        }
 
         private List<Korisnik> PostaviKorisnike()
         {
@@ -89,6 +99,7 @@ namespace GameStore
             return korisnici;
         }
 
+
         private Korisnik PostaviKorisnika()
         {
             Izbornik.ObradaKorisnik.PregledKorisnika();
@@ -96,17 +107,12 @@ namespace GameStore
             return Izbornik.ObradaKorisnik.Korisnici[index - 1];
         }
 
-        private void PrikaziNarudzbe()
+
+        private void BrisanjeNardzbe()
         {
-            Console.WriteLine("------------------");
-            Console.WriteLine("---- Narudzbe ----");
-            Console.WriteLine("------------------");
-            int b = 1;
-            foreach (Narudzba narudzba in Narudzbe)
-            {
-                Console.WriteLine("{0}. {1}", b++, narudzba.BrojNarudzbe);
-            }
-            Console.WriteLine("------------------");
+            PrikaziNarudzbe();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj narudzbe: ", "Nije dobar odabir", 1, Narudzbe.Count());
+            Narudzbe.RemoveAt(index - 1);
         }
     }
 }

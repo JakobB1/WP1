@@ -9,6 +9,7 @@ namespace GameStore
     internal class ObradaKorisnik
     {
         public List<Korisnik> Korisnici { get; }
+
         public ObradaKorisnik()
         {
             Korisnici = new List<Korisnik>();
@@ -18,6 +19,7 @@ namespace GameStore
             }
         }
 
+
         public void PrikaziIzbornik()
         {
             Console.WriteLine("Izbornik za rad s korisnicima");
@@ -26,10 +28,10 @@ namespace GameStore
             Console.WriteLine("3. Promjena postojeceg korisnika");
             Console.WriteLine("4. Brisanje korisnika");
             Console.WriteLine("5. Povratak na glavni izbornik");
+
             switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika korisnika: ",
                 "Odabir mora biti 1-5", 1, 5))
             {
-
                 case 1:
                     PregledKorisnika();
                     PrikaziIzbornik();
@@ -64,6 +66,7 @@ namespace GameStore
             Console.WriteLine("------------------");
         }
 
+
         private void UcitajKorisnika()
         {
             var k = new Korisnik();
@@ -76,12 +79,14 @@ namespace GameStore
             Korisnici.Add(k);
         }
 
+
         private void BrisanjeKorisnika()
         {
             PregledKorisnika();
             int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj korisnika: ", "Nije dobar odabir", 1, Korisnici.Count());
             Korisnici.RemoveAt(index - 1);
         }
+
 
         private void TestniPodaci()
         {
@@ -93,8 +98,6 @@ namespace GameStore
                 Email = "pero@gmail.com",
                 Oib = "12345678911"
             });
-
-            
         }
     }
 }

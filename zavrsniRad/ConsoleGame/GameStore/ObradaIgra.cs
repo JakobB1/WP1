@@ -24,6 +24,7 @@ namespace GameStore
             Igre = new List<Igra>();
         }
 
+
         public void PrikaziIzbornik()
         {
             Console.WriteLine("Izbornik za rad s igrama");
@@ -57,49 +58,6 @@ namespace GameStore
             }
         }
 
-        private void UnosNoveIgre()
-        {
-            var i = new Igra();
-            i.Sifra = Pomocno.ucitajCijeliBroj("Unesite sifru igre: ",
-                "Unos mora biti pozitivni cijeli broj");
-            i.Naziv = Pomocno.UcitajString("Unesite naziv igre: ",
-                "Unos obavezan");
-            i.Zanr = Pomocno.UcitajString("Unesite zanr igre: ",
-                "Unos obavezan");
-            i.Opis = Pomocno.UcitajString("Unesite opis igre: ",
-                "Unos obavezan");
-            i.Izdavaci = PostaviIzdavace();
-            i.Cijena = Pomocno.ucitajDecimalniBroj("Unesite cijenu (. za decimalni dio): ", 
-                "Unos mora biti pozitivan broj");
-            i.DobnaGranica = Pomocno.ucitajCijeliBroj("Unesite dobrnu granicu igre: ",
-                "Unos mora biti pozitivni cijeli broj");
-            i.DatumIzlaska = Pomocno.ucitajDatum("Unesi datum grupe u formatu dd.MM.yyyy.", "Greška");
-            Igre.Add(i);
-        }
-
-        private void BrisanjeIgre()
-        {
-            PrikaziIgre();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj igre: ", "Nije dobar odabir", 1, Igre.Count());
-            Igre.RemoveAt(index - 1);
-        }
-
-        private List<Izdavac> PostaviIzdavace()
-        {
-            List<Izdavac> izdavaci = new List<Izdavac>();
-            while (Pomocno.ucitajBool("Želite li dodati izdavace? (da ili bilo što drugo za ne): "))
-            {
-                izdavaci.Add(PostaviIzdavaca());
-            }
-            return izdavaci;
-        }
-
-        private Izdavac PostaviIzdavaca()
-        {
-            Izbornik.ObradaIzdavac.PrikaziIzdavace();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izbornik.ObradaIzdavac.Izdavaci.Count());
-            return Izbornik.ObradaIzdavac.Izdavaci[index - 1];
-        }
 
         public void PrikaziIgre()
         {
@@ -114,5 +72,52 @@ namespace GameStore
             Console.WriteLine("------------------");
         }
 
+
+        private void UnosNoveIgre()
+        {
+            var i = new Igra();
+            i.Sifra = Pomocno.ucitajCijeliBroj("Unesite sifru igre: ",
+                "Unos mora biti pozitivni cijeli broj");
+            i.Naziv = Pomocno.UcitajString("Unesite naziv igre: ",
+                "Unos obavezan");
+            i.Zanr = Pomocno.UcitajString("Unesite zanr igre: ",
+                "Unos obavezan");
+            i.Opis = Pomocno.UcitajString("Unesite opis igre: ",
+                "Unos obavezan");
+            i.Izdavaci = PostaviIzdavace();
+            i.Cijena = Pomocno.ucitajDecimalniBroj("Unesite cijenu (. za decimalni dio): ",
+                "Unos mora biti pozitivan broj");
+            i.DobnaGranica = Pomocno.ucitajCijeliBroj("Unesite dobrnu granicu igre: ",
+                "Unos mora biti pozitivni cijeli broj");
+            i.DatumIzlaska = Pomocno.ucitajDatum("Unesi datum grupe u formatu dd.MM.yyyy.", "Greška");
+            Igre.Add(i);
+        }
+
+
+        private List<Izdavac> PostaviIzdavace()
+        {
+            List<Izdavac> izdavaci = new List<Izdavac>();
+            while (Pomocno.ucitajBool("Želite li dodati izdavace? (da ili bilo što drugo za ne): "))
+            {
+                izdavaci.Add(PostaviIzdavaca());
+            }
+            return izdavaci;
+        }
+
+
+        private Izdavac PostaviIzdavaca()
+        {
+            Izbornik.ObradaIzdavac.PrikaziIzdavace();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izbornik.ObradaIzdavac.Izdavaci.Count());
+            return Izbornik.ObradaIzdavac.Izdavaci[index - 1];
+        }
+
+
+        private void BrisanjeIgre()
+        {
+            PrikaziIgre();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj igre: ", "Nije dobar odabir", 1, Igre.Count());
+            Igre.RemoveAt(index - 1);
+        }
     }
 }
