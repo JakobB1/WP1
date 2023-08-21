@@ -41,6 +41,7 @@ namespace GameStore
                     PrikaziIzbornik();
                     break;
                 case 3:
+                    PromjenaKorisnika();
                     PrikaziIzbornik();
                     break;
                 case 4:
@@ -77,6 +78,20 @@ namespace GameStore
             k.Email = Pomocno.UcitajString("Unesi Email korisnika: ", "Email obavezno");
             k.Oib = Pomocno.UcitajString("Unesi OIB korisnika: ", "OIB obavezno");
             Korisnici.Add(k);
+        }
+
+
+        private void PromjenaKorisnika()
+        {
+            PregledKorisnika();
+            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj korisnika: ", "Nije dobar odabir", 1, Korisnici.Count());
+            var k = Korisnici[index - 1];
+            k.Sifra = Pomocno.ucitajCijeliBroj("Unesite sifru korisnika (" + k.Sifra + "): ",
+                "Unos mora biti pozitivni cijeli broj");
+            k.Ime = Pomocno.UcitajString("Unesi Ime korisnika (" + k.Ime + "): ", "Ime obavezno");
+            k.Prezime = Pomocno.UcitajString("Unesi Prezime korisnika (" + k.Prezime + "): ", "Prezime obavezno");
+            k.Email = Pomocno.UcitajString("Unesi Email korisnika (" + k.Email + "): ", "Email obavezno");
+            k.Oib = Pomocno.UcitajString("Unesi OIB korisnika (" + k.Oib + "): ", "OIB obavezno");
         }
 
 
