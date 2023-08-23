@@ -1,0 +1,15 @@
+D:\WP1\CSHARP\Console09\02Delegati\bin\Debug\net6.0\02Delegati.exe
+D:\WP1\CSHARP\Console09\02Delegati\bin\Debug\net6.0\02Delegati.deps.json
+D:\WP1\CSHARP\Console09\02Delegati\bin\Debug\net6.0\02Delegati.runtimeconfig.json
+D:\WP1\CSHARP\Console09\02Delegati\bin\Debug\net6.0\02Delegati.dll
+D:\WP1\CSHARP\Console09\02Delegati\bin\Debug\net6.0\02Delegati.pdb
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.csproj.AssemblyReference.cache
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.GeneratedMSBuildEditorConfig.editorconfig
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.AssemblyInfoInputs.cache
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.AssemblyInfo.cs
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.csproj.CoreCompileInputs.cache
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.dll
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\refint\02Delegati.dll
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.pdb
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\02Delegati.genruntimeconfig.cache
+D:\WP1\CSHARP\Console09\02Delegati\obj\Debug\net6.0\ref\02Delegati.dll

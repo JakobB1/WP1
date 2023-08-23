@@ -8,8 +8,8 @@ namespace GameStore
 {
     internal class Izbornik
     {
-        public ObradaIzdavac ObradaIzdavac { get;}
-        public ObradaIgra ObradaIgra { get;}
+        public ObradaIzdavac ObradaIzdavac { get; }
+        public ObradaIgra ObradaIgra { get; }
         public ObradaKorisnik ObradaKorisnik { get; }
         public ObradaNarudzba ObradaNarudzba { get; }
 

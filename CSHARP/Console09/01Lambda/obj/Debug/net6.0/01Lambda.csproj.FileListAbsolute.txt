@@ -1,0 +1,15 @@
+D:\WP1\CSHARP\Console09\01Lambda\bin\Debug\net6.0\01Lambda.exe
+D:\WP1\CSHARP\Console09\01Lambda\bin\Debug\net6.0\01Lambda.deps.json
+D:\WP1\CSHARP\Console09\01Lambda\bin\Debug\net6.0\01Lambda.runtimeconfig.json
+D:\WP1\CSHARP\Console09\01Lambda\bin\Debug\net6.0\01Lambda.dll
+D:\WP1\CSHARP\Console09\01Lambda\bin\Debug\net6.0\01Lambda.pdb
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.csproj.AssemblyReference.cache
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.GeneratedMSBuildEditorConfig.editorconfig
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.AssemblyInfoInputs.cache
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.AssemblyInfo.cs
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.csproj.CoreCompileInputs.cache
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.dll
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\refint\01Lambda.dll
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.pdb
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\01Lambda.genruntimeconfig.cache
+D:\WP1\CSHARP\Console09\01Lambda\obj\Debug\net6.0\ref\01Lambda.dll
