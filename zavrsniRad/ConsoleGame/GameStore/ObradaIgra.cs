@@ -12,18 +12,17 @@ namespace GameStore
     {
         public List<Igra> Igre { get; }
 
-        private Izbornik Izbornik;
-
-        public ObradaIgra(Izbornik izbornik) : this()
-        {
-            this.Izbornik = izbornik;
-        }
-
+        
         public ObradaIgra()
         {
             Igre = new List<Igra>();
+            if (Pomocno.dev)
+            {
+                TestniPodaci();
+            }
         }
 
+        
 
         public void PrikaziIzbornik()
         {
@@ -84,7 +83,8 @@ namespace GameStore
                 "Unos obavezan");
             i.Opis = Pomocno.UcitajString("Unesite opis igre: ",
                 "Unos obavezan");
-            i.Izdavaci = PostaviIzdavace();
+            i.Izdavac = Pomocno.ucitajCijeliBroj("Unesite sifru izdavaca: ",
+                "Unos mora biti pozitivni cijeli broj");
             i.Cijena = Pomocno.ucitajDecimalniBroj("Unesite cijenu (. za decimalni dio): ",
                 "Unos mora biti pozitivan broj");
             i.DobnaGranica = Pomocno.ucitajCijeliBroj("Unesite dobrnu granicu igre: ",
@@ -93,31 +93,29 @@ namespace GameStore
             Igre.Add(i);
         }
 
-
-        private List<Izdavac> PostaviIzdavace()
-        {
-            List<Izdavac> izdavaci = new List<Izdavac>();
-            while (Pomocno.ucitajBool("Želite li dodati izdavace? (da ili bilo što drugo za ne): "))
-            {
-                izdavaci.Add(PostaviIzdavaca());
-            }
-            return izdavaci;
-        }
-
-
-        private Izdavac PostaviIzdavaca()
-        {
-            Izbornik.ObradaIzdavac.PrikaziIzdavace();
-            int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj izdavaca: ", "Nije dobar odabir", 1, Izbornik.ObradaIzdavac.Izdavaci.Count());
-            return Izbornik.ObradaIzdavac.Izdavaci[index - 1];
-        }
-
+        
 
         private void BrisanjeIgre()
         {
             PrikaziIgre();
             int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj igre: ", "Nije dobar odabir", 1, Igre.Count());
             Igre.RemoveAt(index - 1);
+        }
+
+
+        private void TestniPodaci()
+        {
+            Igre.Add(new Igra
+            {
+                Sifra = 1,
+                Naziv = "Naziv01",
+                Zanr = "Zanr01",
+                Opis = "Opis01",
+                Izdavac = 1,
+                Cijena = 10,
+                DobnaGranica = 18,
+                DatumIzlaska = DateTime.Parse("12.12.2012.")
+            });
         }
     }
 }

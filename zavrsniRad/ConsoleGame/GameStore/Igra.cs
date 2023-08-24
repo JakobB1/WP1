@@ -11,7 +11,7 @@ namespace GameStore
         public string Naziv { get; set; }
         public string Zanr { get; set; }
         public string Opis { get; set; }
-        public List<Izdavac> Izdavaci { get; set; }
+        public int Izdavac { get; set; }
         public decimal Cijena { get; set; }
         public int DobnaGranica { get; set; }
         public DateTime DatumIzlaska { get; set; }
