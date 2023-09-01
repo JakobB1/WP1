@@ -64,3 +64,4 @@ D:\WP1\CSHARP\EdunovaWebAPI\HelloWorld\obj\Debug\net7.0\refint\HelloWorld.dll
 D:\WP1\CSHARP\EdunovaWebAPI\HelloWorld\obj\Debug\net7.0\HelloWorld.pdb
 D:\WP1\CSHARP\EdunovaWebAPI\HelloWorld\obj\Debug\net7.0\HelloWorld.genruntimeconfig.cache
 D:\WP1\CSHARP\EdunovaWebAPI\HelloWorld\obj\Debug\net7.0\ref\HelloWorld.dll
+D:\WP1\CSHARP\EdunovaWebAPI\HelloWorld\bin\Debug\net7.0\Newtonsoft.Json.dll
