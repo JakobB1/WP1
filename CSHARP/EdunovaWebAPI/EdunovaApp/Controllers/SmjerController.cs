@@ -1,4 +1,5 @@
-﻿using EdunovaApp.Models;
+﻿using EdunovaApp.Data;
+using EdunovaApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EdunovaApp.Controllers
@@ -7,37 +8,50 @@ namespace EdunovaApp.Controllers
     [Route("api/v1/[controller]")]
     public class SmjerController : ControllerBase
     {
+
+        // Dependency injection u controller
+        // https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?view=aspnetcore-7.0&tabs=visual-studio#dependency-injection
+        private readonly EdunovaContext _context;
+
+        public SmjerController(EdunovaContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
-            var lista = new List<Smjer>()
-            {
-                new (){Naziv="Prvi"},
-                new (){Naziv="Drugi"},
-            }; 
-            return new JsonResult(lista); 
+            
+            return new JsonResult(_context.Smjer.ToList());
         }
 
         [HttpPost]
         public IActionResult Post(Smjer smjer)
         {
+            _context.Smjer.Add(smjer);
+            _context.SaveChanges();
+
             // dodavanje u bazu
-            return Created("/api/v1/Smjer", smjer);
+            return Created("/api/v1/Smjer",smjer); // 201
         }
 
-        [HttpPut]
+
+      [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Smjer smjer)
-        {
-            //promjena u bazi
+        public IActionResult Put(int sifra, Smjer smjer) {
+            // promjena u bazi
+
+          
+
             return StatusCode(StatusCodes.Status200OK, smjer);
         }
 
         [HttpDelete]
         [Route("{sifra:int}")]
-        public IActionResult Deleet(int sifra)
+        [Produces("application/json")]
+        public IActionResult Delete(int sifra)
         {
-            //brisanje u bazi
+            // Brisanje u bazi
             return StatusCode(StatusCodes.Status200OK, "{\"obrisano\":true}");
         }
     }
