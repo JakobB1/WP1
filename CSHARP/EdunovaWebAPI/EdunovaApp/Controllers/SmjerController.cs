@@ -18,22 +18,86 @@ namespace EdunovaApp.Controllers
             _context = context;
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         [HttpGet]
         public IActionResult Get()
         {
+            // kontrola ukoliko upit nije dobar
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var smjerovi = _context.Smjer.ToList();
+                if(smjerovi==null || smjerovi.Count == 0)
+                {
+                    return new EmptyResult();
+                }
+                return new JsonResult(_context.Smjer.ToList());
+            }
+            catch (Exception ex) 
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, 
+                                    ex.Message);
+            }
+
             
-            return new JsonResult(_context.Smjer.ToList());
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         [HttpPost]
         public IActionResult Post(Smjer smjer)
         {
-            _context.Smjer.Add(smjer);
-            _context.SaveChanges();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            // dodavanje u bazu
-            return Created("/api/v1/Smjer",smjer); // 201
+            try 
+            { 
+                _context.Smjer.Add(smjer);
+                _context.SaveChanges();
+                return StatusCode(StatusCodes.Status201Created, smjer);
+            }catch (Exception ex) 
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex.Message);
+            }
         }
+
+
+
 
 
       [HttpPut]
@@ -41,7 +105,7 @@ namespace EdunovaApp.Controllers
         public IActionResult Put(int sifra, Smjer smjer) {
             // promjena u bazi
 
-          
+            
 
             return StatusCode(StatusCodes.Status200OK, smjer);
         }
