@@ -1,6 +1,8 @@
-﻿using EdunovaApp.Data;
+﻿using System.Net.WebSockets;
+using EdunovaApp.Data;
 using EdunovaApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 
 namespace EdunovaApp.Controllers
 {
@@ -103,11 +105,40 @@ namespace EdunovaApp.Controllers
       [HttpPut]
         [Route("{sifra:int}")]
         public IActionResult Put(int sifra, Smjer smjer) {
-            // promjena u bazi
-
             
+            if(sifra<=0 || smjer==null) 
+            {
+                return BadRequest();
+            }
 
-            return StatusCode(StatusCodes.Status200OK, smjer);
+            try
+            {
+                var smjerBaza = _context.Smjer.Find(sifra);
+                if (smjerBaza == null)
+                {
+                    return BadRequest();
+                }
+                //
+                //
+                smjerBaza.Naziv = smjer.Naziv;
+                smjerBaza.Trajanje = smjer.Trajanje;
+                smjerBaza.Cijena = smjer.Cijena;
+                smjerBaza.Upisnina = smjer.Upisnina;
+                smjerBaza.Verificiran = smjer.Verificiran;
+
+                _context.Smjer.Update(smjerBaza);
+                _context.SaveChanges();
+
+                return StatusCode(StatusCodes.Status200OK, smjerBaza);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex.Message); // 
+                //nije dobro vracati cijeli ex ali za dev je OK
+            }
+
         }
 
         [HttpDelete]
@@ -115,8 +146,41 @@ namespace EdunovaApp.Controllers
         [Produces("application/json")]
         public IActionResult Delete(int sifra)
         {
-            // Brisanje u bazi
-            return StatusCode(StatusCodes.Status200OK, "{\"obrisano\":true}");
+            if(sifra <= 0)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                var smjerBaza = _context.Smjer.Find(sifra);
+                if(smjerBaza == null)
+                {
+                    return BadRequest();
+                }
+
+                _context.Smjer.Remove(smjerBaza);
+                _context.SaveChanges();
+
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
+
+            }
+            catch (Exception ex)
+            {
+                try
+                {
+                    SqlException sqle = (SqlException)ex;
+                    return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                   sqle);
+                }
+                catch (Exception e)
+                {
+
+                }
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                   ex.Message);
+            }
         }
     }
 }
