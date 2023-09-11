@@ -140,3 +140,5 @@ D:\WP1\CSHARP\EdunovaWebAPI\EdunovaApp\obj\Debug\net7.0\refint\EdunovaApp.dll
 D:\WP1\CSHARP\EdunovaWebAPI\EdunovaApp\obj\Debug\net7.0\EdunovaApp.pdb
 D:\WP1\CSHARP\EdunovaWebAPI\EdunovaApp\obj\Debug\net7.0\EdunovaApp.genruntimeconfig.cache
 D:\WP1\CSHARP\EdunovaWebAPI\EdunovaApp\obj\Debug\net7.0\ref\EdunovaApp.dll
+D:\WP1\CSHARP\EdunovaWebAPI\EdunovaApp\bin\Debug\net7.0\EdunovaApp.xml
+D:\WP1\CSHARP\EdunovaWebAPI\EdunovaApp\obj\Debug\net7.0\EdunovaApp.xml
