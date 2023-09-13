@@ -17,17 +17,23 @@ namespace GameStoreWebAPI.Controllers
             _context = context;
         }
 
+
         [HttpGet]
         public IActionResult Get()
         {
             return new JsonResult(_context.Izdavac.ToList());   
         }
 
+
         [HttpPost]
         public IActionResult Post(Izdavac izdavac)
         {
+            _context.Izdavac.Add(izdavac);
+            _context.SaveChanges();
+
             return Created("/api/v1/Izdavac", izdavac);
         }
+
 
         [HttpPut]
         [Route("{sifra:int}")]
@@ -35,6 +41,7 @@ namespace GameStoreWebAPI.Controllers
         {
             return StatusCode(StatusCodes.Status200OK, izdavac);
         }
+
 
         [HttpDelete]
         [Route("{sifra:int}")]
