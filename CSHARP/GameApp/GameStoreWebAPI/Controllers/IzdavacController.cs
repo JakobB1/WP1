@@ -69,15 +69,66 @@ namespace GameStoreWebAPI.Controllers
         [Route("{sifra:int}")]
         public IActionResult Put(int sifra, Izdavac izdavac)
         {
-            return StatusCode(StatusCodes.Status200OK, izdavac);
+            if(sifra<=0 || izdavac == null)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                var izdavacBaza = _context.Izdavac.Find(sifra);
+                if (izdavacBaza == null)
+                {
+                    return BadRequest();
+                }
+
+                izdavacBaza.naziv = izdavac.naziv;
+                izdavacBaza.drzava = izdavac.drzava;
+                izdavacBaza.webStranica = izdavac.webStranica;
+
+                _context.Izdavac.Update(izdavacBaza);
+                _context.SaveChanges();
+
+                return StatusCode(StatusCodes.Status200OK, izdavacBaza);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex);
+            }
         }
 
 
         [HttpDelete]
         [Route("{sifra:int}")]
-        public IActionResult Delete(int sifra) 
+        public IActionResult Delete(int sifra)
         {
-            return StatusCode(StatusCodes.Status200OK, "{\"obrisano\":true}");
+            if (sifra <= 0)
+            {
+                return BadRequest();
+            }
+
+            var izdavacBaza = _context.Izdavac.Find(sifra);
+            if (izdavacBaza == null)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                _context.Izdavac.Remove(izdavacBaza);
+                _context.SaveChanges();
+
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
+
+            }
+            catch (Exception ex)
+            {
+
+                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
+
+            }
         }
     }
 }
