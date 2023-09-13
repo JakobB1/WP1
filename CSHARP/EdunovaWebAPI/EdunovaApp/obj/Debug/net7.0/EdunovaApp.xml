@@ -4,6 +4,17 @@
         <name>EdunovaApp</name>
     </assembly>
     <members>
+        <member name="T:EdunovaApp.Controllers.GrupaController">
+            <summary>
+            Namjenjeno za CRUD operacije nad Grupom
+            </summary>
+        </member>
+        <member name="M:EdunovaApp.Controllers.GrupaController.#ctor(EdunovaApp.Data.EdunovaContext,Microsoft.Extensions.Logging.ILogger{EdunovaApp.Controllers.GrupaController})">
+            <summary>
+            Konstruktor
+            </summary>
+            <param name="context"></param>
+        </member>
         <member name="T:EdunovaApp.Controllers.SmjerController">
             <summary>
             Namijenjeno za CRUD operacije na entitetom smjer u bazi

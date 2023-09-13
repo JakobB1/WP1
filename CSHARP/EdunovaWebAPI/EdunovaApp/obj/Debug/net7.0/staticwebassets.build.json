@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "qJ6V8SIp5FyRdBmKoB29SKOs1keu88uBOTl/7KR1KoE=",
+  "Hash": "uMH4YWJHUjFrIEwPhXv4vSWrzwa5us6hg4gQ4qA0fwc=",
   "Source": "EdunovaApp",
   "BasePath": "_content/EdunovaApp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EdunovaApp\\wwwroot",
+      "Source": "EdunovaApp",
+      "ContentRoot": "D:\\WP1\\CSHARP\\EdunovaWebAPI\\EdunovaApp\\wwwroot\\",
+      "BasePath": "_content/EdunovaApp",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
