@@ -21,17 +21,47 @@ namespace GameStoreWebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return new JsonResult(_context.Izdavac.ToList());   
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var izdavaci = _context.Izdavac.ToList();
+                if(izdavaci==null || izdavaci.Count == 0)
+                {
+                    return new EmptyResult();
+                }
+                return new JsonResult(_context.Izdavac.ToList());
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex.Message);
+            }
         }
 
 
         [HttpPost]
         public IActionResult Post(Izdavac izdavac)
         {
-            _context.Izdavac.Add(izdavac);
-            _context.SaveChanges();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            return Created("/api/v1/Izdavac", izdavac);
+            try
+            {
+                _context.Izdavac.Add(izdavac);
+                _context.SaveChanges();
+                return StatusCode(StatusCodes.Status201Created, izdavac);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex.Message);
+            }
         }
 
 
