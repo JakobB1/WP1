@@ -51,3 +51,6 @@ alter table igra add foreign key(izdavac_id) references izdavac(sifra);
 alter table narudzba add foreign key(korisnik_id) references korisnik(sifra);
 alter table narudzba_igra add foreign key(igra_id) references igra(sifra);
 alter table narudzba_igra add foreign key(narudzba_id) references narudzba(sifra);
+
+insert into izdavac(naziv,drzava,webStranica)
+values ('Naziv01','Drzava01','Web01');

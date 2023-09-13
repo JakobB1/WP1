@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using GameStoreWebAPI.Data;
 using GameStoreWebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,15 +9,18 @@ namespace GameStoreWebAPI.Controllers
     [Route("api/v1/[controller]")]
     public class IzdavacController : ControllerBase
     {
+
+        private readonly GameContext _context;
+
+        public IzdavacController(GameContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
-            var lista = new List<Izdavac>()
-            {
-                new (){naziv="Prvi"},
-                new (){naziv="Drugi"}
-            };
-            return new JsonResult(lista);
+            return new JsonResult(_context.Izdavac.ToList());   
         }
 
         [HttpPost]
