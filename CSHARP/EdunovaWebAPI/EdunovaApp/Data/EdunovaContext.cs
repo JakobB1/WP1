@@ -6,12 +6,15 @@ namespace EdunovaApp.Data
     public class EdunovaContext : DbContext
     {
         public EdunovaContext(DbContextOptions<EdunovaContext> opcije)
-            : base(opcije) { 
-        
+            : base(opcije)
+        {
+
         }
 
         public DbSet<Smjer> Smjer { get; set; }
         public DbSet<Polaznik> Polaznik { get; set; }
+
+        public DbSet<Grupa> Grupa { get; set; }
 
         protected override void OnModelCreating(
             ModelBuilder modelBuilder)
@@ -19,7 +22,7 @@ namespace EdunovaApp.Data
             // implementacija veze 1:n
             modelBuilder.Entity<Grupa>().HasOne(g => g.Smjer);
 
-            // implementaacija veze n:n
+            // implementacjia veze n:n
             modelBuilder.Entity<Grupa>()
                 .HasMany(g => g.Polaznici)
                 .WithMany(p => p.Grupe)
@@ -29,8 +32,6 @@ namespace EdunovaApp.Data
                 c => c.ToTable("clan")
                 );
         }
-
-
 
     }
 }
