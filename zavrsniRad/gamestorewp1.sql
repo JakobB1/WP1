@@ -9,7 +9,7 @@ create table izdavac(
 	sifra int not null primary key identity(1,1),
 	naziv varchar(50) not null,
 	drzava varchar(50) not null,
-	web_stranica varchar(50) not null
+	webStranica varchar(50) not null
 );
 
 create table igra(
@@ -18,8 +18,8 @@ create table igra(
 	izdavac_id int not null,
 	zanr varchar(50) not null,
 	cijena decimal(18,2) not null,
-	dobna_granica int not null,
-	datum_izlaska datetime not null,
+	dobnaGranica int not null,
+	datumIzlaska datetime not null,
 	opis varchar(50) not null
 );
 
