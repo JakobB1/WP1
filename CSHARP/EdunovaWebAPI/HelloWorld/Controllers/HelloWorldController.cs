@@ -79,7 +79,7 @@ namespace HelloWorld.Controllers
         [HttpPut]
         public string Promjena(int sifra, string naziv)
         {
-            return "Na šifri " + sifra + " postavljam " + naziv;   
+            return "Na šifri " + sifra + " postavljam " + naziv;
         }
 
         [HttpDelete]
@@ -87,7 +87,6 @@ namespace HelloWorld.Controllers
         {
             return true;
         }
-
 
 
 
@@ -148,5 +147,6 @@ namespace HelloWorld.Controllers
 
             return new JsonResult(JsonConvert.SerializeObject(matrica));
         }
+
     }
 }

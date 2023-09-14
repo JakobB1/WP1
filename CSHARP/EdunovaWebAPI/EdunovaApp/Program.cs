@@ -66,5 +66,5 @@ app.UseHttpsRedirection();
 
 
 app.MapControllers();
-
+app.UseStaticFiles();
 app.Run();

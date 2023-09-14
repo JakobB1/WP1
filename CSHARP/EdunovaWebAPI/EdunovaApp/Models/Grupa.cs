@@ -12,5 +12,7 @@ namespace EdunovaApp.Models
         public DateTime? DatumPocetka { get; set; }
 
         public List<Polaznik> Polaznici { get; set; } = new();
+
+
     }
 }

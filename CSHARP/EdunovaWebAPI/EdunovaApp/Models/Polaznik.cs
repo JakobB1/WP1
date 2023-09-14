@@ -1,4 +1,6 @@
-﻿namespace EdunovaApp.Models
+﻿using System.Linq.Expressions;
+
+namespace EdunovaApp.Models
 {
     public class Polaznik : Entitet
     {
@@ -6,6 +8,7 @@
         public string? Prezime { get; set; }
         public string? Oib { get; set; }
         public string? Email { get; set; }
+
         public ICollection<Grupa> Grupe { get; } = new List<Grupa>();
     }
 }

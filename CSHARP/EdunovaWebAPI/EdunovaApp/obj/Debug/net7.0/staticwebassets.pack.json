@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\WP1\\CSHARP\\EdunovaWebAPI\\EdunovaApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.EdunovaApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.EdunovaApp.props",
+      "PackagePath": "build\\EdunovaApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.EdunovaApp.props",
+      "PackagePath": "buildMultiTargeting\\EdunovaApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.EdunovaApp.props",
+      "PackagePath": "buildTransitive\\EdunovaApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
