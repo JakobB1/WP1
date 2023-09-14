@@ -5,9 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GameStoreWebAPI.Controllers
 {
-    /// <summary>
-    /// Namijenjeno za CRUD operacije na entitetom izdavac u bazi
-    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
     public class IzdavacController : ControllerBase
