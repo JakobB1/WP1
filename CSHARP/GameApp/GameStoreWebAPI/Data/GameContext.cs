@@ -11,5 +11,6 @@ namespace GameStoreWebAPI.Data
         }
 
         public DbSet<Izdavac> Izdavac { get; set; }
+        public DbSet<Korisnik> Korisnik { get; set; }
     }
 }
