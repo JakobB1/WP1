@@ -2,6 +2,7 @@
 using GameStoreWebAPI.Data;
 using GameStoreWebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 
 namespace GameStoreWebAPI.Controllers
 {
@@ -102,6 +103,7 @@ namespace GameStoreWebAPI.Controllers
 
         [HttpDelete]
         [Route("{sifra:int}")]
+        [Produces("application/json")]
         public IActionResult Delete(int sifra)
         {
             if (sifra <= 0)
