@@ -35,7 +35,7 @@ create table narudzba(
 	sifra int not null primary key identity(1,1),
 	korisnik_id int not null,
 	placanje varchar(50) not null,
-	datum datetime not null
+	datumObracuna datetime not null
 );
 
 create table narudzba_igra(
@@ -67,5 +67,5 @@ insert into korisnik(ime,prezime,oib,email)
 values ('Pero','Peric',12345678911,'pero@mail.com');
 
 select * from narudzba;
-insert into narudzba(korisnik_id,placanje,datum)
+insert into narudzba(korisnik_id,placanje,datumObracuna)
 values (1,'Kartica','2023-10-10 00:00:00');
