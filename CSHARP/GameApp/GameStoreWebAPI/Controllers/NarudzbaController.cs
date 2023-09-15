@@ -1,19 +1,17 @@
-﻿using System.Linq.Expressions;
-using GameStoreWebAPI.Data;
+﻿using GameStoreWebAPI.Data;
 using GameStoreWebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 
 namespace GameStoreWebAPI.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class IzdavacController : ControllerBase
+    public class NarudzbaController : ControllerBase
     {
 
         private readonly GameContext _context;
 
-        public IzdavacController(GameContext context)
+        public NarudzbaController(GameContext context)
         {
             _context = context;
         }
@@ -29,12 +27,12 @@ namespace GameStoreWebAPI.Controllers
 
             try
             {
-                var izdavaci = _context.Izdavac.ToList();
-                if(izdavaci==null || izdavaci.Count == 0)
+                var narudzbe = _context.Narudzba.ToList();
+                if (narudzbe == null || narudzbe.Count == 0)
                 {
                     return new EmptyResult();
                 }
-                return new JsonResult(_context.Izdavac.ToList());
+                return new JsonResult(_context.Narudzba.ToList());
             }
             catch (Exception ex)
             {
@@ -45,7 +43,7 @@ namespace GameStoreWebAPI.Controllers
 
 
         [HttpPost]
-        public IActionResult Post(Izdavac izdavac)
+        public IActionResult Post(Narudzba narudzba)
         {
             if (!ModelState.IsValid)
             {
@@ -54,9 +52,9 @@ namespace GameStoreWebAPI.Controllers
 
             try
             {
-                _context.Izdavac.Add(izdavac);
+                _context.Narudzba.Add(narudzba);
                 _context.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, izdavac);
+                return StatusCode(StatusCodes.Status201Created, narudzba);
             }
             catch (Exception ex)
             {
@@ -68,29 +66,29 @@ namespace GameStoreWebAPI.Controllers
 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Izdavac izdavac)
+        public IActionResult Put(int sifra, Narudzba narudzba)
         {
-            if(sifra<=0 || izdavac == null)
+            if (sifra <= 0 || narudzba == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var izdavacBaza = _context.Izdavac.Find(sifra);
-                if (izdavacBaza == null)
+                var narudzbaBaza = _context.Narudzba.Find(sifra);
+                if (narudzbaBaza == null)
                 {
                     return BadRequest();
                 }
 
-                izdavacBaza.Naziv = izdavac.Naziv;
-                izdavacBaza.Drzava = izdavac.Drzava;
-                izdavacBaza.WebStranica = izdavac.WebStranica;
+                narudzbaBaza.Placanje = narudzbaBaza.Placanje;
+                narudzbaBaza.DatumObracuna = narudzbaBaza.DatumObracuna;
 
-                _context.Izdavac.Update(izdavacBaza);
+
+                _context.Narudzba.Update(narudzbaBaza);
                 _context.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, izdavacBaza);
+                return StatusCode(StatusCodes.Status200OK, narudzbaBaza);
 
             }
             catch (Exception ex)
@@ -111,15 +109,15 @@ namespace GameStoreWebAPI.Controllers
                 return BadRequest();
             }
 
-            var izdavacBaza = _context.Izdavac.Find(sifra);
-            if (izdavacBaza == null)
+            var narudzbaBaza = _context.Narudzba.Find(sifra);
+            if (narudzbaBaza == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                _context.Izdavac.Remove(izdavacBaza);
+                _context.Narudzba.Remove(narudzbaBaza);
                 _context.SaveChanges();
 
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");
