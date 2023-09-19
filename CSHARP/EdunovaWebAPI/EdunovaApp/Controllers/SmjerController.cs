@@ -46,7 +46,7 @@ namespace EdunovaApp.Controllers
             try
             {
                 var smjerovi = _context.Smjer.ToList();
-                if(smjerovi==null || smjerovi.Count == 0)
+                if (smjerovi == null || smjerovi.Count == 0)
                 {
                     return new EmptyResult();
                 }
@@ -54,12 +54,12 @@ namespace EdunovaApp.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, 
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
                                     ex.Message);
             }
 
-            
-            
+
+
         }
 
 
@@ -90,14 +90,15 @@ namespace EdunovaApp.Controllers
                 _context.Smjer.Add(smjer);
                 _context.SaveChanges();
                 return StatusCode(StatusCodes.Status201Created, smjer);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable,
                                    ex.Message);
             }
-            
 
-            
+
+
         }
 
 
@@ -129,9 +130,10 @@ namespace EdunovaApp.Controllers
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Smjer smjer) {
-        
-            if (sifra<=0 || smjer==null)
+        public IActionResult Put(int sifra, Smjer smjer)
+        {
+
+            if (sifra <= 0 || smjer == null)
             {
                 return BadRequest();
             }
@@ -163,7 +165,7 @@ namespace EdunovaApp.Controllers
                                   ex); // kada se vrati cijela instanca ex tada na klijentu imamo više podataka o grešci
                 // nije dobro vraćati cijeli ex ali za dev je OK
             }
-           
+
         }
 
 

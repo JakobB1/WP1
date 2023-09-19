@@ -276,7 +276,7 @@ namespace EdunovaApp.Controllers
                 return BadRequest();
             }
 
-            if (sifra <= 0 || polaznikSifra<=0)
+            if (sifra <= 0 || polaznikSifra <= 0)
             {
                 return BadRequest();
             }
@@ -295,7 +295,7 @@ namespace EdunovaApp.Controllers
 
                 var polaznik = _context.Polaznik.Find(polaznikSifra);
 
-                if(polaznik == null)
+                if (polaznik == null)
                 {
                     return BadRequest();
                 }
@@ -353,7 +353,7 @@ namespace EdunovaApp.Controllers
                     return BadRequest();
                 }
 
-               
+
                 grupa.Polaznici.Remove(polaznik);
 
                 _context.Grupa.Update(grupa);
@@ -374,5 +374,5 @@ namespace EdunovaApp.Controllers
 
 
 
-        }
+    }
 }

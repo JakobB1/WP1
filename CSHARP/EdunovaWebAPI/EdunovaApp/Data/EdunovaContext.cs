@@ -6,8 +6,9 @@ namespace EdunovaApp.Data
     public class EdunovaContext : DbContext
     {
         public EdunovaContext(DbContextOptions<EdunovaContext> opcije)
-            : base(opcije) { 
-        
+            : base(opcije)
+        {
+
         }
 
         public DbSet<Smjer> Smjer { get; set; }
@@ -28,7 +29,7 @@ namespace EdunovaApp.Data
                 .UsingEntity<Dictionary<string, object>>("clan",
                 c => c.HasOne<Polaznik>().WithMany().HasForeignKey("polaznik"),
                 c => c.HasOne<Grupa>().WithMany().HasForeignKey("grupa"),
-                c=>c.ToTable("clan")
+                c => c.ToTable("clan")
                 );
         }
 
