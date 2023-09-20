@@ -6,14 +6,13 @@ namespace GameStoreWebAPI.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class NarudzbaController : ControllerBase
+    public class StavkaController : ControllerBase
     {
-
         private readonly GameContext _context;
-        private readonly ILogger<NarudzbaController> _logger;
+        private readonly ILogger<StavkaController> _logger;
 
-        public NarudzbaController(GameContext context,
-            ILogger<NarudzbaController> logger)
+        public StavkaController(GameContext context,
+            ILogger<StavkaController> logger)
         {
             _context = context;
             _logger = logger;
@@ -30,23 +29,24 @@ namespace GameStoreWebAPI.Controllers
 
             try
             {
-                var narudzbe = _context.Narudzba.ToList();
-                if (narudzbe == null || narudzbe.Count == 0)
+                var stavke = _context.Stavka.ToList();
+                if (stavke == null || stavke.Count == 0)
                 {
                     return new EmptyResult();
                 }
-                return new JsonResult(_context.Narudzba.ToList());
+                return new JsonResult(_context.Stavka.ToList());
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable,
                                     ex.Message);
             }
+
         }
 
 
         [HttpPost]
-        public IActionResult Post(Narudzba narudzba)
+        public IActionResult Post(Stavka stavka)
         {
             if (!ModelState.IsValid)
             {
@@ -55,9 +55,9 @@ namespace GameStoreWebAPI.Controllers
 
             try
             {
-                _context.Narudzba.Add(narudzba);
+                _context.Stavka.Add(stavka);
                 _context.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, narudzba);
+                return StatusCode(StatusCodes.Status201Created, stavka);
             }
             catch (Exception ex)
             {
@@ -69,29 +69,29 @@ namespace GameStoreWebAPI.Controllers
 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Narudzba narudzba)
+        public IActionResult Put(int sifra, Stavka stavka)
         {
-            if (sifra <= 0 || narudzba == null)
+            if (sifra <= 0 || stavka == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var narudzbaBaza = _context.Narudzba.Find(sifra);
-                if (narudzbaBaza == null)
+                var stavkaBaza = _context.Stavka.Find(sifra);
+                if (stavkaBaza == null)
                 {
                     return BadRequest();
                 }
 
-                narudzbaBaza.Placanje = narudzbaBaza.Placanje;
-                narudzbaBaza.DatumObracuna = narudzbaBaza.DatumObracuna;
+
+                stavkaBaza.Kolicina = stavkaBaza.Kolicina;
 
 
-                _context.Narudzba.Update(narudzbaBaza);
+                _context.Stavka.Update(stavkaBaza);
                 _context.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, narudzbaBaza);
+                return StatusCode(StatusCodes.Status200OK, stavkaBaza);
 
             }
             catch (Exception ex)
@@ -112,15 +112,15 @@ namespace GameStoreWebAPI.Controllers
                 return BadRequest();
             }
 
-            var narudzbaBaza = _context.Narudzba.Find(sifra);
-            if (narudzbaBaza == null)
+            var stavkaBaza = _context.Stavka.Find(sifra);
+            if (stavkaBaza == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                _context.Narudzba.Remove(narudzbaBaza);
+                _context.Stavka.Remove(stavkaBaza);
                 _context.SaveChanges();
 
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");
@@ -133,5 +133,6 @@ namespace GameStoreWebAPI.Controllers
 
             }
         }
+
     }
 }

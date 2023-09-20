@@ -1,8 +1,11 @@
 ﻿using System.Linq.Expressions;
+using System.Text.RegularExpressions;
 using GameStoreWebAPI.Data;
 using GameStoreWebAPI.Models;
+using GameStoreWebAPI.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameStoreWebAPI.Controllers
 {
@@ -12,16 +15,21 @@ namespace GameStoreWebAPI.Controllers
     {
 
         private readonly GameContext _context;
+        private readonly ILogger<IgraController> _logger;
 
-        public IgraController(GameContext context)
+        public IgraController(GameContext context,
+            ILogger<IgraController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
 
         [HttpGet]
         public IActionResult Get()
         {
+            _logger.LogInformation("Dohvacam igre");
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -29,79 +37,155 @@ namespace GameStoreWebAPI.Controllers
 
             try
             {
-                var igre = _context.Igra.ToList();
+                var igre = _context.Igra
+                    .Include(i => i.Izdavac)
+                    .ToList();
+
                 if (igre == null || igre.Count == 0)
                 {
                     return new EmptyResult();
                 }
-                return new JsonResult(_context.Igra.ToList());
+
+                List<IgraDTO> vrati = new();
+
+                igre.ForEach(i =>
+                {
+                    vrati.Add(new IgraDTO()
+                    {
+                        Sifra = i.Sifra,
+                        Naziv = i.Naziv,
+                        Izdavac = i.Izdavac?.Naziv,
+                        SifraIzdavac = i.Izdavac.Sifra,
+                        Zanr = i.Zanr,
+                        Cijena = i.Cijena,
+                        DobnaGranica = i.DobnaGranica,
+                        DatumIzlaska = i.DatumIzlaska,
+                        Opis = i.Opis
+
+                    });
+                });
+                return Ok(vrati);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                    ex.Message);
+                return StatusCode(
+                    StatusCodes.Status503ServiceUnavailable,
+                    ex);
             }
+
+
         }
 
 
         [HttpPost]
-        public IActionResult Post(Igra igra)
+        public IActionResult Post(IgraDTO igraDTO)
         {
+
             if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (igraDTO.SifraIzdavac <= 0)
             {
                 return BadRequest(ModelState);
             }
 
             try
             {
-                _context.Igra.Add(igra);
+
+                var izdavac = _context.Izdavac.Find(igraDTO.SifraIzdavac);
+
+                if (izdavac == null)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                Igra i = new()
+                {
+                    Naziv = igraDTO.Naziv,
+                    Izdavac = izdavac,
+                    Zanr = igraDTO.Zanr,
+                    Cijena = igraDTO.Cijena,
+                    DobnaGranica = igraDTO.DobnaGranica,
+                    DatumIzlaska = igraDTO.DatumIzlaska,
+                    Opis = igraDTO.Opis
+
+                };
+
+                _context.Igra.Add(i);
                 _context.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, igra);
+
+                igraDTO.Sifra = i.Sifra;
+                igraDTO.Izdavac = izdavac.Naziv;
+
+                return Ok(igraDTO);
+
+
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                    ex.Message);
+                return StatusCode(
+                   StatusCodes.Status503ServiceUnavailable,
+                   ex);
             }
+
         }
 
 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Igra igra)
+        public IActionResult Put(int sifra, IgraDTO igraDTO)
         {
-            if (sifra <= 0 || igra == null)
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if (sifra <= 0 || igraDTO == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var igraBaza = _context.Igra.Find(sifra);
-                if (igraBaza == null)
+                var izdavac = _context.Izdavac.Find(igraDTO.SifraIzdavac);
+
+                if (izdavac == null)
                 {
                     return BadRequest();
                 }
 
-                igraBaza.Naziv = igra.Naziv;
-                igraBaza.Zanr = igra.Zanr;
-                igraBaza.Cijena = igra.Cijena;
-                igraBaza.DobnaGranica = igra.DobnaGranica;
-                igraBaza.DatumIzlaska = igra.DatumIzlaska;
-                igraBaza.Opis = igra.Opis;
+                var igra = _context.Igra.Find(sifra);
 
+                if (igra == null)
+                {
+                    return BadRequest();
+                }
 
-                _context.Igra.Update(igraBaza);
+                igra.Naziv = igra.Naziv;
+                igra.Izdavac = izdavac;
+                igra.Zanr = igra.Zanr;
+                igra.Cijena = igra.Cijena;
+                igra.DobnaGranica = igra.DobnaGranica;
+                igra.DatumIzlaska = igra.DatumIzlaska;
+                igra.Opis = igra.Opis;
+
+                _context.Igra.Update(igra);
                 _context.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, igraBaza);
+                igraDTO.Sifra = sifra;
+                igraDTO.Izdavac = izdavac.Naziv;
 
+                return Ok(igraDTO);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                    ex);
+                return StatusCode(
+                    StatusCodes.Status503ServiceUnavailable,
+                    ex.Message);
             }
+
+
         }
 
 
