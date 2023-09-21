@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GameStoreWebAPI.Controllers
 {
+
     [ApiController]
     [Route("api/v1/[controller]")]
     public class IgraController : ControllerBase
@@ -25,6 +26,19 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Dohvaca sve igre iz baze
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    GET api/v1/Igra
+        ///
+        /// </remarks>
+        /// <returns>Igre u bazi</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpGet]
         public IActionResult Get()
         {

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameStoreWebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:GameStoreWebAPI.Controllers.IgraController.Get">
+             <summary>
+             Dohvaca sve igre iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Igra
+            
+             </remarks>
+             <returns>Igre u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+    </members>
+</doc>
