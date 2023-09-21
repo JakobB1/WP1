@@ -6,6 +6,9 @@ using Microsoft.Data.SqlClient;
 
 namespace GameStoreWebAPI.Controllers
 {
+    /// <summary>
+    /// Namijenjeno za CRUD operacije na entitetom izdavac u bazi
+    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
     public class IzdavacController : ControllerBase
@@ -19,6 +22,19 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Dohvaća sve izdavače iz baze
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    GET api/v1/Izdavac
+        ///
+        /// </remarks>
+        /// <returns>Izdavči u bazi</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpGet]
         public IActionResult Get()
         {
@@ -44,6 +60,20 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Dodaje izdavača u bazu
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    POST api/v1/Izdavac
+        ///    {}
+        ///
+        /// </remarks>
+        /// <returns>Kreirani izdavač u bazi s svim podacima</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPost]
         public IActionResult Post(Izdavac izdavac)
         {
@@ -66,6 +96,23 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Mijenja podatke postojećeg izdavača u bazi
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    PUT api/v1/izdavac/1
+        ///
+        /// {}
+        ///
+        /// </remarks>
+        /// <param name="sifra">Šifra izdavača koji se mijenja</param>  
+        /// <returns>Svi poslani podaci od izdavača</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi izdavača kojeg želimo promijeniti</response>
+        /// <response code="415">Nismo poslali JSON</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPut]
         [Route("{sifra:int}")]
         public IActionResult Put(int sifra, Izdavac izdavac)
@@ -101,6 +148,21 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Briše izdavača iz baze
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    DELETE api/v1/izdavac/1
+        ///    
+        /// </remarks>
+        /// <param name="sifra">Šifra izdavača koji se briše</param>  
+        /// <returns>Odgovor da li je obrisano ili ne</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi izdavača kojeg želimo obrisati</response>
+        /// <response code="415">Nismo poslali JSON</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpDelete]
         [Route("{sifra:int}")]
         [Produces("application/json")]

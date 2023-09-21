@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GameStoreWebAPI.Controllers
 {
+    /// <summary>
+    /// Namijenjeno za CRUD operacije na entitetom stavka u bazi
+    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
     public class StavkaController : ControllerBase
@@ -18,6 +21,20 @@ namespace GameStoreWebAPI.Controllers
             _logger = logger;
         }
 
+
+        /// <summary>
+        /// Dohvaća sve stavke iz baze
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    GET api/v1/Stavka
+        ///
+        /// </remarks>
+        /// <returns>Stavke u bazi</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
 
         [HttpGet]
         public IActionResult Get()
@@ -45,6 +62,20 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Dodaje stavku u bazu
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    POST api/v1/Stavka
+        ///    {}
+        ///
+        /// </remarks>
+        /// <returns>Kreirana stavka u bazi s svim podacima</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPost]
         public IActionResult Post(Stavka stavka)
         {
@@ -67,6 +98,23 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Mijenja podatke postojeće stavke u bazi
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    PUT api/v1/stavka/1
+        ///
+        /// {}
+        ///
+        /// </remarks>
+        /// <param name="sifra">Šifra stavke koji se mijenja</param>  
+        /// <returns>Svi poslani podaci od stavke</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi stavke koje želimo promijeniti</response>
+        /// <response code="415">Nismo poslali JSON</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPut]
         [Route("{sifra:int}")]
         public IActionResult Put(int sifra, Stavka stavka)
@@ -102,6 +150,22 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Briše stavku iz baze
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    DELETE api/v1/stavka/1
+        ///    
+        /// </remarks>
+        /// <param name="sifra">Šifra stavke koji se briše</param>  
+        /// <returns>Odgovor da li je obrisano ili ne</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi stavke kojeg želimo obrisati</response>
+        /// <response code="415">Nismo poslali JSON</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
+        [HttpDelete]
         [HttpDelete]
         [Route("{sifra:int}")]
         [Produces("application/json")]

@@ -9,7 +9,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GameStoreWebAPI.Controllers
 {
-
+    /// <summary>
+    /// Namijenjeno za CRUD operacije na entitetom igra u bazi
+    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
     public class IgraController : ControllerBase
@@ -27,7 +29,7 @@ namespace GameStoreWebAPI.Controllers
 
 
         /// <summary>
-        /// Dohvaca sve igre iz baze
+        /// Dohvaća sve igre iz baze
         /// </summary>
         /// <remarks>
         /// Primjer upita:
@@ -91,6 +93,20 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Dodaje igre u bazu
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    POST api/v1/Igra
+        ///    {}
+        ///
+        /// </remarks>
+        /// <returns>Kreirane igre u bazi s svim podacima</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPost]
         public IActionResult Post(IgraDTO igraDTO)
         {
@@ -147,6 +163,22 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Mijenja podatke postojećih igara u bazi
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    PUT api/v1/igra/1
+        ///    {}
+        ///
+        /// </remarks>
+        /// <param name="sifra">Šifra igre koja se mijenja</param>  
+        /// <returns>Svi poslani podaci od igre</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi igre koju želimo promijeniti</response>
+        /// <response code="415">Nismo poslali JSON</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPut]
         [Route("{sifra:int}")]
         public IActionResult Put(int sifra, IgraDTO igraDTO)
@@ -203,6 +235,21 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Briše igre iz baze
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    DELETE api/v1/igra/1
+        ///    
+        /// </remarks>
+        /// <param name="sifra">Šifra igre koja se briše</param>  
+        /// <returns>Odgovor da li je obrisano ili ne</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi igre koju želimo obrisati</response>
+        /// <response code="415">Nismo poslali JSON</response> 
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpDelete]
         [Route("{sifra:int}")]
         [Produces("application/json")]
