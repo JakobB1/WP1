@@ -36,6 +36,14 @@ builder.Services.AddSwaggerGen(sgo => { // sgo je instanca klase SwaggerGenOptio
 });
 
 
+builder.Services.AddCors(opcije =>
+{
+    opcije.AddPolicy("CorsPolicy",
+        builder =>
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
+
 // dodavanje baze podataka
 builder.Services.AddDbContext<EdunovaContext>(o =>
     o.UseSqlServer(
@@ -64,7 +72,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
 app.MapControllers();
 app.UseStaticFiles();
+
+app.UseCors("CorsPolicy");
+
 app.Run();
