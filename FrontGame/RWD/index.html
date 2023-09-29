@@ -11,18 +11,55 @@
 <body>
 
     <div class="grid-container visina">
+
+      <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      
+      <div class="top-bar" id="example-menu">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Site Title</li>
+            <li>
+              <a href="#">One</a>
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+          </ul>
+        </div>       
+      </div>
+
+
       <div class="grid-x grid-padding-x">
-        <div class="large-6 cell">
+        <div class="large-6 medium-8  small-4 cell">
           <div class="success callout">
             Lijevo
           </div>
         </div>
-        <div class="large-6">
+        <div class="large-6 medium-4 small-8 cell">
           <div class="success callout">
             Desno
           </div>
         </div>
       </div>
+
+      <!-- Podaci -->
+      <ol>
+        <li>Prvi izdavač</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Eligendi eos, aut quibusdam autem nihil minima. 
+          Laboriosam earum unde eius sed illo assumenda odio 
+          eos quas dolor deserunt! Consequatur, ab ipsum!</li>
+      </ol>
+
+
+
     </div>
 
 
