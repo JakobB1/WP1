@@ -1,4 +1,4 @@
-use master;
+﻿use master;
 drop database if exists gamestorewp1;
 go
 create database gamestorewp1;
@@ -54,13 +54,25 @@ alter table stavka add foreign key(narudzba_id) references narudzba(sifra);
 
 select * from izdavac;
 insert into izdavac(naziv,drzava,webStranica)
-values ('Valve','Bellevue, Washington','https://www.valvesoftware.com/en/');
+values	('Valve','Bellevue, Washington','https://www.valvesoftware.com/en/'),
+		('FromSoftware','Tokyo, Japan','https://www.fromsoftware.jp/ww/'),
+		('CD Projekt Red','Łódź, Poland','https://www.cdprojektred.com/en'),
+		('Capcom','Osaka, Japan','https://www.capcom.com/'),
+		('id Software','Richardson, Texas, United States','https://www.idsoftware.com/'),
+		('Santa Monica Studio','Los Angeles, California','https://sms.playstation.com/');
+
+
 
 select * from igra;
 insert into igra(naziv,izdavac_id,zanr,cijena,dobnaGranica,datumIzlaska,opis)
-values ('Half-Life',1,'First Person Shooter',8,18,'1998-11-19 00:00:00',
-'Valves debut title blends action and adventure with award-winning technology 
-to create a frighteningly realistic world where players must think to survive');
+values ('Half-Life',1,'First Person Shooter',7.99,18,'1998-11-19 00:00:00',
+		'Valves debut title blends action and adventure with award-winning technology 
+		to create a frighteningly realistic world where players must think to survive'),
+
+		('Dark Souls',2,'Action RPG',9.99,16,'2011-09-22 00:00:00',
+		'The unique old-school action RPG experience captivated imaginations of gamers 
+		worldwide with incredible challenge and intense emotional reward.');
+
 
 select * from korisnik;
 insert into korisnik(ime,prezime,oib,email)
