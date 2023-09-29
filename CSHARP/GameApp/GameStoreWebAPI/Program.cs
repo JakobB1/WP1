@@ -7,10 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(sgo => { // sgo je instanca klase SwaggerGenOptions
-    // èitati https://devintxcontent.blob.core.windows.net/showcontent/Speaker%20Presentations%20Fall%202017/Web%20API%20Best%20Practices.pdf
+
+builder.Services.AddSwaggerGen(sgo => {
     var o = new Microsoft.OpenApi.Models.OpenApiInfo()
     {
         Title = "Game API",
@@ -32,6 +32,15 @@ builder.Services.AddSwaggerGen(sgo => { // sgo je instanca klase SwaggerGenOptio
     sgo.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
 
 });
+
+
+builder.Services.AddCors(opcije =>
+{
+    opcije.AddPolicy("CorsPolicy",
+        builder =>
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 
 // Dodavanje baze podataka
 builder.Services.AddDbContext<GameContext>(o =>
@@ -57,8 +66,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+
 app.UseHttpsRedirection();
 
 app.MapControllers();
 app.UseStaticFiles();
+
+app.UseCors("CorsPolicy");
+
 app.Run();
