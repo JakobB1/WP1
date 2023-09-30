@@ -71,7 +71,23 @@ values ('Half-Life',1,'First Person Shooter',7.99,18,'1998-11-19 00:00:00',
 
 		('Dark Souls',2,'Action RPG',9.99,16,'2011-09-22 00:00:00',
 		'The unique old-school action RPG experience captivated imaginations of gamers 
-		worldwide with incredible challenge and intense emotional reward.');
+		worldwide with incredible challenge and intense emotional reward.'),
+
+		('Cyberpunk 2077',3,'Action RPG',35.99,18,'2023-12-10 00:00:00',
+		'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, 
+		where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival.'),
+
+		('Devil May Cry 5',4,'Action Adventure Hack and Slash',29.99,18,'2019-03-08 00:00:00',
+		'The Devil you know returns in this brand new entry in the 
+		over-the-top action series available on the PC'),
+
+		('Doom Eternal',5,'FPS',19.99,18,'2020-03-20 00:00:00',
+		'Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign 
+		to conquer demons across dimensions and stop the final destruction of humanity.'),
+
+		('God of War',6,'Action Adventure Hack and Slash',9.99,18,'2005-03-22 00:00:00',
+		'The mad Kratos is guided by the gods to fight through hordes of 
+		enemies from Greek mythology and overthrow the war god Ares.');
 
 
 select * from korisnik;
