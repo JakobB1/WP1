@@ -190,7 +190,7 @@ namespace GameStoreWebAPI.Controllers
             catch (Exception ex)
             {
 
-                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
+                return new JsonResult("{\"poruka\":\"Ne može se obrisati izdavač jer ima sebi igru\"}");
 
             }
         }
