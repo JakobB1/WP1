@@ -239,7 +239,7 @@
              <response code="400">Zahtjev nije valjan (BadRequest)</response> 
              <response code="503">Na azure treba dodati IP u firewall</response> 
         </member>
-        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Post(GameStoreWebAPI.Models.Narudzba)">
+        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Post(GameStoreWebAPI.Models.DTO.NarudzbaDTO)">
              <summary>
              Dodaje narudžbu u bazu
              </summary>
@@ -255,7 +255,7 @@
              <response code="400">Zahtjev nije valjan (BadRequest)</response> 
              <response code="503">Na azure treba dodati IP u firewall</response> 
         </member>
-        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Put(System.Int32,GameStoreWebAPI.Models.Narudzba)">
+        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Put(System.Int32,GameStoreWebAPI.Models.DTO.NarudzbaDTO)">
              <summary>
              Mijenja podatke postojeće narudžbe u bazi
              </summary>
