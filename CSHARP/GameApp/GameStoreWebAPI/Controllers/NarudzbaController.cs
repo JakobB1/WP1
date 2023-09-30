@@ -1,6 +1,9 @@
-﻿using GameStoreWebAPI.Data;
+﻿using System.Text.RegularExpressions;
+using GameStoreWebAPI.Data;
 using GameStoreWebAPI.Models;
+using GameStoreWebAPI.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameStoreWebAPI.Controllers
 {
@@ -39,6 +42,8 @@ namespace GameStoreWebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            _logger.LogInformation("Dohvacam narudzbe");
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -46,18 +51,38 @@ namespace GameStoreWebAPI.Controllers
 
             try
             {
-                var narudzbe = _context.Narudzba.ToList();
+                var narudzbe = _context.Narudzba
+                    .Include(k => k.Korisnik)
+                    .ToList();
+
                 if (narudzbe == null || narudzbe.Count == 0)
                 {
                     return new EmptyResult();
                 }
-                return new JsonResult(_context.Narudzba.ToList());
+
+                List<NarudzbaDTO> vrati = new();
+
+                narudzbe.ForEach(n =>
+                {
+                    vrati.Add(new NarudzbaDTO()
+                    {
+                        Sifra = n.Sifra,
+                        Korisnik = n.Korisnik?.Ime,
+                        Placanje = n.Placanje,
+                        DatumObracuna = n.DatumObracuna,
+                        SifraKorisnik = n.Korisnik.Sifra
+                    });
+                });
+                return Ok(vrati);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                    ex.Message);
+                return StatusCode(
+                    StatusCodes.Status503ServiceUnavailable,
+                    ex);
             }
+
+
         }
 
 
@@ -77,24 +102,54 @@ namespace GameStoreWebAPI.Controllers
         /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPost]
-        public IActionResult Post(Narudzba narudzba)
+        public IActionResult Post(NarudzbaDTO narudzbaDTO)
         {
+
             if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (narudzbaDTO.SifraKorisnik <= 0)
             {
                 return BadRequest(ModelState);
             }
 
             try
             {
-                _context.Narudzba.Add(narudzba);
+
+                var korisnik = _context.Korisnik.Find(narudzbaDTO.SifraKorisnik);
+
+                if (korisnik == null)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                Narudzba n = new()
+                {
+                    Sifra = narudzbaDTO.Sifra,
+                    Korisnik = korisnik,
+                    Placanje = narudzbaDTO.Placanje,
+                    DatumObracuna = narudzbaDTO.DatumObracuna
+                };
+
+                _context.Narudzba.Add(n);
                 _context.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, narudzba);
+
+                narudzbaDTO.Sifra = n.Sifra;
+                narudzbaDTO.Korisnik = korisnik.Ime;
+
+                return Ok(narudzbaDTO);
+
+
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                    ex.Message);
+                return StatusCode(
+                   StatusCodes.Status503ServiceUnavailable,
+                   ex);
             }
+
         }
 
 
@@ -118,36 +173,53 @@ namespace GameStoreWebAPI.Controllers
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Narudzba narudzba)
+        public IActionResult Put(int sifra, NarudzbaDTO narudzbaDTO)
         {
-            if (sifra <= 0 || narudzba == null)
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if (sifra <= 0 || narudzbaDTO == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var narudzbaBaza = _context.Narudzba.Find(sifra);
-                if (narudzbaBaza == null)
+                var korisnik = _context.Korisnik.Find(narudzbaDTO.SifraKorisnik);
+
+                if (korisnik == null)
                 {
                     return BadRequest();
                 }
 
-                narudzbaBaza.Placanje = narudzbaBaza.Placanje;
-                narudzbaBaza.DatumObracuna = narudzbaBaza.DatumObracuna;
+                var narudzba = _context.Narudzba.Find(sifra);
 
+                if (narudzba == null)
+                {
+                    return BadRequest();
+                }
 
-                _context.Narudzba.Update(narudzbaBaza);
+                narudzba.Korisnik = korisnik;
+                narudzba.Placanje = narudzbaDTO.Placanje;
+                narudzba.DatumObracuna = narudzbaDTO.DatumObracuna;
+
+                _context.Narudzba.Update(narudzba);
                 _context.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, narudzbaBaza);
+                narudzbaDTO.Sifra = sifra;
+                narudzbaDTO.Korisnik = korisnik.Ime;
 
+                return Ok(narudzbaDTO);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                    ex);
+                return StatusCode(
+                    StatusCodes.Status503ServiceUnavailable,
+                    ex.Message);
             }
+
+
         }
 
 
