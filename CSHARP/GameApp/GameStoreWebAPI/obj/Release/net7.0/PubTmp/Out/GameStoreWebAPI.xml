@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameStoreWebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:GameStoreWebAPI.Controllers.IgraController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetom igra u bazi
+            </summary>
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IgraController.Get">
+             <summary>
+             Dohvaća sve igre iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Igra
+            
+             </remarks>
+             <returns>Igre u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IgraController.Post(GameStoreWebAPI.Models.DTO.IgraDTO)">
+             <summary>
+             Dodaje igre u bazu
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Igra
+                {}
+            
+             </remarks>
+             <returns>Kreirane igre u bazi s svim podacima</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IgraController.Put(System.Int32,GameStoreWebAPI.Models.DTO.IgraDTO)">
+             <summary>
+             Mijenja podatke postojećih igara u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/igra/1
+                {}
+            
+             </remarks>
+             <param name="sifra">Šifra igre koja se mijenja</param>  
+             <returns>Svi poslani podaci od igre</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi igre koju želimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IgraController.Delete(System.Int32)">
+             <summary>
+             Briše igre iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/igra/1
+                
+             </remarks>
+             <param name="sifra">Šifra igre koja se briše</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi igre koju želimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="T:GameStoreWebAPI.Controllers.IzdavacController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetom izdavac u bazi
+            </summary>
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IzdavacController.Get">
+             <summary>
+             Dohvaća sve izdavače iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Izdavac
+            
+             </remarks>
+             <returns>Izdavči u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IzdavacController.Post(GameStoreWebAPI.Models.Izdavac)">
+             <summary>
+             Dodaje izdavača u bazu
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Izdavac
+                {}
+            
+             </remarks>
+             <returns>Kreirani izdavač u bazi s svim podacima</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IzdavacController.Put(System.Int32,GameStoreWebAPI.Models.Izdavac)">
+             <summary>
+             Mijenja podatke postojećeg izdavača u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/izdavac/1
+            
+             {}
+            
+             </remarks>
+             <param name="sifra">Šifra izdavača koji se mijenja</param>  
+             <returns>Svi poslani podaci od izdavača</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi izdavača kojeg želimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.IzdavacController.Delete(System.Int32)">
+             <summary>
+             Briše izdavača iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/izdavac/1
+                
+             </remarks>
+             <param name="sifra">Šifra izdavača koji se briše</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi izdavača kojeg želimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="T:GameStoreWebAPI.Controllers.KorisnikController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetom korisnik u bazi
+            </summary>
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.KorisnikController.Get">
+             <summary>
+             Dohvaća sve korisnike iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Korisnik
+            
+             </remarks>
+             <returns>Korisnici u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.KorisnikController.Post(GameStoreWebAPI.Models.DTO.KorisnikDTO)">
+             <summary>
+             Dodaje korisnika u bazu
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Korisnik
+                {}
+            
+             </remarks>
+             <returns>Kreirani korisnik u bazi s svim podacima</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.KorisnikController.Put(System.Int32,GameStoreWebAPI.Models.DTO.KorisnikDTO)">
+             <summary>
+             Mijenja podatke postojećeg korisnika u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/korisnik/1
+            
+             {}
+            
+             </remarks>
+             <param name="sifra">Šifra korisnika koji se mijenja</param>  
+             <returns>Svi poslani podaci od korisnika</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi korisnika kojeg želimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.KorisnikController.Delete(System.Int32)">
+             <summary>
+             Briše korisnika iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/korisnik/1
+                
+             </remarks>
+             <param name="sifra">Šifra korisnika koji se briše</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi korisnika kojeg želimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="T:GameStoreWebAPI.Controllers.NarudzbaController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetom narudžba u bazi
+            </summary>
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Get">
+             <summary>
+             Dohvaća sve narudžbe iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Narudzba
+            
+             </remarks>
+             <returns>Narudzbe u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Post(GameStoreWebAPI.Models.DTO.NarudzbaDTO)">
+             <summary>
+             Dodaje narudžbu u bazu
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Narudzba
+                {}
+            
+             </remarks>
+             <returns>Kreirana narudzba u bazi s svim podacima</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Put(System.Int32,GameStoreWebAPI.Models.DTO.NarudzbaDTO)">
+             <summary>
+             Mijenja podatke postojeće narudžbe u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/narudzba/1
+            
+             {}
+            
+             </remarks>
+             <param name="sifra">Šifra narudžbe koji se mijenja</param>  
+             <returns>Svi poslani podaci od narudžbe</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi narudžbe koje želimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.NarudzbaController.Delete(System.Int32)">
+             <summary>
+             Briše narudžbe iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/narudzba/1
+                
+             </remarks>
+             <param name="sifra">Šifra narudžbe koji se briše</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi narudžbe kojeg želimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="T:GameStoreWebAPI.Controllers.StavkaController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetom stavka u bazi
+            </summary>
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.StavkaController.Get">
+             <summary>
+             Dohvaća sve stavke iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Stavka
+            
+             </remarks>
+             <returns>Stavke u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.StavkaController.Post(GameStoreWebAPI.Models.Stavka)">
+             <summary>
+             Dodaje stavku u bazu
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Stavka
+                {}
+            
+             </remarks>
+             <returns>Kreirana stavka u bazi s svim podacima</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.StavkaController.Put(System.Int32,GameStoreWebAPI.Models.Stavka)">
+             <summary>
+             Mijenja podatke postojeće stavke u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/stavka/1
+            
+             {}
+            
+             </remarks>
+             <param name="sifra">Šifra stavke koji se mijenja</param>  
+             <returns>Svi poslani podaci od stavke</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi stavke koje želimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:GameStoreWebAPI.Controllers.StavkaController.Delete(System.Int32)">
+             <summary>
+             Briše stavku iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/stavka/1
+                
+             </remarks>
+             <param name="sifra">Šifra stavke koji se briše</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi stavke kojeg želimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+    </members>
+</doc>

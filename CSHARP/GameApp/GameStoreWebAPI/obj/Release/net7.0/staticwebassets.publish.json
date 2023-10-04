@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "efXvSjSNmHE5YUDBntfk9o6Z6kKm1AcRaNxxzR97C+M=",
+  "Source": "GameStoreWebAPI",
+  "BasePath": "_content/GameStoreWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GameStoreWebAPI\\wwwroot",
+      "Source": "GameStoreWebAPI",
+      "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
+      "BasePath": "_content/GameStoreWebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\index.html",
+      "SourceId": "GameStoreWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
+      "BasePath": "_content/GameStoreWebAPI",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

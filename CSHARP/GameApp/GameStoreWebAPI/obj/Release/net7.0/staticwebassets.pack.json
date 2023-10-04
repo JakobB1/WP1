@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.GameStoreWebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.GameStoreWebAPI.props",
+      "PackagePath": "build\\GameStoreWebAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.GameStoreWebAPI.props",
+      "PackagePath": "buildMultiTargeting\\GameStoreWebAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.GameStoreWebAPI.props",
+      "PackagePath": "buildTransitive\\GameStoreWebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

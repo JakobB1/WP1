@@ -72,3 +72,4 @@ D:\WP1\CSHARP\GameApp\GameStoreWebAPI\obj\Debug\net7.0\GameStoreWebAPI.genruntim
 D:\WP1\CSHARP\GameApp\GameStoreWebAPI\obj\Debug\net7.0\ref\GameStoreWebAPI.dll
 D:\WP1\CSHARP\GameApp\GameStoreWebAPI\bin\Debug\net7.0\GameStoreWebAPI.xml
 D:\WP1\CSHARP\GameApp\GameStoreWebAPI\obj\Debug\net7.0\GameStoreWebAPI.xml
+D:\WP1\CSHARP\GameApp\GameStoreWebAPI\bin\Debug\net7.0\GameStoreWebAPI.staticwebassets.runtime.json
