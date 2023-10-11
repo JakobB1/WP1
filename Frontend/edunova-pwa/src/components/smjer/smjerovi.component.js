@@ -10,8 +10,6 @@ export default class Smjerovi extends Component{
 
     constructor(props){
         super(props);
-        this.dohvatiSmjerovi = this.dohvatiSmjerovi.bind(this);
-        this.obrisiSmjer = this.obrisiSmjer.bind(this);
 
         this.state = {
             smjerovi: []
