@@ -48,7 +48,6 @@ export default class Polaznici extends Component {
     if(odgovor.ok){
      this.dohvatiPolaznici();
     }else{
-     // alert(odgovor.poruka);
       this.otvoriModal();
     }
     
@@ -66,6 +65,7 @@ export default class Polaznici extends Component {
            <Col key={p.sifra} sm={12} lg={3} md={3}>
 
               <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src={p.slika} />
                 <Card.Body>
                   <Card.Title>{p.ime} {p.prezime}</Card.Title>
                   <Card.Text>

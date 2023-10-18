@@ -7,23 +7,31 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
 
+import Cropper from "react-cropper";
+import "cropperjs/dist/cropper.css";
+import { Image } from "react-bootstrap";
+
 
 
 
 export default class PromjeniPolaznik extends Component {
 
+
+
+
   constructor(props) {
     super(props);
-
     this.polaznik = this.dohvatiPolaznik();
     this.promjeniPolaznik = this.promjeniPolaznik.bind(this);
+    this.spremiSliku = this.spremiSliku.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
     
 
 
     this.state = {
-      polaznik: {}
+      polaznik: {},
+      trenutnaSlika: ""
     };
   }
 
@@ -35,7 +43,8 @@ export default class PromjeniPolaznik extends Component {
     await PolaznikDataService.getBySifra(niz[niz.length-1])
       .then(response => {
         this.setState({
-          polaznik: response.data
+          polaznik: response.data,
+          trenutnaSlika: response.data.slika
         });
        // console.log(response.data);
       })
@@ -81,39 +90,144 @@ export default class PromjeniPolaznik extends Component {
     
   }
 
+    _crop() {
+        // image in dataUrl
+       // console.log(this.cropper.getCroppedCanvas().toDataURL());
+       this.setState({
+        slikaZaServer: this.cropper.getCroppedCanvas().toDataURL()
+      });
+    }
 
+    onCropperInit(cropper) {
+        this.cropper = cropper;
+    }
+
+    onChange = (e) => {
+      e.preventDefault();
+      let files;
+      if (e.dataTransfer) {
+        files = e.dataTransfer.files;
+      } else if (e.target) {
+        files = e.target.files;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.setState({
+          image: reader.result
+        });
+      };
+      try {
+        reader.readAsDataURL(files[0]);
+      } catch (error) {
+        
+      }
+      
+    }
+
+
+    spremiSlikuAkcija = () =>{
+      const { slikaZaServer} = this.state;
+      const { polaznik} = this.state;
+
+      
+
+      this.spremiSliku(polaznik.sifra,slikaZaServer); 
+    };
+
+
+    async spremiSliku(sifra,slika){
+
+      let base64 = slika;
+      base64=base64.replace('data:image/png;base64,', '');
+
+      const odgovor = await  PolaznikDataService.postaviSliku(sifra,{
+        base64: base64
+      });
+    if(odgovor.ok){
+      //window.location.href='/polaznici';
+      this.setState({
+        trenutnaSlika: slika
+      });
+    }else{
+      // pokaži grešku
+      console.log(odgovor);
+    }
+
+    }
+  
   render() {
     
     const { polaznik} = this.state;
+    const { image} = this.state;
+    const { slikaZaServer} = this.state;
+    const { trenutnaSlika} = this.state;
 
     return (
     <Container>
         <Form onSubmit={this.handleSubmit}>
+        <Row>
+          <Col key="1" sm={12} lg={6} md={6}>
+              <Form.Group className="mb-3" controlId="ime">
+                <Form.Label>Ime</Form.Label>
+                <Form.Control type="text" name="ime" placeholder="Josip" maxLength={255} defaultValue={polaznik.ime} required/>
+              </Form.Group>
 
 
-        <Form.Group className="mb-3" controlId="ime">
-            <Form.Label>Ime</Form.Label>
-            <Form.Control type="text" name="ime" placeholder="Josip" maxLength={255} defaultValue={polaznik.ime} required/>
-          </Form.Group>
+              <Form.Group className="mb-3" controlId="prezime">
+                <Form.Label>Prezime</Form.Label>
+                <Form.Control type="text" name="prezime" placeholder="Horvat" defaultValue={polaznik.prezime}  required />
+              </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="prezime">
-            <Form.Label>Prezime</Form.Label>
-            <Form.Control type="text" name="prezime" placeholder="Horvat" defaultValue={polaznik.prezime}  required />
-          </Form.Group>
+              <Form.Group className="mb-3" controlId="email">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="text" name="email" placeholder="jhorvat@edunova.hr" defaultValue={polaznik.email}  />
+              </Form.Group>
 
+              <Form.Group className="mb-3" controlId="oib">
+                <Form.Label>OIB</Form.Label>
+                <Form.Control type="text" name="oib" placeholder="" defaultValue={polaznik.ime}  />
+              </Form.Group>
+              
+              <Row>
+              <Col key="1" sm={12} lg={6} md={6}>
+                Trenutna slika<br />
+                <Image src={trenutnaSlika} className="slika"/>
+                </Col>
+                <Col key="2" sm={12} lg={6} md={6}>
+                  Nova slika<br />
+                <Image src={slikaZaServer} className="slika"/>
+                </Col>
+              </Row>
 
-          <Form.Group className="mb-3" controlId="email">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="text" name="email" placeholder="jhorvat@edunova.hr" defaultValue={polaznik.email}  />
-          </Form.Group>
+            </Col>
+            <Col key="2" sm={12} lg={6} md={6}>
+            <input type="file" onChange={this.onChange} />
 
-          <Form.Group className="mb-3" controlId="oib">
-            <Form.Label>OIB</Form.Label>
-            <Form.Control type="text" name="oib" placeholder="" defaultValue={polaznik.oib}  />
-          </Form.Group>
+             <input type="button" onClick={this.spremiSlikuAkcija} value={"Spremi sliku"} />
 
+                <Cropper
+                    src={image}
+                    style={{ height: 400, width: "100%" }}
+                    initialAspectRatio={1}
+                    guides={true}
+                    viewMode={1}
+                    minCropBoxWidth={50}
+                    minCropBoxHeight={50}
+                    cropBoxResizable={false}
+                    background={false}
+                    responsive={true}
+                    checkOrientation={false} 
+                    crop={this._crop.bind(this)}
+                    onInitialized={this.onCropperInit.bind(this)}
+                />
         
+            </Col>
+            </Row>
+
+       
+
+          
          
           <Row>
             <Col>

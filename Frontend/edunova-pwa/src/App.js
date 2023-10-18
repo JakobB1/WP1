@@ -10,6 +10,9 @@ import PromjeniSmjer from './components/smjer/promjeniSmjer.component';
 import Polaznici from './components/polaznik/polaznici.component';
 import DodajPolaznik from './components/polaznik/dodajPolaznik.component';
 import PromjeniPolaznik from './components/polaznik/promjeniPolaznik.component';
+import Grupe from './components/grupa/grupe.component';
+import DodajGrupa from './components/grupa/dodajGrupa.component';
+import PromjeniGrupa from './components/grupa/promjeniGrupa.component';
 
 export default function App() {
   return (
@@ -22,8 +25,11 @@ export default function App() {
         <Route path="/smjerovi/dodaj" element={<DodajSmjer />} />
         <Route path="/smjerovi/:sifra" element={<PromjeniSmjer />} />
         <Route path="/polaznici" element={<Polaznici />} />
-          <Route path="/polaznici/dodaj" element={<DodajPolaznik />} />
-          <Route path="/polaznici/:sifra" element={<PromjeniPolaznik />} />
+        <Route path="/polaznici/dodaj" element={<DodajPolaznik />} />
+        <Route path="/polaznici/:sifra" element={<PromjeniPolaznik />} />
+        <Route path="/grupe" element={<Grupe />} />
+        <Route path="/grupe/dodaj" element={<DodajGrupa />} />
+        <Route path="/grupe/:sifra" element={<PromjeniGrupa />} />
       </Routes>
      
     </Router>

@@ -11,6 +11,11 @@ class PolaznikDataService {
     return await http.get('/polaznik/' + sifra);
   }
 
+  async traziPolaznik(uvjet) {
+    console.log('Tražim s: ' + uvjet);
+    return await http.get('/polaznik/trazi/'+uvjet);
+  }
+
   async post(polaznik){
     //console.log(smjer);
     const odgovor = await http.post('/polaznik',polaznik)
@@ -52,6 +57,20 @@ class PolaznikDataService {
  
        return odgovor;
      }
+
+     async postaviSliku(sifra,slika){
+    
+      const odgovor = await http.put('/polaznik/postaviSliku/' + sifra,slika)
+         .then(response => {
+           return {ok:true, poruka: 'Postavio sliku'};
+         })
+         .catch(error => {
+           console.log(error);
+           return {ok:false, poruka: error.response.data};
+         });
+   
+         return odgovor;
+       }
      
  
 }
