@@ -41,12 +41,12 @@
       "PackagePath": "staticwebassets\\service-worker.js.map"
     },
     {
-      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.d1d1cfa5.css",
-      "PackagePath": "staticwebassets\\static\\css\\main.d1d1cfa5.css"
+      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.994f2fad.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.994f2fad.css"
     },
     {
-      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.d1d1cfa5.css.map",
-      "PackagePath": "staticwebassets\\static\\css\\main.d1d1cfa5.css.map"
+      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.994f2fad.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.994f2fad.css.map"
     },
     {
       "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\787.82cf9215.chunk.js",
@@ -57,20 +57,20 @@
       "PackagePath": "staticwebassets\\static\\js\\787.82cf9215.chunk.js.map"
     },
     {
-      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.687babad.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.687babad.js"
+      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.49614c2b.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.49614c2b.js"
     },
     {
-      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.687babad.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\static\\js\\main.687babad.js.LICENSE.txt"
+      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.49614c2b.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.49614c2b.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.687babad.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.687babad.js.map"
+      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.49614c2b.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.49614c2b.js.map"
     },
     {
-      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg",
-      "PackagePath": "staticwebassets\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg"
+      "Id": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\media\\logo.cd39162d86cb9ddb6b99ef60742e6ab4.svg",
+      "PackagePath": "staticwebassets\\static\\media\\logo.cd39162d86cb9ddb6b99ef60742e6ab4.svg"
     },
     {
       "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.GameStoreWebAPI.Microsoft.AspNetCore.StaticWebAssets.props",

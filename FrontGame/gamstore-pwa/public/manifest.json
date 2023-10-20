@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "GameApp",
+  "name": "GameApp frontend aplijkacija",
   "icons": [
     {
       "src": "favicon.ico",

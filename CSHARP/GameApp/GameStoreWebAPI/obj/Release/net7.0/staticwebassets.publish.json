@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TLJBFvzyAZH8+cLh8wW+do0HjP10G89euT2nN4WbIh0=",
+  "Hash": "R5LVWYA89Q1w3F/fNKc1n49BtjXAuM7vEPU+KX+TRJE=",
   "Source": "GameStoreWebAPI",
   "BasePath": "_content/GameStoreWebAPI",
   "Mode": "Default",
@@ -187,12 +187,12 @@
       "OriginalItemSpec": "wwwroot\\service-worker.js.map"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.d1d1cfa5.css",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.994f2fad.css",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/css/main.d1d1cfa5.css",
+      "RelativePath": "static/css/main.994f2fad.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +201,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d1d1cfa5.css"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.994f2fad.css"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.d1d1cfa5.css.map",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\css\\main.994f2fad.css.map",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/css/main.d1d1cfa5.css.map",
+      "RelativePath": "static/css/main.994f2fad.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,7 +218,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d1d1cfa5.css.map"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.994f2fad.css.map"
     },
     {
       "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\787.82cf9215.chunk.js",
@@ -255,12 +255,12 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\787.82cf9215.chunk.js.map"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.687babad.js",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.49614c2b.js",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/js/main.687babad.js",
+      "RelativePath": "static/js/main.49614c2b.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +269,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.687babad.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.49614c2b.js"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.687babad.js.LICENSE.txt",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.49614c2b.js.LICENSE.txt",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/js/main.687babad.js.LICENSE.txt",
+      "RelativePath": "static/js/main.49614c2b.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,15 +286,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.687babad.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.49614c2b.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.687babad.js.map",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.49614c2b.js.map",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/js/main.687babad.js.map",
+      "RelativePath": "static/js/main.49614c2b.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,15 +303,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.687babad.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.49614c2b.js.map"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\media\\logo.cd39162d86cb9ddb6b99ef60742e6ab4.svg",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+      "RelativePath": "static/media/logo.cd39162d86cb9ddb6b99ef60742e6ab4.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -320,7 +320,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg"
+      "OriginalItemSpec": "wwwroot\\static\\media\\logo.cd39162d86cb9ddb6b99ef60742e6ab4.svg"
     }
   ]
 }
