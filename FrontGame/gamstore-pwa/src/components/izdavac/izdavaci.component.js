@@ -9,8 +9,6 @@ export default class Izdavaci extends Component{
 
     constructor(props){
         super(props);
-        this.dohvatiIzdavaci = this.dohvatiIzdavaci.bind(this);
-        this.obrisiIzdavac = this.obrisiIzdavac.bind(this);
 
         this.state = {
             izdavaci: []
