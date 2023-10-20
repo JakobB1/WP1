@@ -60,6 +60,34 @@ namespace GameStoreWebAPI.Controllers
         }
 
 
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra) {
+
+            if (sifra <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var i = _context.Izdavac.Find(sifra);
+
+                if(i == null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, i);
+                }
+
+                return new JsonResult(i);
+            } 
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        
+        }
+
+
         /// <summary>
         /// Dodaje izdavača u bazu
         /// </summary>
