@@ -1,11 +1,43 @@
 import React, { Component } from "react";
 import { Container, Table } from "react-bootstrap";
+import IzdavacDataService from "../..//services/izdavac.service";
 
 
 export default class Izdavaci extends Component{
 
+    constructor(props){
+        super(props);
+        this.dohvatiIzdavaci = this.dohvatiIzdavaci.bind(this);
+
+        this.state = {
+            izdavaci: []
+        };
+
+    }
+
+    componentDidMount(){
+        this.dohvatiIzdavaci();
+    }
+
+    async dohvatiIzdavaci(){
+
+        await IzdavacDataService.get()
+        .then(response => {
+            this.setState({
+                izdavaci: response.data
+            });
+            console.log(response.data);
+        })
+        .catch(e =>{
+            console.log(e);
+        });
+    }
+
 
     render(){
+
+        const { izdavaci } = this.state;
+
         return (
             <Container>
                 <a href="/izdavaci/dodaj" className="btn btn-success gumb">
@@ -22,7 +54,16 @@ export default class Izdavaci extends Component{
                         </tr>
                     </thead>
                     <tbody>
-                        {/* Ovdje će doći podaci s backend-a */}
+                        { izdavaci && izdavaci.map((izdavac,index) => (
+
+                            <tr key={index}>
+                                <td>{izdavac.naziv}</td>
+                                <td>{izdavac.drzava}</td>
+                                <td>{izdavac.webStranica}</td>
+                                <td></td>
+                            </tr>
+
+                        ))}
                     </tbody>
                 </Table>
 
