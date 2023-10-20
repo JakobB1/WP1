@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Container, Table } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import IzdavacDataService from "../..//services/izdavac.service";
+import { Link } from "react-router-dom";
+import {FaEdit, FaTrash} from "react-icons/fa";
 
 
 export default class Izdavaci extends Component{
@@ -8,6 +10,7 @@ export default class Izdavaci extends Component{
     constructor(props){
         super(props);
         this.dohvatiIzdavaci = this.dohvatiIzdavaci.bind(this);
+        this.obrisiIzdavac = this.obrisiIzdavac.bind(this);
 
         this.state = {
             izdavaci: []
@@ -31,6 +34,15 @@ export default class Izdavaci extends Component{
         .catch(e =>{
             console.log(e);
         });
+    }
+
+    async obrisiIzdavac(sifra){
+        const odgovor = await IzdavacDataService.delete(sifra);
+        if(odgovor.ok){
+            this.dohvatiIzdavaci();
+        }else{
+            alert(odgovor.poruka);
+        }
     }
 
 
@@ -60,7 +72,17 @@ export default class Izdavaci extends Component{
                                 <td>{izdavac.naziv}</td>
                                 <td>{izdavac.drzava}</td>
                                 <td>{izdavac.webStranica}</td>
-                                <td></td>
+                                <td>
+                                    <Link className="btn btn-primary gumb"
+                                    to={`/izdavaci/${izdavac.sifra}`}>
+                                        <FaEdit />
+                                    </Link>
+
+                                    <Button variant="danger" className="gumb"
+                                    onClick={()=>this.obrisiIzdavac(izdavac.sifra)}>
+                                        <FaTrash />
+                                    </Button>
+                                </td>
                             </tr>
 
                         ))}
