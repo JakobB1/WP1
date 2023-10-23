@@ -38,7 +38,7 @@ class IzdavacDataService{
     }
 
     async put(sifra,izdavac){
-        //console.log(izdavac);
+        //console.log(izdavaac);
         const odgovor = await http.put('/izdavac/' + sifra,izdavac)
            .then(response => {
              return {ok:true, poruka: 'Promjenio izdavaca'}; // return u odgovor
@@ -49,7 +49,7 @@ class IzdavacDataService{
            });
      
            return odgovor;
-    }
+         }
 
 }
 
