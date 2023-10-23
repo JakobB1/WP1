@@ -11,6 +11,7 @@ import Korisnici from './components/korisnik/korisnici.component';
 import DodajKorisnik from './components/korisnik/dodajKorisnik.component';
 import PromjeniKorisnik from './components/korisnik/promjeniKorisnik.component';
 import Igre from './components/igra/igre.component';
+import Narudzbe from './components/narudzba/narudzba.component';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/korisnici/dodaj" element={<DodajKorisnik />} />
         <Route path="/korisnici/:sifra" element={<PromjeniKorisnik />} />
         <Route path="/igre" element={<Igre />} />
+        <Route path="/narudzbe" element={<Narudzbe />} />
         
       </Routes>
       

@@ -1,27 +1,27 @@
 import http from "../http-common";
 
-class IgraDataService {
+class NarudzbaDataService {
   getAll() {
-    return http.get("/igra");
+    return http.get("/narudzba");
   }
 
   async getBySifra(sifra) {
    // console.log(sifra);
-    return await http.get('/igra/' + sifra);
+    return await http.get('/narudzba/' + sifra);
   }
 
-  async getIgre(sifra) {
+  async getNarudzbe(sifra) {
     // console.log(sifra);
-     return await http.get('/igra/' + sifra + '/izdavaci');
+     return await http.get('/narudzba/' + sifra + '/korisnici');
    }
  
 
 
-  async post(igra){
-    //console.log(igre);
-    const odgovor = await http.post('/igra',igra)
+  async post(narudzba){
+    //console.log(narudzbe);
+    const odgovor = await http.post('/narudzba',narudzba)
        .then(response => {
-         return {ok:true, poruka: 'Unio igru'}; // return u odgovor
+         return {ok:true, poruka: 'Unio narudzbu'}; // return u odgovor
        })
        .catch(error => {
         console.log(error.response);
@@ -34,7 +34,7 @@ class IgraDataService {
 
   async delete(sifra){
     
-    const odgovor = await http.delete('/igra/' + sifra)
+    const odgovor = await http.delete('/narudzba/' + sifra)
        .then(response => {
          return {ok:true, poruka: 'Obrisao uspješno'};
        })
@@ -46,9 +46,9 @@ class IgraDataService {
        return odgovor;
      }
 
-     async obrisiIzdavaca(igra, izdavac){
+     async obrisiKorisnika(narudzba, korisnik){
     
-      const odgovor = await http.delete('/igra/obrisiizdavaca/' + igra + '/' + izdavac)
+      const odgovor = await http.delete('/narudzba/obrisikorisnika/' + narudzba + '/' + korisnik)
          .then(response => {
            return {ok:true, poruka: 'Obrisao uspješno'};
          })
@@ -60,9 +60,9 @@ class IgraDataService {
          return odgovor;
        }
 
-       async dodajIzdavaca(igra, izdavac){
+       async dodajKorisnika(narudzba, korisnik){
     
-        const odgovor = await http.post('/igra/dodajizdavaca/' + igra + '/' + izdavac)
+        const odgovor = await http.post('/narudzba/dodajkorisnika/' + narudzba + '/' + korisnik)
            .then(response => {
              return {ok:true, poruka: 'Dodao uspješno'};
            })
@@ -76,4 +76,4 @@ class IgraDataService {
 
 }
 
-export default new IgraDataService();
+export default new NarudzbaDataService();
