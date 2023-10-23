@@ -23,7 +23,7 @@ export default class Izbornik extends Component{
             <NavDropdown title="Programi" id="basic-nav-dropdown">
               <NavDropdown.Item href="/izdavaci">Izdavaci</NavDropdown.Item>
               <NavDropdown.Item href="/igre">Igre</NavDropdown.Item>
-              <NavDropdown.Item href="/korisnici">Koirsnici</NavDropdown.Item>
+              <NavDropdown.Item href="/korisnici">Korisnici</NavDropdown.Item>
               <NavDropdown.Item href="/narudzbe">Narudzbe</NavDropdown.Item>
               <NavDropdown.Divider />
                 <NavDropdown.Item target="_blank" href="/swagger/index.html">Swagger</NavDropdown.Item>
