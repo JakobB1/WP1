@@ -55,7 +55,7 @@ export default class DodajIzdavac extends Component {
 
 
 
-    this.dodajIzdavac({
+    this.promjeniIzdavac({
       naziv: podaci.get('naziv'),
       drzava: podaci.get('drzava'),
       webStranica: podaci.get('webStranica')
@@ -65,26 +65,32 @@ export default class DodajIzdavac extends Component {
 
 
   render() { 
+
+    const { izdavac} = this.state;
+
     return (
     <Container>
         <Form onSubmit={this.handleSubmit}>
 
 
-          <Form.Group className="mb-3" controlId="naziv">
+        <Form.Group className="mb-3" controlId="naziv">
             <Form.Label>Naziv</Form.Label>
-            <Form.Control type="text" name="naziv" placeholder="Naziv izdavaca" maxLength={255} required/>
+            <Form.Control type="text" name="naziv" placeholder="Naziv izdavača"
+            maxLength={255} defaultValue={izdavac.naziv} required />
           </Form.Group>
 
 
           <Form.Group className="mb-3" controlId="drzava">
-            <Form.Label>Drzava</Form.Label>
-            <Form.Control type="text" name="drzava" placeholder="Drzava izdavaca" maxLength={255} required/>
+            <Form.Label>Država</Form.Label>
+            <Form.Control type="text" name="drzava" placeholder="Država izdavača"
+            maxLength={255} defaultValue={izdavac.naziv} required />
           </Form.Group>
 
 
           <Form.Group className="mb-3" controlId="webStranica">
             <Form.Label>Web stranica</Form.Label>
-            <Form.Control type="text" name="webStranica" placeholder="Web stranica izdavaca" maxLength={255} required/>
+            <Form.Control type="text" name="webStranica" placeholder="Web stranica izdavača"
+            maxLength={255} defaultValue={izdavac.naziv} required />
           </Form.Group>
 
 
