@@ -6,6 +6,11 @@ import Pocetna from './components/pocetna.component';
 import NadzornaPloca from './components/nadzornaploca.component';
 import Izdavaci from './components/izdavac/izdavaci.component';
 import DodajIzdavac from './components/izdavac/dodajIzdavac.component';
+import PromjeniIzdavac from './components/izdavac/promjeniIzdavac.component';
+import Korisnici from './components/korisnik/korisnici.component';  
+import DodajKorisnik from './components/korisnik/dodajKorisnik.component';
+import PromjeniKorisnik from './components/korisnik/promjeniKorisnik.component';
+import Igre from './components/igra/igre.component';
 
 function App() {
   return (
@@ -15,7 +20,13 @@ function App() {
         <Route path='/' element={<Pocetna />} />
         <Route path='/nadzornaploca' element={<NadzornaPloca />} />
         <Route path='/izdavaci' element={<Izdavaci />} />
-        <Route path="izdavaci/dodaj" element={<DodajIzdavac />} />
+        <Route path="/izdavaci/dodaj" element={<DodajIzdavac />} />
+        <Route path="/izdavaci/:sifra" element={<PromjeniIzdavac />} />
+        <Route path="/korisnici" element={<Korisnici />} />
+        <Route path="/korisnici/dodaj" element={<DodajKorisnik />} />
+        <Route path="/korisnici/:sifra" element={<PromjeniKorisnik />} />
+        <Route path="/igre" element={<Igre />} />
+        
       </Routes>
       
     </Router>
