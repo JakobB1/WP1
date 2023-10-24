@@ -18,7 +18,7 @@ class NarudzbaDataService {
 
 
   async post(narudzba){
-    //console.log(narudzbe);
+    //console.log(igre);
     const odgovor = await http.post('/narudzba',narudzba)
        .then(response => {
          return {ok:true, poruka: 'Unio narudzbu'}; // return u odgovor
@@ -48,7 +48,7 @@ class NarudzbaDataService {
 
      async obrisiKorisnika(narudzba, korisnik){
     
-      const odgovor = await http.delete('/narudzba/obrisikorisnika/' + narudzba + '/' + korisnik)
+      const odgovor = await http.delete('/igra/obrisikorisnika/' + narudzba + '/' + korisnik)
          .then(response => {
            return {ok:true, poruka: 'Obrisao uspješno'};
          })
@@ -62,7 +62,7 @@ class NarudzbaDataService {
 
        async dodajKorisnika(narudzba, korisnik){
     
-        const odgovor = await http.post('/narudzba/dodajkorisnika/' + narudzba + '/' + korisnik)
+        const odgovor = await http.post('/igra/dodajkorisnika/' + narudzba + '/' + korisnik)
            .then(response => {
              return {ok:true, poruka: 'Dodao uspješno'};
            })
