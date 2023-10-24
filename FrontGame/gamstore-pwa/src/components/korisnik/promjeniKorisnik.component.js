@@ -22,7 +22,7 @@ export default class PromjeniKorisnik extends Component {
   constructor(props) {
     super(props);
     this.korisnik = this.dohvatiKorisnik();
-    this.PromjeniKorisnik = this.PromjeniKorisnik.bind(this);
+    this.PromjeniKorisnik = this.promjeniKorisnik.bind(this);
     this.spremiSliku = this.spremiSliku.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
@@ -53,11 +53,11 @@ export default class PromjeniKorisnik extends Component {
       });
   }
 
-  async PromjeniKorisnik(korisnik) {
+  async promjeniKorisnik(korisnik) {
     // ovo mora bolje
     let href = window.location.href;
     let niz = href.split('/'); 
-    const odgovor = await KorisnikDataService.put(niz[niz.length-1],this.korisnik);
+    const odgovor = await KorisnikDataService.put(niz[niz.length-1],korisnik);
     if(odgovor.ok){
       window.location.href='/korisnici';
     }else{
@@ -81,7 +81,7 @@ export default class PromjeniKorisnik extends Component {
     //console.log(podaci.get('verificiran'));
     // You can pass formData as a service body directly:
 
-    this.PromjeniKorisnik({
+    this.promjeniKorisnik({
       ime: podaci.get('ime'),
       prezime: podaci.get('prezime'),
       oib: podaci.get('oib'),

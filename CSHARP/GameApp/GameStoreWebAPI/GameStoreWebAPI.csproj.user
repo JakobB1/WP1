@@ -2,6 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>https</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>D:\WP1\CSHARP\GameApp\GameStoreWebAPI\Properties\PublishProfiles\jakobb1-001-site1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\WP1\CSHARP\GameApp\GameStoreWebAPI\Properties\PublishProfiles\jakobb1-001-site1 - Web Deploy1.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
