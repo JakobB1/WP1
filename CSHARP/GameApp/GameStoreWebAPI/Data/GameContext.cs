@@ -8,7 +8,7 @@ namespace GameStoreWebAPI.Data
         public GameContext(DbContextOptions<GameContext> opcije)
             : base(opcije)
         {
-
+           
         }
 
         public DbSet<Izdavac> Izdavac { get; set; }

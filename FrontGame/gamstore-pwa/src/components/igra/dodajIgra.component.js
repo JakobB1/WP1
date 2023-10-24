@@ -31,6 +31,7 @@ export default class DodajIgra extends Component {
   }
 
   async dodajIgra(igra) {
+    console.log(igra)
     const odgovor = await IgraDataService.post(igra);
     if(odgovor.ok){
       // routing na igre
@@ -74,8 +75,20 @@ export default class DodajIgra extends Component {
       zanr: podaci.get('zanr'),
       cijena: parseFloat(podaci.get('cijena')),
       dobnaGranica: parseFloat(podaci.get('dobnaGranica')),
-      datumIzlaska: datum
+      datumIzlaska: datum,
     });
+
+    // this.dodajIgra({
+    //   sifra: 0,
+    //   naziv: "string",
+    //   izdavac: "string",
+    //   zanr: "string",
+    //   cijena: 0,
+    //   dobnaGranica: 0,
+    //   datumIzlaska: "2023-10-24T17:14:27.823Z",
+    //   opis: "string",
+    //   sifraIzdavac: 0
+    // })
     
   }
 
@@ -92,13 +105,13 @@ export default class DodajIgra extends Component {
 
         <Form.Group className="mb-3" controlId="naziv">
             <Form.Label>Naziv</Form.Label>
-            <Form.Control type="text" name="naziv" placeholder="" maxLength={255} required/>
+            <Form.Control type="text" name="naziv" placeholder="" maxLength={255} />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="izdavac">
             <Form.Label>Izdavač</Form.Label>
             <Form.Select onChange={e => {
-              this.setState({ izdavac: e.target.value});
+              this.setState({ sifraIzdavac: e.target.value});
             }}>
             {izdavaci && izdavaci.map((izdavac,index) => (
                   <option key={index} value={izdavac.sifra}>{izdavac.naziv}</option>
@@ -110,7 +123,7 @@ export default class DodajIgra extends Component {
           <Form.Group className="mb-3" controlId="zanr">
             <Form.Label>Žanr</Form.Label>
             <Form.Control type="text" name="zanr" placeholder="Žanr igre"
-            maxLength={255} required />
+            maxLength={255} />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="cijena">
@@ -124,7 +137,7 @@ export default class DodajIgra extends Component {
           <Form.Group className="mb-3" controlId="dobnaGranica">
             <Form.Label>Dobna granica</Form.Label>
             <Form.Control type="text" name="dobnaGranica" placeholder="dobnaGranica"
-            maxLength={255}  required />
+            maxLength={255}  />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="vrijeme">

@@ -21,6 +21,7 @@ class IgraDataService {
     //console.log(igre);
     const odgovor = await http.post('/igra',igra)
        .then(response => {
+          console.log(response);
          return {ok:true, poruka: 'Unio igru'}; // return u odgovor
        })
        .catch(error => {

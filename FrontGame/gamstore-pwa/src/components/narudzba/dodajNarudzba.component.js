@@ -89,7 +89,7 @@ export default class DodajNarudzba extends Component {
         <Form.Group className="mb-3" controlId="korisnik">
             <Form.Label>Korisnik</Form.Label>
             <Form.Select onChange={e => {
-              this.setState({ korisnik: e.target.value});
+              this.setState({ sifraKorisnik: e.target.value});
             }}>
             {korisnici && korisnici.map((korisnik,index) => (
                   <option key={index} value={korisnik.sifra}>{korisnik.ime}</option>

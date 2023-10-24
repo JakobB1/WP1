@@ -73,8 +73,8 @@ namespace GameStoreWebAPI.Controllers
                         Izdavac = i.Izdavac?.Naziv,
                         SifraIzdavac = i.Izdavac.Sifra,
                         Zanr = i.Zanr,
-                        Cijena = i.Cijena,
-                        DobnaGranica = i.DobnaGranica,
+                        Cijena = i.Cijena.Value,
+                        DobnaGranica = i.DobnaGranica.Value,
                         DatumIzlaska = i.DatumIzlaska,
                         Opis = i.Opis
 
