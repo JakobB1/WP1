@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import IgraDataService from "../../services/igra.service";
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import { FaEdit } from 'react-icons/fa';
 import { FaTrash } from 'react-icons/fa';
 import { Modal } from 'react-bootstrap';
+import moment from "moment/moment";
 
 
 export default class Igre extends Component {
@@ -75,26 +74,26 @@ export default class Igre extends Component {
               {igre && igre.map((i,index) => (
                 
                 <tr key={index}>
-                  <td> 
-                    <p className="naziv">{i.naziv} </p>
+                  <td>{i.naziv}</td>
+                  <td className="izdavac">{i.izdavac} </td>
+                  <td className="zanr">{i.zanr} </td>
+                  <td className="cijena">{i.cijena}</td>
+                  <td className="dobnaGranica">{i.dobnaGranica}</td>
+                  <td className="datumIzlaska">
+                    {i.datumIzlaska==null ? "Nije definirano" :
+                    moment.utc(i.datumIzlaska).format("DD. MM. YYYY. HH:mm")}
                   </td>
-                    <p className="izdavac">{i.izdavac} </p>
                   <td>
-                    <p className="zanr">{i.zanr} </p>
-                    
-                  
-                    <Row>
-                      <Col>
-                        <Link className="btn btn-primary gumb" to={`/igre/${i.sifra}`}><FaEdit /></Link>
-                      </Col>
-                      <Col>
-                        { i.brojIzdavaca===0 &&
-                             <Button variant="danger"  className="gumb" onClick={() => this.obrisiIgra(i.sifra)}><FaTrash /></Button>
-                        }
-                      </Col>
-                    </Row>
-                    
-                  </td>
+                                    <Link className="btn btn-primary gumb"
+                                    to={`/igre/${i.sifra}`}>
+                                        <FaEdit />
+                                    </Link>
+
+                                    <Button variant="danger" className="gumb"
+                                    onClick={()=>this.obrisiIgra(i.sifra)}>
+                                        <FaTrash />
+                                    </Button>
+                                </td>
                 </tr>
                 ))
               }

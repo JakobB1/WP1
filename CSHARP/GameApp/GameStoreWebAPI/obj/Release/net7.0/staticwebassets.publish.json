@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tfwsFodztqYHlaY7fHwbUa3CHEwPYyr3W6owyg5USF4=",
+  "Hash": "9zcrpFSFmKTEUeK3sVW/+XV2pESjv4/cQ2BjjTBPFKg=",
   "Source": "GameStoreWebAPI",
   "BasePath": "_content/GameStoreWebAPI",
   "Mode": "Default",
@@ -255,12 +255,12 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\787.82cf9215.chunk.js.map"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.f3fbce15.js",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.f43de37f.js",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/js/main.f3fbce15.js",
+      "RelativePath": "static/js/main.f43de37f.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +269,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.f3fbce15.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.f43de37f.js"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.f3fbce15.js.LICENSE.txt",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.f43de37f.js.LICENSE.txt",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/js/main.f3fbce15.js.LICENSE.txt",
+      "RelativePath": "static/js/main.f43de37f.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,15 +286,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.f3fbce15.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.f43de37f.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.f3fbce15.js.map",
+      "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\js\\main.f43de37f.js.map",
       "SourceId": "GameStoreWebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\",
       "BasePath": "_content/GameStoreWebAPI",
-      "RelativePath": "static/js/main.f3fbce15.js.map",
+      "RelativePath": "static/js/main.f43de37f.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,7 +303,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.f3fbce15.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.f43de37f.js.map"
     },
     {
       "Identity": "D:\\WP1\\CSHARP\\GameApp\\GameStoreWebAPI\\wwwroot\\static\\media\\logo.cd39162d86cb9ddb6b99ef60742e6ab4.svg",
