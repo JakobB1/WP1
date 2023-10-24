@@ -13,6 +13,7 @@ import PromjeniKorisnik from './components/korisnik/promjeniKorisnik.component';
 import Igre from './components/igra/igre.component';
 import Narudzbe from './components/narudzba/narudzba.component';
 import DodajIgra from './components/igra/dodajIgra.component';
+import DodajNarudzba from './components/narudzba/dodajNarudzba.component';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/igre" element={<Igre />} />
         <Route path="/igre/dodaj" element={<DodajIgra />} />
         <Route path="/narudzbe" element={<Narudzbe />} />
+        <Route path="/narudzbe/dodaj" element={<DodajNarudzba />} />
         
       </Routes>
       

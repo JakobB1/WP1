@@ -58,7 +58,7 @@ export default class Narudzbe extends Component{
         return (
     
         <Container>
-          <a href="/narudzbe/dodaj" className="btn btn-success gumb">Dodaj novu igru</a>
+          <a href="/narudzbe/dodaj" className="btn btn-success gumb">Dodaj novu narudzbu</a>
           <Table striped bordered hover responsive>
                   <thead>
                     <tr>
