@@ -14,6 +14,9 @@ import Igre from './components/igra/igre.component';
 import Narudzbe from './components/narudzba/narudzba.component';
 import DodajIgra from './components/igra/dodajIgra.component';
 import DodajNarudzba from './components/narudzba/dodajNarudzba.component';
+import PromjeniIgra from './components/igra/promjeniIgra.component';
+import PromjeniNarudzba from './components/narudzba/promjeniNarudzba.component';
+import Stavke from './components/stavka/stavke.component';
 
 function App() {
   return (
@@ -22,16 +25,25 @@ function App() {
       <Routes>
         <Route path='/' element={<Pocetna />} />
         <Route path='/nadzornaploca' element={<NadzornaPloca />} />
+        
         <Route path='/izdavaci' element={<Izdavaci />} />
         <Route path="/izdavaci/dodaj" element={<DodajIzdavac />} />
         <Route path="/izdavaci/:sifra" element={<PromjeniIzdavac />} />
+
         <Route path="/korisnici" element={<Korisnici />} />
         <Route path="/korisnici/dodaj" element={<DodajKorisnik />} />
         <Route path="/korisnici/:sifra" element={<PromjeniKorisnik />} />
+
         <Route path="/igre" element={<Igre />} />
         <Route path="/igre/dodaj" element={<DodajIgra />} />
+        <Route path="/narudzbe/:sifra" element={<PromjeniIgra />} />
+        
         <Route path="/narudzbe" element={<Narudzbe />} />
         <Route path="/narudzbe/dodaj" element={<DodajNarudzba />} />
+        <Route path="/narudzbe/:sifra" element={<PromjeniNarudzba />} />
+
+        <Route path="/stavke" element={<Stavke />} />
+        
         
       </Routes>
       
