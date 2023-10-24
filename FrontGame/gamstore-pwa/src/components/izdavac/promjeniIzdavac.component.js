@@ -13,10 +13,8 @@ export default class PromjeniIzdavac extends Component {
 
   constructor(props) {
     super(props);
-
-   
     this.izdavac = this.dohvatiIzdavac();
-    this.promjeniIzdavac = this.promjeniIzdavac.bind(this);
+    this.promjeniIzdavac = this.PromjeniIzdavac.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
 
@@ -45,11 +43,11 @@ export default class PromjeniIzdavac extends Component {
    
   }
 
-  async promjeniIzdavac(izdavac) {
+  async PromjeniIzdavac(izdavac) {
     // ovo mora bolje
     let href = window.location.href;
     let niz = href.split('/'); 
-    const odgovor = await IzdavacDataService.put(niz[niz.length-1],this.izdavac);
+    const odgovor = await IzdavacDataService.put(niz[niz.length-1],izdavac);
     if(odgovor.ok){
       // routing na izdavacima
       window.location.href='/izdavaci';
@@ -93,26 +91,25 @@ export default class PromjeniIzdavac extends Component {
         <Form onSubmit={this.handleSubmit}>
 
 
-          <Form.Group className="mb-3" controlId="naziv">
+        <Form.Group className="mb-3" controlId="naziv">
             <Form.Label>Naziv</Form.Label>
-            <Form.Control type="text" name="naziv" placeholder="Naziv izdavača"
-            maxLength={255} defaultValue={izdavac.naziv} required />
-          </Form.Group>
+            <Form.Control type="text" name="naziv" placeholder="Naziv izdavača" 
+            maxLength={255} defaultValue={izdavac.naziv} required/>
+        </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="drzava">
-            <Form.Label>Država</Form.Label>
-            <Form.Control type="text" name="drzava" placeholder="Drzava izdavača"
-            maxLength={255} defaultValue={izdavac.drzava} required />
-          </Form.Group>
+        <Form.Group className="mb-3" controlId="drzava">
+            <Form.Label>Dražava</Form.Label>
+            <Form.Control type="text" name="drzava" placeholder="Država izdavača" 
+            maxLength={255} defaultValue={izdavac.drzava} required/>
+        </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="webStranica">
+        <Form.Group className="mb-3" controlId="webStranica">
             <Form.Label>Web stranica</Form.Label>
-            <Form.Control type="text" name="webStranica" placeholder="Web stranica izdavača"
-            maxLength={255} defaultValue={izdavac.webStranica} required />
-            
-          </Form.Group>
+            <Form.Control type="text" name="webStranica" placeholder="Država izdavača" 
+            maxLength={255} defaultValue={izdavac.webStranica} required/>
+        </Form.Group>
 
           
          

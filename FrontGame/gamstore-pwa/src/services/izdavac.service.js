@@ -4,30 +4,31 @@ import http from "../http-common";
 class IzdavacDataService{
 
     async get(){
-        return await http.get('/Izdavac')
+        return await http.get('/Izdavac');
     }
 
     async getBySifra(sifra) {
         return await http.get('/izdavac/' + sifra);
-    }
+      }
 
     async delete(sifra){
         const odgovor = await http.delete('/Izdavac/' + sifra)
         .then(response => {
             return {ok: true, poruka: 'Obrisao uspješno'};
         })
-        .catch(error =>{
-            return {ok: false, poruka: error.response.data}
+        .catch(e=>{
+            return {ok: false, poruka: e.response.data};
         });
 
         return odgovor;
     }
 
+
     async post(izdavac){
-        //console.log(izdavac);
+        //console.log(smjer);
         const odgovor = await http.post('/izdavac',izdavac)
            .then(response => {
-             return {ok:true, poruka: 'Unio izdavaca'}; // return u odgovor
+             return {ok:true, poruka: 'Unio izdavac'}; // return u odgovor
            })
            .catch(error => {
             //console.log(error.response);
@@ -38,10 +39,10 @@ class IzdavacDataService{
     }
 
     async put(sifra,izdavac){
-        //console.log(izdavaac);
+        //console.log(smjer);
         const odgovor = await http.put('/izdavac/' + sifra,izdavac)
            .then(response => {
-             return {ok:true, poruka: 'Promjenio izdavaca'}; // return u odgovor
+             return {ok:true, poruka: 'Promjenio izdavac'}; // return u odgovor
            })
            .catch(error => {
             //console.log(error.response);

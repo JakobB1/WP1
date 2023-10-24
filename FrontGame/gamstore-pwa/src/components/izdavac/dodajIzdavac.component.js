@@ -14,6 +14,10 @@ export default class DodajIzdavac extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      izdavac:[]
+    };
+
     this.dodajIzdavac = this.dodajIzdavac.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -55,7 +59,7 @@ export default class DodajIzdavac extends Component {
 
 
 
-    this.promjeniIzdavac({
+    this.dodajIzdavac({
       naziv: podaci.get('naziv'),
       drzava: podaci.get('drzava'),
       webStranica: podaci.get('webStranica')
@@ -101,7 +105,7 @@ export default class DodajIzdavac extends Component {
             </Col>
             <Col>
             <Button variant="primary" className="gumb" type="submit">
-              Dodaj smjer
+              Dodaj izdavača
             </Button>
             </Col>
           </Row>
